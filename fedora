@@ -1,1 +1,2 @@
 sudo yum install ctags
+fix wifi problem: https://unix.stackexchange.com/a/153827/265591
