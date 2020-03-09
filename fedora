@@ -1,1 +1,2 @@
 sudo yum install ctags
+sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
