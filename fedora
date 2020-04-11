@@ -9,3 +9,5 @@ all:
 	yes | yum install grubby
 	yes | sudo yum install ctags
 	yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
+	sudo dnf -y install sublime-merge
+	sudo dnf -y install sublime-text
