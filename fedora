@@ -7,7 +7,7 @@ all:
 	yes | yum install kernel-headers kernel-devel
 	yes | sudo dnf install module-build-service fedpkg
 	yes | yum install grubby
-	yes | sudo yum install ctags
+	yes | sudo yum install ctags indent
 	yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
 	sudo dnf -y install sublime-merge
 	sudo dnf -y install sublime-text
