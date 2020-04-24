@@ -4,13 +4,13 @@ all:
 	yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign
 	yes | sudo yum group install "Development Tools"
 	yes | sudo yum install bison openssl-devel
-	yes | yum install kernel-headers kernel-devel
-	yes | sudo dnf install module-build-service fedpkg
+	yes | yum install kernel-headers kernel-devel SDL2-devel qemu-user
+	yes | sudo dnf install module-build-service fedpkg R-R.cache
 	yes | yum install grubby libusb-devel make automake gcc gcc-c++ kernel-devel
 	yes | sudo yum install ctags indent
 	yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
-	sudo dnf -y install sublime-merge hexchat
-	sudo dnf -y install sublime-text gnome-tweak-tool
+	sudo dnf -y install sublime-merge gcc-c++-arm-linux-gnu
+	sudo dnf -y install sublime-text gnome-tweak-tool gcc-c++-aarch64-linux-gnu binutils-arm-linux-gnu gcc-arm-linux-gnu glibc-arm-linux-gnu
 
 iotop
 htop
