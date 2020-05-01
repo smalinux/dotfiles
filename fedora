@@ -16,3 +16,4 @@ all:
 iotop
 htop
 ascii
+$epiphany # web browser
