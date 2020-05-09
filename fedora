@@ -11,9 +11,11 @@ all:
 	yes | sudo yum install ctags indent
 	yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
 	sudo dnf -y install sublime-merge gcc-c++-arm-linux-gnu
+	sudo dnf -y install binutils-devel
 	sudo dnf -y install sublime-text gnome-tweak-tool gcc-c++-aarch64-linux-gnu binutils-arm-linux-gnu gcc-arm-linux-gnu glibc-arm-linux-gnu
 
 iotop
 htop
 ascii
 $epiphany # web browser
+xcalc
