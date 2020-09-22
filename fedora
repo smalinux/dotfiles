@@ -4,7 +4,7 @@ all:
 	sudo ln -s /var/lib/snapd/snap /snap
 	yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign
 	yes | sudo yum group install "Development Tools"
-	yes | sudo yum install bison openssl-devel
+	yes | sudo yum install bison openssl-devel global
 	yes | yum install kernel-headers kernel-devel SDL2-devel qemu-user strace
 	yes | sudo dnf install module-build-service fedpkg R-R.cache discord
 	yes | yum install grubby libusb-devel make automake gcc gcc-c++ kernel-devel
