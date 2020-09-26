@@ -12,7 +12,7 @@ all:
 	yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
 	sudo dnf -y install sublime-merge gcc-c++-arm-linux-gnu
 	sudo dnf -y install binutils-devel libX11-devel libXft-devel libXinerama-devel nitrogen xorg-x11-xinit-session
-	sudo dnf -y install xinit 
+	sudo dnf -y install xinit mpv
 	sudo dnf -y install sublime-text gnome-tweak-tool gcc-c++-aarch64-linux-gnu binutils-arm-linux-gnu gcc-arm-linux-gnu glibc-arm-linux-gnu
 
 iotop
