@@ -34,7 +34,11 @@ git clone git://git.suckless.org/st ~/suckless/st
 cd suxkless/dwm && make clean install
 cd suxkless/st && make clean install
 cd ~
-ln -sf ~/suckless/dwm ~/bin/dwm
-ln -sf ~/suckless/st ~/bin/st
-
+ln -sf ~/dotfiles/suckless/dwm ~/bin/dwm
+ln -sf ~/dotfiles/suckless/st ~/bin/st
 echo "exec dwm" > ~/.xinitrc
+
+# ~/.vimrc
+cd ~
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+
