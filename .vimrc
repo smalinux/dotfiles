@@ -11,18 +11,29 @@ syntax on
 " set tabstop=4 softtabstop=4
 " set expandtab
 "set smartindent
+""set backspace=indent,eol,start  " more powerful backspacing
 set nu relativenumber
 
 " set smartcase
 " set undodir
 set undofile
-set incsearch
+
+" incase search, search while i am typing ....
+set is
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Sets how many lines of history VIM has to remember
 set history=500
+
+" ignore case when search for some thing.
+" set noic      to remove ignore case!
+set ic
+
+" Highlight all search results when use /
+set hls
+
 
 " Enable filetype plugins
 " filetype plugin on
@@ -32,41 +43,20 @@ set history=500
 set autoread
 " au FocusGained,BufEnter * checktime
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Enable syntax highlighting
-syntax enable 
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+" copy things from vim to outside ....
 "
-" " Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
+"
 
 
+" I like to be scroll free ;)
+""set scrolloff
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -109,6 +99,43 @@ set wrap "Wrap lines
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Windows :help CTRL-W 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Resize widows with mouse :)))
+" https://vi.stackexchange.com/a/521/23017
+:set mouse=n
+:set ttymouse=xterm2
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tabs 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Auto close brackets 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+
+
+
+
 
 
 
@@ -217,7 +244,7 @@ Plugin 'junegunn/goyo.vim'
 
 "
 " Hard Mode in vim (deprecated)
-Plugin 'wikitopian/hardmode'
+"Plugin 'wikitopian/hardmode'
 
 
 
@@ -280,13 +307,9 @@ map <C-g> :Goyo<CR>
 " Hard Mode config
 " autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
-
-
-
-
-
-
-
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" End of plugin & config
+" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 
 
 
