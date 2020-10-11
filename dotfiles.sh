@@ -26,6 +26,11 @@ yes | sudo apt-get install dwm
 
 
 
+# Linking my most important files ...
+ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
+
+
+
 # Download my main tools
 
 # 1- suckless

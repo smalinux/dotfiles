@@ -54,6 +54,12 @@ set autoread
 
 
 
+" Making knew shortcuts ...
+"map w e
+map <F5> i{<Esc>$a}<Esc>    " Click F5 to surround a line with {}
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
