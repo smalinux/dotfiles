@@ -9,7 +9,7 @@ yes | sudo apt-get install build-essential gcc make xorg xserver-xorg \
        	curl i3lock imagemagick feh fonts-font-awesome libx11-dev\
 	libxft-dev vim  curl mpv youtube-dl tree\
 	zathura cmake python3-dev libncurses5-dev libncursesw5-dev\
-    nnn 
+    nnn linux-headers-`uname -r` flex bison
 
 # wifi hotspot utils
 

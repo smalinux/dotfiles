@@ -34,7 +34,6 @@ set ic
 " Highlight all search results when use /
 set hls
 
-
 " Enable filetype plugins
 " filetype plugin on
 " filetype indent on
@@ -130,13 +129,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Auto close brackets 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 
 
 
