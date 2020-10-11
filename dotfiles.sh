@@ -28,6 +28,8 @@ yes | sudo apt-get install dwm
 
 # Linking my most important files ...
 ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
+ln -sf ~/dotfiles/man.txt ~/man.txt
+ln -sf ~/dotfiles/notes.txt ~/notes.txt
 
 
 
@@ -57,23 +59,10 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 # install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall
-
-### bla bla bla
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+vim +PluginInstall # KEEB THIS LINE ALWAYS LAST LINE !
+### END OF FILE 
