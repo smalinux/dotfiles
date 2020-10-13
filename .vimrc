@@ -244,7 +244,9 @@ Plugin 'junegunn/goyo.vim'
 " Hard Mode in vim (deprecated)
 "Plugin 'wikitopian/hardmode'
 
-
+"
+" vimWiki
+Plugin 'vimwiki/vimwiki'
 
 
 
