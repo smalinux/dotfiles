@@ -56,6 +56,16 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ########### ~/.bashrc
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
+
+
+
+######### my custom keyboard settings
+ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
+
+
+
+
+
 # install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

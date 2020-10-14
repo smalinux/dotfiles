@@ -115,6 +115,9 @@ fi
 
 
 alias p='zathura'
+
+# package manager alieases
 alias i='sudo apt-get install'
+alias s='apt search'
 alias r='sudo apt-get remove'
 
