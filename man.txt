@@ -15,8 +15,28 @@ When you have free time too learn about linux general info:
     https://unix.stackexchange.com/a/214/265591
 ______________________________________________
 I want to read this book when i own a free time:
-    
     Can't Hurt Me: Master Your Mind and Defy the Odds Hardcover –  David Goggins (Author)
+______________________________________________
+Read Ahmed Gaber Elneer recommended books for linux roadmap
+after you master any linux subsystem
+______________________________________________
+Read "Linux from scratch" book
+______________________________________________
+suckless & vim & workflow-lifestyle 
+______________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
