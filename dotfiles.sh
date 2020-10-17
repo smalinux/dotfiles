@@ -49,6 +49,17 @@ ln -sf ~/dotfiles/suckless/dmenu/dmenu_run ~/bin/dmenu_run
 ln -sf ~/dotfiles/suckless/dmenu/dmenu_path ~/bin/dmenu_path
 ln -sf ~/dotfiles/suckless/dmenu/stest ~/bin/stest
 
+
+
+####### update my dotfiles script 
+ln -sf ~/dotfiles/update.sh ~/update.sh
+
+
+
+
+
+
+
 ########### ~/.vimrc
 cd ~
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
