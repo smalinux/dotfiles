@@ -1,0 +1,35 @@
+=== videos ===
+hacking on the linux kernel:
+https://www.youtube.com/watch?v=UeLOV9Fnen0
+Working and Living in Germany:
+https://www.youtube.com/watch?v=LOwYfNeCjSA
+
+
+
+
+
+
+
+https://linux-kernel-labs.github.io/refs/heads/master/
+http://eudyptula-challenge.org/
+https://github.com/0xAX/linux-insides
+https://dri.freedesktop.org/docs/drm/core-api/kernel-api.html
+https://kernelnewbies.org/
+
+
+=== Books ===
+- LDD3
+- Linux Device Driver Development Cookbook
+- Linux Device Drivers Development
+- Essential Linux Device Drivers
+- .
+
+
+[ finish these basics stuff and go back to AlSamman if you want]
+at this point of time your are a man. you are a very good. you are the king.
+read beyond this links if you want to do more ...
+[ If you want to do extra job read one chapter or two from ULK ]
+
+
+
+Read fucking stupid books: PLKA && ULK

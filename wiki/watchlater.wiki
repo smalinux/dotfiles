@@ -1,0 +1,35 @@
+MeetUp: vim, tmux, httpie and jq   https://www.youtube.com/watch?v=7LahjY_poio&t=959s
+Search youtube: https://www.youtube.com/results?search_query=vim+tmux
+Atreus, i3, and Vim : https://www.youtube.com/watch?v=NbVOEKKcLgU&t=50s
+
+
+"You can be a kernel hacker!" by Julia Evans : https://www.youtube.com/watch?v=0IQlpFWTFbM
+ 
+ 
+xmodmap
+I (love) this site http://xahlee.info/linux/linux_xmodmap_tutorial.html
+[Youtube] https://www.youtube.com/results?search_query=xmodmap
+https://wiki.archlinux.org/index.php/xmodmap
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -7,17 +7,18 @@
 syntax on
 
 
-" set noerrorbells
-" set tabstop=4 softtabstop=4
-" set expandtab
+"set noerrorbells
+"set tabstop=4 softtabstop=4
+"set expandtab
 "set smartindent
-""set backspace=indent,eol,start  " more powerful backspacing
-set nu relativenumber
-
-" set smartcase
-" set undodir
-set undofile
-
+"set backspace=indent,eol,start  " more powerful backspacing
+"set nu relativenumber
+"set autoindent
+"set cindent
+"set shiftwidth=2
+"set smartcase
+"set undodir
+"set undofile
 " incase search, search while i am typing ....
 set is
 
@@ -41,6 +42,11 @@ set hls
 " Set to auto read when a file is changed from the outside
 set autoread
 " au FocusGained,BufEnter * checktime
+
+
+" toggle paste mode
+set pastetoggle=<F3>
+
 
 " copy things from vim to outside ....
 "
@@ -78,22 +84,22 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
-set smarttab
+"set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+"set shiftwidth=4
+"set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+"set ai "Auto indent
+"set si "Smart indent
+"set wrap "Wrap lines
 
 
 
