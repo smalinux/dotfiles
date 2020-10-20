@@ -1,15 +1,15 @@
 # Master tools: remember!!
-yes | sudo apt-get install git # git clone https://github.com/smalinux/dotfiles.git
+yes | sudo yum install git # git clone https://github.com/smalinux/dotfiles.git
 # run command bash dotfiles.sh
 
 # Basic sys libs
 ##########
-yes | sudo apt-get install build-essential gcc make xorg xserver-xorg \
+yes | sudo yum install build-essential gcc make xorg xserver-xorg \
 	linux-headers-4.19.0-10-all-i386 firmware-linux-free mesa-utils wget\
-       	curl i3lock imagemagick feh fonts-font-awesome libx11-dev\
-	libxft-dev vim  curl mpv youtube-dl tree\
-	zathura cmake python3-dev libncurses5-dev libncursesw5-dev\
-    nnn linux-headers-`uname -r` flex bison libssl-dev libelf-dev
+       	i3lock imagemagick feh fonts-font-awesome libx11-devel\
+	vim  curl mpv youtube-dl tree\
+	zathura cmake python3-devel libncurses5-dev libncursesw5-devel\
+    nnn linux-headers-`uname -r` flex bison libssl-devel libelf-devel
 
 # wifi hotspot utils
 
@@ -20,9 +20,9 @@ yes | sudo apt-get install build-essential gcc make xorg xserver-xorg \
 # Dependencies
 ##########
 # suckless depends
-yes | sudo apt-get install libxft-dev libxinerama-dev
+yes | sudo yum install libXft-devel libXinerama-devel
 # install dwm
-yes | sudo apt-get install dwm
+yes | sudo ym install dwm
 
 
 
