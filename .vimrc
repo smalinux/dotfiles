@@ -6,13 +6,18 @@
 
 syntax on
 
+set nu relativenumber
+
+" Highlight current line
+set cursorline
+
+
 
 "set noerrorbells
 "set tabstop=4 softtabstop=4
 "set expandtab
 "set smartindent
 "set backspace=indent,eol,start  " more powerful backspacing
-"set nu relativenumber
 "set autoindent
 "set cindent
 "set shiftwidth=2
@@ -145,6 +150,46 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Cscope
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("cscope")
+        " Look for a 'cscope.out' file starting from the current directory,
+        " going up to the root directory.
+        let s:dirs = split(getcwd(), "/")
+        while s:dirs != []
+                let s:path = "/" . join(s:dirs, "/")
+                if (filereadable(s:path . "/cscope.out"))
+                        execute "cs add " . s:path . "/cscope.out " . s:path . " -v"
+                        break
+                endif
+                let s:dirs = s:dirs[:-2]
+        endwhile
+
+        set csto=0  " Use cscope first, then ctags
+        set cst     " Only search cscope
+        set csverb  " Make cs verbose
+
+        nmap `<C-\>`s :cs find s `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap `<C-\>`g :cs find g `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap `<C-\>`c :cs find c `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap `<C-\>`t :cs find t `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap `<C-\>`e :cs find e `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap `<C-\>`f :cs find f `<C-R>`=expand("`<cfile>`")`<CR>``<CR>`
+        nmap `<C-\>`i :cs find i ^`<C-R>`=expand("`<cfile>`")`<CR>`$`<CR>`
+        nmap `<C-\>`d :cs find d `<C-R>`=expand("`<cword>`")`<CR>``<CR>`
+        nmap <F6> :cnext <CR>
+        nmap <F5> :cprev <CR>
+
+        " Open a quickfix window for the following queries.
+        set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
+endif
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle plugin manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -186,9 +231,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 "
-" Dracula - Dark theme for Vim
-Plugin 'dracula/vim', { 'name': 'dracula' }
-
+" Dark theme for Vim
+Plugin 'Zenburn'
 "
 " A light and configurable statusline/tabline plugin for Vim
 Plugin 'itchyny/lightline.vim'
@@ -283,7 +327,7 @@ filetype plugin indent on    " required
 
 " Enable Dracula Theme config
 " ---------------------------
-colorscheme dracula
+colorscheme zenburn
 
 " lightline.vim config
 " --------------------
@@ -328,10 +372,20 @@ map <C-g> :Goyo<CR>
 
 
 
+" ========================================================
+" Tutorial <3
+" ========================================================
+
+" Compare two files
+"$ vimdiff file1 file2
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
 
+"
+"
 
 
 

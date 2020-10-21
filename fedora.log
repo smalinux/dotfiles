@@ -67,6 +67,7 @@ authselect
 authselect-compat
 authselect-libs
 autocorr-en
+autogen-libopts
 avahi
 avahi-glib
 avahi-libs
@@ -190,6 +191,7 @@ crypto-policies-scripts
 cryptsetup
 cryptsetup-libs
 cryptsetup-libs
+cscope
 ctags
 cups
 cups-client
@@ -508,6 +510,8 @@ gnome-weather
 gnupg2
 gnupg2-smime
 gnutls
+gnutls-dane
+gnutls-utils
 gobject-introspection
 gom
 google-crosextra-caladea-fonts
@@ -600,8 +604,10 @@ gvnc
 gzip
 harfbuzz
 harfbuzz-icu
+hexedit
 hfsplus-tools
 hicolor-icon-theme
+hivex
 hostname
 hplip
 hplip-common
@@ -902,6 +908,10 @@ libgs
 libgsf
 libgtop2
 libgudev
+libguestfs
+libguestfs-tools
+libguestfs-tools-c
+libguestfs-xfs
 libgusb
 libgusb
 libgweather
@@ -945,6 +955,7 @@ liblangtag
 liblangtag-data
 libldb
 libldb
+libldm
 liblouis
 libmad
 libmatroska
@@ -1180,9 +1191,15 @@ libvarlink-util
 libvdpau
 libverto
 libverto-libev
+libvirt
+libvirt-bash-completion
+libvirt-client
 libvirt-daemon
 libvirt-daemon-config-network
+libvirt-daemon-config-nwfilter
 libvirt-daemon-driver-interface
+libvirt-daemon-driver-libxl
+libvirt-daemon-driver-lxc
 libvirt-daemon-driver-network
 libvirt-daemon-driver-nodedev
 libvirt-daemon-driver-nwfilter
@@ -1200,6 +1217,7 @@ libvirt-daemon-driver-storage-rbd
 libvirt-daemon-driver-storage-scsi
 libvirt-daemon-driver-storage-sheepdog
 libvirt-daemon-driver-storage-zfs
+libvirt-daemon-driver-vbox
 libvirt-daemon-kvm
 libvirt-gconfig
 libvirt-glib
@@ -1321,6 +1339,7 @@ low-memory-monitor
 lpsolve
 lrzsz
 lsof
+lsscsi
 lttng-ust
 lua
 lua-expat
@@ -1374,6 +1393,7 @@ mesa-libxatracker
 mesa-vulkan-drivers
 mesa-vulkan-drivers
 microcode_ctl
+minicom
 mkpasswd
 mkpasswd
 mlocate
@@ -1537,6 +1557,7 @@ pcre2-utf32
 pcsc-lite-libs
 pcsc-lite-libs
 perl-Carp
+perl-Class-Inspector
 perl-constant
 perl-Data-Dumper
 perl-Data-Dumper
@@ -1548,12 +1569,15 @@ perl-Errno
 perl-Errno
 perl-Error
 perl-Exporter
+perl-Exporter-Tiny
 perl-File-Path
 perl-File-Path
+perl-File-ShareDir
 perl-File-Temp
 perl-Getopt-Long
 perl-Getopt-Long
 perl-Git
+perl-hivex
 perl-HTTP-Tiny
 perl-interpreter
 perl-interpreter
@@ -1561,14 +1585,18 @@ perl-IO
 perl-IO
 perl-IO-Socket-IP
 perl-IO-Socket-SSL
+perl-libintl-perl
 perl-libnet
 perl-libs
 perl-libs
+perl-List-MoreUtils
+perl-List-MoreUtils-XS
 perl-macros
 perl-macros
 perl-MIME-Base64
 perl-Mozilla-CA
 perl-Net-SSLeay
+perl-Params-Util
 perl-parent
 perl-PathTools
 perl-Pod-Escapes
@@ -1581,6 +1609,8 @@ perl-Socket
 perl-Socket
 perl-srpm-macros
 perl-Storable
+perl-Sys-Guestfs
+perl-Sys-Virt
 perl-Term-ANSIColor
 perl-Term-Cap
 perl-TermReadKey
@@ -1703,6 +1733,7 @@ python3-libreport
 python3-libs
 python3-libselinux
 python3-libsemanage
+python3-libvirt
 python3-libxml2
 python3-lockfile
 python3-louis
@@ -1780,6 +1811,7 @@ qemu-common
 qemu-guest-agent
 qemu-img
 qemu-kvm
+qemu-kvm-core
 qemu-system-x86
 qemu-system-x86-core
 qemu-ui-curses
@@ -1855,6 +1887,7 @@ sane-backends-drivers-scanners
 sane-backends-libs
 satyr
 schroedinger
+scrub
 SDL2
 SDL2-devel
 seabios-bin
@@ -1933,6 +1966,7 @@ subversion
 subversion-libs
 sudo
 suitesparse
+supermin
 sushi
 switcheroo-control
 symlinks
@@ -2025,6 +2059,10 @@ vim-minimal
 vim-minimal
 vino
 virglrenderer
+virt-install
+virt-manager
+virt-manager-common
+virt-top
 virtualbox-guest-additions
 vlc
 vlc-core
@@ -2119,6 +2157,7 @@ zathura
 zchunk-libs
 zd1211-firmware
 zenity
+zerofree
 zfs-fuse
 zimg
 zip
