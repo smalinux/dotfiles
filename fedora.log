@@ -735,6 +735,7 @@ kpartx
 krb5-libs
 krb5-workstation
 kyotocabinet-libs
+ladspa
 lame-libs
 langpacks-core-en
 langpacks-core-font-en
@@ -761,6 +762,7 @@ libasyncns
 libatasmart
 libattr
 libavc1394
+libavdevice
 libbabeltrace
 libbasicobjects
 libblkid
@@ -1343,6 +1345,7 @@ lsscsi
 lttng-ust
 lua
 lua-expat
+luajit
 lua-json
 lua-libs
 lua-libs
@@ -1415,6 +1418,7 @@ mpage
 mpfr
 mpfr
 mpg123-libs
+mpv
 mtdev
 mtools
 mtr
@@ -1487,6 +1491,7 @@ ocaml-srpm-macros
 ocl-icd
 oddjob
 oddjob-mkhomedir
+openal-soft
 openblas
 openblas
 openblas-serial
@@ -1873,6 +1878,7 @@ rp-pppoe
 rsync
 rsync
 rtkit
+rubberband
 runc
 rust-srpm-macros
 rygel
@@ -1910,6 +1916,7 @@ sil-mingzat-fonts
 sil-nuosu-fonts
 sil-padauk-fonts
 simple-scan
+simplescreenrecorder
 skkdic
 slang
 slirp4netns
@@ -2050,6 +2057,8 @@ usermode
 userspace-rcu
 utf8proc
 util-linux
+vamp-plugin-sdk
+vapoursynth-libs
 vconfig
 vid.stab
 vim-common
@@ -2091,6 +2100,7 @@ woff2
 words
 wpa_supplicant
 wpebackend-fdo
+x264-devel
 x264-libs
 x265-libs
 xapian-core-libs

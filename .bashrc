@@ -43,6 +43,10 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+
+
+
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -74,6 +78,12 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+
+
+
+
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -120,8 +130,19 @@ fi
 alias p='zathura'
 
 # package manager alieases
-alias i='sudo apt-get install'
-alias s='apt search'
-alias r='sudo apt-get remove'
+alias i='sudo yum install'
+alias s='yum search'
+alias r='sudo yum remove'
 
+alias find='find / -name'
+
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
+
+# Record screencast
+#@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+#@ Google: How to Configure Xorg as Default GNOME Session in Fedora 
+#@ https://fedoraproject.org/wiki/ScreenCasting
+alias record='simplescreenrecorder'
 
