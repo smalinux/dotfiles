@@ -128,13 +128,16 @@ fi
 
 
 alias p='zathura'
-
+alias f='sudo find . -name'
+alias ll='ls -la'
+alias ll='ls -la'
+alias rr='yes | rm -r'
+alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
 # package manager alieases
 alias i='sudo yum install'
 alias s='yum search'
 alias r='sudo yum remove'
 
-alias find='find / -name'
 
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
@@ -145,4 +148,3 @@ alias ....='cd ..; cd ..; cd ..'
 #@ Google: How to Configure Xorg as Default GNOME Session in Fedora 
 #@ https://fedoraproject.org/wiki/ScreenCasting
 alias record='simplescreenrecorder'
-
