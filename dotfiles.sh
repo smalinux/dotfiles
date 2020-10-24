@@ -1,45 +1,13 @@
-# Master tools: remember!!
-yes | sudo yum install git # git clone https://github.com/smalinux/dotfiles.git
-# run command bash dotfiles.sh
-
-# Basic sys libs
-##########
-yes | sudo yum install build-essential gcc make xorg xserver-xorg \
-	linux-headers-4.19.0-10-all-i386 firmware-linux-free mesa-utils wget\
-       	i3lock imagemagick feh fonts-font-awesome libx11-devel\
-	vim  curl mpv youtube-dl tree\
-	zathura cmake python3-devel libncurses5-dev libncursesw5-devel\
-    nnn linux-headers-`uname -r` flex bison libssl-devel libelf-devel
-
-# wifi hotspot utils
-
-
-# My Tools
-##########
-
-# Dependencies
-##########
-# suckless depends
-yes | sudo yum install libXft-devel libXinerama-devel
-# install dwm
-yes | sudo ym install dwm
-
-
-
 # Linking my most important files ...
 ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
 ln -sf ~/dotfiles/man.txt ~/man.txt
 ln -sf ~/dotfiles/notes.txt ~/notes.txt
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/update.sh ~/update.sh
+ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 
-
-
-# Download my main tools
-
-# 1- suckless
-
-# mkdir ~/bin/
-# cd ~/dotfiles/suckless/dwm && make && make  install
-# cd ~/dotfiles/suckless/st && make && make install
+# Suckless
 cd ~
 ln -sf ~/dotfiles/suckless/dwm ~/bin/dwm
 ln -sf ~/dotfiles/suckless/st ~/bin/st
@@ -49,40 +17,9 @@ ln -sf ~/dotfiles/suckless/dmenu/dmenu_run ~/bin/dmenu_run
 ln -sf ~/dotfiles/suckless/dmenu/dmenu_path ~/bin/dmenu_path
 ln -sf ~/dotfiles/suckless/dmenu/stest ~/bin/stest
 
-
-
-####### update my dotfiles script 
-ln -sf ~/dotfiles/update.sh ~/update.sh
-
-
-
-
-
-
-
-########### ~/.vimrc
-cd ~
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-
-########### ~/.bashrc
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-
-
-
-
-######### my custom keyboard settings
-ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
-
-
-
-
-
 # install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-
-
 
 # Installing all vim plugins and quit.
 vim +PluginInstall +qall # KEEB THIS LINE ALWAYS LAST LINE !
