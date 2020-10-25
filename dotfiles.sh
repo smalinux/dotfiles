@@ -1,3 +1,8 @@
+#!/bin/sh
+
+# Mute Gnome alerts
+gsettings set org.gnome.desktop.sound event-sounds false
+
 # Linking my most important files ...
 ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
 ln -sf ~/dotfiles/man.txt ~/man.txt

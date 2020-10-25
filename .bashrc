@@ -137,6 +137,7 @@ alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
 alias i='sudo yum install'
 alias s='yum search'
 alias r='sudo yum remove'
+alias k='cd ~smalinux/linux-kernel-module-cheat/'
 
 
 alias ..='cd ..'
