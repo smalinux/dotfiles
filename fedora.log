@@ -93,6 +93,7 @@ bind-license
 bind-license
 bind-utils
 binutils
+binutils-aarch64-linux-gnu
 binutils-arm-linux-gnu
 binutils-gold
 bison
@@ -410,8 +411,11 @@ gavl
 gawk
 gc
 gcc
+gcc-aarch64-linux-gnu
 gcc-arm-linux-gnu
 gcc-c++
+gcc-c++-aarch64-linux-gnu
+gcc-c++-arm-linux-gnu
 gcc-gdb-plugin
 GConf2
 gcr
