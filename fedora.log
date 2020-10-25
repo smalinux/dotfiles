@@ -645,7 +645,6 @@ hplip
 hplip-common
 hplip-common
 hplip-libs
-htop
 httpd
 httpd-filesystem
 httpd-filesystem
