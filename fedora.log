@@ -149,6 +149,7 @@ checkpolicy
 cheese
 cheese-libs
 chkconfig
+chmlib
 chrome-gnome-shell
 chrony
 chrpath
@@ -527,12 +528,14 @@ gnome-shell-extension-common
 gnome-shell-extension-horizontal-workspaces
 gnome-shell-extension-launch-new-instance
 gnome-shell-extension-places-menu
+gnome-shell-extension-user-theme
 gnome-shell-extension-window-list
 gnome-software
 gnome-system-monitor
 gnome-terminal
 gnome-terminal-nautilus
 gnome-themes-extra
+gnome-tweaks
 gnome-user-docs
 gnome-user-docs
 gnome-user-share
@@ -778,7 +781,6 @@ kpartx
 krb5-libs
 krb5-workstation
 kyotocabinet-libs
-ladspa
 lame-libs
 langpacks-core-en
 langpacks-core-font-en
@@ -808,7 +810,6 @@ libatasmart
 libattr
 libattr-devel
 libavc1394
-libavdevice
 libbabeltrace
 libbasicobjects
 libblkid
@@ -1422,7 +1423,6 @@ lsscsi
 lttng-ust
 lua
 lua-expat
-luajit
 lua-json
 lua-libs
 lua-libs
@@ -1491,7 +1491,6 @@ mpage
 mpfr
 mpfr
 mpg123-libs
-mpv
 mtdev
 mtools
 mtr
@@ -1570,7 +1569,6 @@ ocaml-srpm-macros
 ocl-icd
 oddjob
 oddjob-mkhomedir
-openal-soft
 openblas
 openblas
 openblas-serial
@@ -2099,7 +2097,6 @@ rr
 rsync
 rsync
 rtkit
-rubberband
 runc
 rust-srpm-macros
 rygel
@@ -2288,8 +2285,6 @@ usermode
 userspace-rcu
 utf8proc
 util-linux
-vamp-plugin-sdk
-vapoursynth-libs
 vconfig
 vid.stab
 vim-common
@@ -2335,6 +2330,9 @@ woff2
 words
 wpa_supplicant
 wpebackend-fdo
+wxBase3
+wxGTK3
+wxGTK3-i18n
 x264-devel
 x264-libs
 x265-libs
@@ -2344,6 +2342,7 @@ xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
+xchm
 xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gtk

@@ -129,9 +129,9 @@ fi
 
 alias p='zathura'
 alias f='sudo find . -name'
-alias ll='ls -la'
-alias ll='ls -la'
 alias rr='yes | rm -r'
+alias ll='ls -la'
+alias ll='ls -la'
 alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
 # package manager alieases
 alias i='sudo yum install'
