@@ -129,7 +129,6 @@ fi
 
 alias p='zathura'
 alias f='sudo find . -name'
-alias rr='yes | rm -r'
 alias ll='ls -la'
 alias ll='ls -la'
 alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
@@ -149,3 +148,7 @@ alias ....='cd ..; cd ..; cd ..'
 #@ Google: How to Configure Xorg as Default GNOME Session in Fedora 
 #@ https://fedoraproject.org/wiki/ScreenCasting
 alias record='simplescreenrecorder'
+
+
+
+alias R='yes | rm -r'
