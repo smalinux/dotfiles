@@ -26,6 +26,22 @@ set cursorline
 " incase search, search while i am typing ....
 set is
 
+"# useful when split vim windows 
+":vsp [filename] & ctl w v
+":sp [filename] & ctrl w n
+set splitbelow splitright
+
+"# Shortcut split navigation, ctl+[h/j/k/l]
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Re-arrange my most used symbols
+inoremap <CAPS> <BS>
+
+
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 

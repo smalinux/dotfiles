@@ -1,15 +1,17 @@
-
-
-! -*- coding: utf-8 -*-
-! ! make f1 f2 f3 do cut copy paste
+! Re-arrenge most used symbols
+! Ex: make shift-p be (
+! etc,,,
+keysym P = p parenleft	
+keysym T = t asciitilde
+keysym E = e equal
+keysym A = a asterisk
+keysym H = h numbersign
+keysym K = k braceleft
+keysym B = b bracketleft
+keysym N = n exclam
 !
-! ! keycode  68 = F2 F2 F2 F2 F2 F2 XF86Switch_VT_2
-! ! keycode  69 = F3 F3 F3 F3 F3 F3 XF86Switch_VT_3
-! ! keycode  70 = F4 F4 F4 F4 F4 F4 XF86Switch_VT_4
-!
-keycode  68 = XF86Cut F2 F2 F2 F2 F2 XF86Switch_VT_2
-keycode  69 = XF86Copy F3 F3 F3 F3 F3 XF86Switch_VT_3
-keycode  70 = XF86Paste F4 F4 F4 F4 F4 XF86Switch_VT_4
-
-keycode  17 = 1 asterisk 1 asterisk
-keycode  10 = 8 exclam 8 exclam
+! Swap Caps_Lock and BackSpace
+remove Lock = Caps_Lock
+keysym BackSpace = Caps_Lock
+keysym Caps_Lock = BackSpace
+add Lock = Caps_Lock
