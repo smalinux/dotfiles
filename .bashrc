@@ -152,3 +152,5 @@ alias record='simplescreenrecorder'
 
 
 alias R='yes | rm -r'
+alias map='xmodmap dotfiles/.Xmodmap'
+alias mapo='xmodmap dotfiles/xmodmap_original'
