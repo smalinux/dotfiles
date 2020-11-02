@@ -11,7 +11,7 @@ keysym B = b bracketleft
 keysym N = n exclam
 !
 ! Swap Caps_Lock and BackSpace
+!
 remove Lock = Caps_Lock
-keysym BackSpace = Caps_Lock
-keysym Caps_Lock = BackSpace
-add Lock = Caps_Lock
+keycode 66 = BackSpace
+keycode 22 = Caps_Lock
