@@ -5,6 +5,7 @@ gsettings set org.gnome.desktop.sound event-sounds false
 
 # Linking my most important files ...
 ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
+ln -sf ~/dotfiles/fun.txt ~/fun.txt
 ln -sf ~/dotfiles/man.txt ~/man.txt
 ln -sf ~/dotfiles/notes.txt ~/notes.txt
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
