@@ -275,7 +275,7 @@ Plugin 'itchyny/lightline.vim'
 
 "
 " A tree explorer plugin for vim.
-Plugin 'preservim/nerdtree'
+" Plugin 'preservim/nerdtree'
 
 "
 " EditorConfig plugin for Vim
@@ -364,7 +364,7 @@ let g:lightline = {
       \ }
 
 " NERDTree Config
-map <C-o> :NERDTreeToggle<CR>
+" map <C-o> :NERDTreeToggle<CR>
 
 " Rainbow brackets config ({{{{}}}})
 let g:rainbow_active = 1
