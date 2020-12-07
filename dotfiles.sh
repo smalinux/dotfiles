@@ -8,6 +8,7 @@ ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
 ln -sf ~/dotfiles/fun.txt ~/fun.txt
 ln -sf ~/dotfiles/man.txt ~/man.txt
 ln -sf ~/dotfiles/notes.txt ~/notes.txt
+ln -sf ~/dotfiles/linux-cute-dever.adoc ~/linux-cute-dever.adoc
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/update.sh ~/update.sh
