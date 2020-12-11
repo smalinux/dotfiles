@@ -1,9 +1,0 @@
-[Unit]
-Description=Change login tty number.
-
-[Service]
-Type=idle
-ExecStart=/home/smalinux/bin/change.login.tty
-
-[Install]
-WantedBy=multi-user.target 
