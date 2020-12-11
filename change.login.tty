@@ -1,0 +1,4 @@
+#!/bin/bash
+# This changes the login tty #
+
+chvt 7

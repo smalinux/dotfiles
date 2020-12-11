@@ -2,6 +2,8 @@
 
 # Mute Gnome alerts
 gsettings set org.gnome.desktop.sound event-sounds false
+cd ~
+mkdir bin
 
 # Linking my most important files ...
 ln -sf ~/dotfiles/bookmark.txt ~/bookmark.txt
@@ -14,6 +16,7 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/update.sh ~/update.sh
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
+
 
 # Suckless
 cd ~

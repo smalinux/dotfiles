@@ -604,6 +604,7 @@ gstreamer1-plugins-ugly-free
 gtk2
 gtk3
 gtk3-devel
+gtkmm24
 gtkmm30
 gtksourceview4
 gtk-update-icon-cache
@@ -1522,6 +1523,7 @@ nfs-utils
 nftables
 nftables
 nim-srpm-macros
+nitrogen
 nmap-ncat
 nmap-ncat
 nm-connection-editor
@@ -2071,6 +2073,20 @@ rr
 rsync
 rsync
 rtkit
+ruby
+ruby-default-gems
+rubygem-asciidoctor
+rubygem-bigdecimal
+rubygem-bundler
+rubygem-io-console
+rubygem-irb
+rubygem-json
+rubygem-openssl
+rubygem-psych
+rubygem-rdoc
+rubygems
+ruby-libs
+rubypick
 runc
 rust-srpm-macros
 rygel
