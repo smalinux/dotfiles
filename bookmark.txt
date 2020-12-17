@@ -10,3 +10,31 @@ https://www.youtube.com/channel/UCToFb-mcTsoyyf3muma9r9w/videos
 https://www.youtube.com/c/KrisOcchipinti/videos
 https://www.youtube.com/c/NicholasBernstein/playlists
 https://wiki.installgentoo.com/index.php/PCI_passthrough
+
+Podcasts:
+	https://attiamo.me/podcasts/?fbclid=IwAR2occ40hCXEndQmA5_HI3zBR5XgRa6RujZKvEpSBxtEfSXNHnTrYypWpxU
+
+Funny videos:
+	https://www.youtube.com/c/HackersGameTube/videos
+	https://www.youtube.com/user/BadEditPro/videos
+
+Conf:
+	linux.conf.au
+	https://www.youtube.com/c/linuxconfau/videos
+
+Book:
+	The Unix-Haters Handbook
+
+fedoramagazine
+	https://fedoramagazine.org/
+
+Cute blog:
+	https://blogs.igalia.com/itoral/
+
+
+
+
+
+
+
+
