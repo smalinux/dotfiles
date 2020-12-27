@@ -1,0 +1,32 @@
+xauth:  file /home/smalinux/.serverauth.14751 does not exist
+
+
+X.Org X Server 1.20.9
+X Protocol Version 11, Revision 0
+Build Operating System:  5.8.7-200.fc32.x86_64 
+Current Operating System: Linux dhcppc9 5.9.0-11953-g7cf726a59435-dirty #5 SMP Fri Oct 23 08:24:22 EET 2020 x86_64
+Kernel command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-5.9.0-11953-g7cf726a59435-dirty root=/dev/mapper/fedora_localhost--live-root ro modprobe.blacklist=xhci_hcd
+Build Date: 08 October 2020  12:00:00AM
+Build ID: xorg-x11-server 1.20.9-1.fc32 
+Current version of pixman: 0.40.0
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/home/smalinux/.local/share/xorg/Xorg.2.log", Time: Thu Dec 17 07:36:47 2020
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+xf86EnableIOPorts: failed to set IOPL for I/O (Operation not permitted)
+(II) [KMS] Kernel modesetting enabled.
+(II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Internal error:   Could not resolve keysym XF86FullScreen
+Errors from xkbcomp are not fatal to the X server
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Internal error:   Could not resolve keysym XF86FullScreen
+Errors from xkbcomp are not fatal to the X server
+xinit: connection to X server lost
+
+waiting for X server to shut down (II) Server terminated successfully (0). Closing log file.
+

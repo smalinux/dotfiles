@@ -9,3 +9,21 @@ git add .
 git commit -m "Update"
 git push origin master
 # EOF
+
+# what
+cd /home/smalinux/what-I-learned-today
+git push
+
+cd /home/smalinux/gittutorial
+git push
+
+cd /home/smalinux/my-modules
+git push
+
+cd /home/smalinux/linux_hacking
+git push
+
+cd /home/smalinux/swm
+git push
+
+
