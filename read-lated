@@ -1,0 +1,56 @@
+Unreliable Guide To Hacking The Linux Kernel
+https://people.netfilter.org/rusty/unreliable-guides/kernel-hacking/lk-hacking-guide.html
+-
+workqueue_struct simple example
+https://gist.github.com/yagihiro/309746
+-
+Practical Device Drivers Tutorial
+https://embetronicx.com/tutorials/linux/device-drivers/usb-device-driver-example/
+-
+Binding & unbinding
+https://lwn.net/Articles/143397/
+-
+mail: Input device driver
+http://lists.kernelnewbies.org/pipermail/kernelnewbies/2017-September/018280.html
+-
+How programs get run: ELF binaries
+https://lwn.net/Articles/631631/
+-
+debug linux kernel with gdb and qumeu
+https://stackoverflow.com/questions/11408041/how-to-debug-the-linux-kernel-with-gdb-and-qemu/33203642#33203642
+-
+How programs get run
+https://lwn.net/Articles/630727/
+-
+https://sysplay.github.io/books/LinuxDrivers/book/index.html
+-
+Missing semester : very interesting course about Vim and other things ...
+https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J
+-
+Custom input layout 
+https://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-keyboard-layout-definition
+https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450
+https://superuser.com/questions/576599/creating-a-custom-input-method
+-
+vim
+https://vi.stackexchange.com/questions/10296/navigation-in-insert-mode
+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

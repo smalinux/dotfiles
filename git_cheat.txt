@@ -1,0 +1,399 @@
+
+
+BRANCH & MERGE
+===============================================================================
+Isolating work in branches, changing context, and integrating changes
+
+Branching basics
+===================
+git branch					list your branches. a * will appear next to the currently active branch
+git branch [branch-name]			create a new branch at the current commit
+git checkout 					switch to another branch and check it out into your working directory
+git merge [branch]				merge the specified branch’s history into the current one
+git log						show all commits in the current branch’s history
+
+git branch -m <oldname> <newname>		rename local branch
+git branch -m <newname>				will change current branch name
+
+
+Branching & merging
+===================
+git checkout master				Sit in your base branch 
+git merge hotfix				merge hotfix branch to master(base branch)
+git branch -d hotfix				delete hotfix branch because you don't need it any more
+
+
+
+
+
+
+
+git switch [duplicated by checkout]
+===============================================================================
+git switch <testing-branch>
+	Switch to an existing branch
+git switch -c <new-branch>
+	Create a new branch and switch to it
+git switch -
+	Return to your previously checked out branch
+
+
+
+
+
+
+git checkout
+===============================================================================
+git checkout -b <newbranchname>
+	create a new branch and want to switch to that new branch at the same time.
+
+
+git branch
+===============================================================================
+git branch					list all branchs
+git branch <b_name>				Create branch
+git branch -b <b_name>				Delete branch
+git branch --move <old> <new>
+git push --set-upstream origin main		This makes the renamed branch available on the remote.
+
+
+git config (man git-config)
+===============================================================================
+git config --global core.editor 		read value from config
+git config --global core.editor vim		write value ,,,
+git confing --list				list all my configuration
+
+=== help levels
+git config --list --help 			help for --list level
+git config --help				help for config level
+git --help					help for git level
+
+
+
+
+git log
+===============================================================================
+git log --oneline --decorate
+	shows you where the branch pointers are pointing.
+
+
+
+
+
+Merge tools
+===============================================================================
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse 
+diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff
+
+
+Remote Branches
+===============================================================================
+git branch branchname <sha1-of-commit>		I can make branch from anywhere
+						https://stackoverflow.com/a/2816728/5688267
+						https://stackoverflow.com/a/8491176/5688267
+
+
+git status vs git diff
+======================
+git status === what's up, are there any changes?
+git diff === show my all changes line by line?
+
+
+HEAD === where I exist.
+
+
+git diff					before git add.
+						Show my unstaged changes, please.
+						I love diff, git status shows me quick info,
+						But diff shows diff.
+						https://stackoverflow.com/a/35978722/5688267
+
+git diff --staged 				After git add, before commit.
+						things will add to next commit.
+
+git diff HEAD					everything changed since last commit.
+
+git difftool 					my love!
+						git diff attribute === git difftool 
+						I use tools for diff because it's hard to move between diffs.
+						I like meld more than vimdiff.
+						$ git config --local diff.tool meld
+						https://stackoverflow.com/a/3395497/5688267
+						Skipped: https://youtu.be/duqBHik7nRo?t=2690
+
+Compare two branches[i write it down]
+
+
+git bisect trick
+==================
+Skipped part: https://youtu.be/duqBHik7nRo?t=2892
+Google
+
+
+git submodules
+==================
+Skipped part: https://youtu.be/duqBHik7nRo
+
+
+Google: gitk other tool than
+
+
+=======
+PR == Pull Request ))
+=======
+
+
+Google: git list all branches
+Google: git checkout vs switch
+Google: git merge rerere - enble rerere
+Google: undo in git
++++++++++++++++++++++++++++++++
+
+
+Mom, what’s happening?!
+git status, what’s happening?!
+
+git add . for losers.
+Try, git add -p					Pick specific changes, so
+						You can create really good commit without 
+						A Lot of thinking. 
+						You're craftspeople.
+						You make it. Make it awesome. 
+
+git reset					undo git add -p
+						for losers. try: git reset -p
+
+git reset --hard 2343 				Time machine!
+						remove all commits from 2343
+						move HEAD to 2343
+						F. 
+						https://stackoverflow.com/a/9530204/5688267
+
+git reset HEAD~1				undo last commit
+
+git log --oneline --decorate --all --graph 	my love!
+
+git log --oneline --all --graph --grep="C1" 	F***, I can search by anything!
+
+git merge --abort 				for mother f*&^
+
+
+rebase
+===============================================================================
+so imagine this
+situation we've got the master Brown
+develop or whatever your main line is
+and we're happily developing along and
+then somebody branches and does some work.
+great!
+Sometimes you want to rebase. We might rebase
+because there’s a conflict. 
+we might rebase because we like to rewrite the history
+and make our history look like a happy story where nothing ever goes wrong.
+either way this is what happens!
+
+at a time if your rebasing because you're you have a branch that
+won't cleanly merge ie: there's a
+conflict you're going to see a conflict
+when you do the rebase.
+the good news you know how to resolve conflicts a rebase
+conflict sounds pretty horrifying right
+get status will show you what conflicted you will inspect it
+you will fix it you will add it the only
+difference insert is that instead of
+running it commit at the end you run: git rebase - - continue
+and get status tells
+you that's what you should run next so
+don't be freaked out with that because
+it's super easy ok.
+
+===============================================================================
+
+Git Aliases
+================
+git config alias.l '!ls'						# git l
+git config alias.g "log --all --decorate --oneline --graph"		# git g
+
+
+supplementary tools:
+========================
+https://github.com/tj/git-extras
+https://github.com/github/hub
+
+
+delete a Git branch locally and remotely
+[https://stackoverflow.com/a/23961231/5688267]
+[branch -d] vs [push origin --d]
+=============================================
+locally: 
+$ git branch -d <branch_name>
+
+remotely: 
+===
+Option 1:
+$ git push -d origin <branch_name>
+
+Option 2:
+$ git push <remote_name> -d <branch_name>
+
+
+Rename remote branch
+[https://stackoverflow.com/a/30590238/5688267]
+=============
+
+
+
+Don't do this command -_- -_- -_-!!!
+=============================================
+git push -f --mirror 			Stupied command will sync all local branches with remote.
+					In most cases you don't need that.
+					I need some privacy! -_-
+
+
+Hard core rm!! F*&^
+How Remove Files completely from git repository history
+[https://stackoverflow.com/a/52643437/5688267]
+===============================================================================
+if you want remove entirely from the repository’s history then you need to run couple of commands.
+
+It took some trial and error for me to find something that worked for me
+
+1. Find out the path fo the file in your repo
+2. Execute Below command with file path
+
+$ git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
+
+It’s a time intensive task might takes good amount of time to complete.
+As it has to check each commit and remove. 
+For my repo which is ~10 years old took almost 10hours with 90K commits.
+
+If you want to push it to remote repo just do git push:
+	$ git push -all
+
+See also: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository
+
+
+git pull vs git fetch
+===============================================================================
+You love images, I know
+https://stackoverflow.com/a/30733500/5688267
+https://stackoverflow.com/a/34998582/5688267
+
+1. Update your local repo from the remote (but don't merge):
+	$ git fetch
+2. After downloading the updates, let's see the differences:
+	$ git diff master origin/master 
+3. If you're happy with those updates, then merge:
+	$ git pull
+
+
+
+Now I can merge two diffrante repo
+[https://stackoverflow.com/q/37937984/5688267]
+here I can merge only, NOT rebase.
+Thanks for god, there exist such solution.
+Sorry, your history not 100% clean & strightforward. (------>>------>>------>>)
+===============================================================================
+git remote add new-origin <repository url>
+git pull new-origin master --allow-unrelated-histories
+==========================
+*   f27c107 (HEAD -> master) Merge branch 'master' of https://github.com/smalinux/new-repo
+|\  
+| * 67c2685 (new-repo/master) commit 3 from new repo
+| * fc756d2 commit 3 from new repo 
+| * e6111e4 commit 2 from new repo 
+| * de4d84f commit 1 from new repo
+* 45baeb7 commit 1 from old repo
+* 45baeb7 commit 2 from old repo
+* 45baeb7 commit 3 from old repo
+
+
+
+
+[diff] Comparing two branches in Git
+[https://stackoverflow.com/a/9834872/5688267]
+===============================================================================
+git diff branch1..branch2
+
+Compare spacific file between two branches:
+	$git diff branch1..branch2 your_file
+
+Compare local vs remote branch:
+	$git diff remotes/origin/some-branch my-local-branch 
+
+Compares the checked out branch to branch_2:
+	$git diff ..branch_2
+
+get list of changed files only:
+1. try:
+	$git diff master..branch | grep "^diff"
+2. or formal way:
+	$git diff --name-status firstbranch..yourBranchName
+
+
+
+merge forward
+[https://www.atlassian.com/git/tutorials/using-branches/git-merge]
+git merge <master> <new-branch>
+===============================================================================
+# Start a new feature
+	$git checkout -b new-feature master
+# Edit some files
+	$git add <file>
+	$git commit -m "Start a feature"
+# Edit some files
+	$git add <file>
+	$git commit -m "Finish a feature"
+# Merge in the new-feature branch
+	$git checkout master
+	$git merge new-feature
+	$git branch -d new-feature
+
+
+
+[undo] git undo all uncommitted or unsaved changes
+[https://stackoverflow.com/a/14075772/5688267]
+later read: https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/
+===============================================================================
+1. This will unstage all files you might have staged with git add:
+	$git reset
+
+2.0 This will revert all local uncommitted changes (should be executed in repo root):
+	$git checkout .
+
+2.1 You can also revert uncommitted changes only to particular file or directory:
+	$git checkout [some_dir|file.txt]
+
+2.2 Yet another way to revert all uncommitted changes (longer to type, but works from any subdirectory):
+	$git reset --hard HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
