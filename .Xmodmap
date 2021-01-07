@@ -1,17 +1,4 @@
-! Re-arrenge most used symbols
-! Ex: make shift-p be (
-! etc,,,
-! keysym P = p parenleft	
-! keysym T = t asciitilde
-! keysym E = e equal
-! keysym A = a asterisk
-! keysym H = h numbersign
-! keysym K = k braceleft
-! keysym B = b bracketleft
-! keysym N = n exclam
-!
-! Swap Caps_Lock and BackSpace
-!
 remove Lock = Caps_Lock
-keycode 66 = BackSpace
-keycode 22 = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
