@@ -36,4 +36,10 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall # KEEB THIS LINE ALWAYS LAST LINE !
 ### END OF FILE 
 
-sudo yum install qemu nasm
+# fedora yum dependencies
+sudo chmod +x ~/dotfiles/yum.sh
+sudo sh ~/dotfiles/yum.sh
+
+# .git config
+sudo chmod +x ~/dotfiles/git.sh
+sh ~/dotfiles/git.sh
