@@ -43,3 +43,11 @@ sudo sh ~/dotfiles/yum.sh
 # .git config
 sudo chmod +x ~/dotfiles/git.sh
 sh ~/dotfiles/git.sh
+
+# Remove user passwd to speed ur work
+# https://www.google.com/search?q=fedora+change+passwd+user+to+empty
+echo "========================================================================"
+echo "========== IF you want to speed you work >> remove usr passwd =========="
+echo "sudo passwd -r root"
+echo "sudo passwd -r -f -u smalinux"
+echo "========================================================================"
