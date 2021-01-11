@@ -35,3 +35,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Installing all vim plugins and quit.
 vim +PluginInstall +qall # KEEB THIS LINE ALWAYS LAST LINE !
 ### END OF FILE 
+
+sudo yum install qemu nasm
