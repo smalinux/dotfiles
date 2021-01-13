@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yes | sudo yum install qemu nasm
+yes | sudo yum install qemu nasm libmpc-devel
 yes | su -c "yum install gparted"
 yes | sudo dnf install gcc make bison openssl-devel elfutils-libelf-devel snapd
 sudo ln -s /var/lib/snapd/snap /snap

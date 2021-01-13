@@ -128,8 +128,10 @@ fi
 
 
 alias p='zathura'
+# $ f
+# $ F
 alias f='sudo find . -name'
-alias ll='ls -la'
+alias F='sudo find / -name'
 alias ll='ls -la'
 alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
 # package manager alieases
@@ -155,3 +157,10 @@ alias R='yes | rm -r'
 alias map='xmodmap dotfiles/.Xmodmap'
 alias mapo='xmodmap dotfiles/xmodmap_original'
 alias out="gnome-session-quit --logout"
+
+##### git aliases
+alias statpatch='git apply --stat'
+alias checkpatch='git apply --check'
+alias applypatch='git am --signoff'
+alias getpatch='git am --signoff'
+alias getpatch='git am --signoff'

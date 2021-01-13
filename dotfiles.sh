@@ -51,3 +51,11 @@ echo "========== IF you want to speed you work >> remove usr passwd =========="
 echo "sudo passwd -r root"
 echo "sudo passwd -r -f -u smalinux"
 echo "========================================================================"
+# Fuck off mouse! I will never to back again! I'm vimmer who use GUI
+#   with keyboard ONLY!..........
+echo "Please if you are moving between pysical an virtul vmware, to this:"
+echo "	VMware > edit > preferences > input"
+echo "		<check> grap keyboard and mouse on key click"
+echo "========================================================================"
+
+sh ~/dotfiles/VMware.sh
