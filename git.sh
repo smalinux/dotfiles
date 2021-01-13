@@ -7,6 +7,9 @@
 #$ applypatch	- apply the patch to ,,,
 #$ getpatch 	- make patch from last commit
 
+#$ git grep --files-with-match <pattern>
+#	I love this. list all filenames only that match this "pattern"
+
 git config --global user.name "Sohaib Mohammed"
 git config --global user.email sohaibfacebook396@gmail.com
 git config --global core.editor vim

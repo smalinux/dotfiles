@@ -255,10 +255,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 "
 " Dark theme for Vim
-Plugin 'Zenburn'
+"Plugin 'Zenburn'
+
 "
 " A light and configurable statusline/tabline plugin for Vim
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 
 "
 " terryma/vim-multiple-cursors
@@ -322,7 +323,19 @@ Plugin 'junegunn/goyo.vim'
 " vimWiki
 Plugin 'vimwiki/vimwiki'
 
+"
+"Cool statusline
+Plugin 'vim-airline/vim-airline' 
 
+"
+"Airline themes
+Plugin 'vim-airline/vim-airline-themes' 
+"Nice theme
+Plugin 'notpratheek/vim-luna' 
+
+"youcompleteme
+Plugin 'oblitum/youcompleteme'
+let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 
 
 
@@ -351,7 +364,7 @@ filetype plugin indent on    " required
 
 " Enable Dracula Theme config
 " ---------------------------
-colorscheme zenburn
+"colorscheme zenburn
 
 " lightline.vim config
 " --------------------
@@ -388,6 +401,12 @@ map <C-g> :Goyo<CR>
 
 
 
+"Theming
+syntax enable
+colorscheme luna-term
+let g:airline_theme='luna'
+let g:airline_powerline_fonts=1 "Requires powerline fonts!
+set cursorline
 
 
 

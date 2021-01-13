@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# fedora yum dependencies
+sudo chmod +x ~/dotfiles/yum.sh
+sudo sh ~/dotfiles/yum.sh
+
+# .git config
+sudo chmod +x ~/dotfiles/git.sh
+sh ~/dotfiles/git.sh
+
 # Mute Gnome alerts
 gsettings set org.gnome.desktop.sound event-sounds false
 cd ~
@@ -31,18 +39,11 @@ ln -sf ~/dotfiles/suckless/dmenu/stest ~/bin/stest
 # install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 # Installing all vim plugins and quit.
 vim +PluginInstall +qall # KEEB THIS LINE ALWAYS LAST LINE !
+cd ~/.vim/bundle/youcompleteme && ./install.py --clang-completer && python install.py
 ### END OF FILE 
 
-# fedora yum dependencies
-sudo chmod +x ~/dotfiles/yum.sh
-sudo sh ~/dotfiles/yum.sh
-
-# .git config
-sudo chmod +x ~/dotfiles/git.sh
-sh ~/dotfiles/git.sh
 
 # Remove user passwd to speed ur work
 # https://www.google.com/search?q=fedora+change+passwd+user+to+empty
@@ -58,4 +59,10 @@ echo "	VMware > edit > preferences > input"
 echo "		<check> grap keyboard and mouse on key click"
 echo "========================================================================"
 
+# VMware related stuff
 sh ~/dotfiles/VMware.sh
+
+
+echo "ToDO:"
+echo "Google: vim youcompleteme linux kernel" # how to use ycm plugin with kernel
+echo "that's it!"
