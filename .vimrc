@@ -337,7 +337,9 @@ Plugin 'notpratheek/vim-luna'
 Plugin 'oblitum/youcompleteme'
 let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 
-
+"
+" ctags
+Plugin 'ludovicchabant/vim-gutentags'
 
 
 " ==========================================================
@@ -424,12 +426,24 @@ set cursorline
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+"[gutentags] Don't pollute project dirs
+let g:gutentags_cache_dir = '~/.vim/tags/'
+set statusline+=%{gutentags#statusline()}
 
 
-
-"
-"
-
+"Buttons for going to previous/next file (buffer)
+map <F2> :bprevious<CR>
+map <F3> :bnext<CR>
+"Show a list of files (buffers) that are open
+map <F4> :buffers<CR>
+"Yank (copy) contents of current file (buffer) - also to X11 clipboard
+map <F5> :%y+<CR>
+"Show name of file and path relative to current working directory
+map <F6> :echo @%<CR>
+"Show current working directory
+map <F7> :pwd<CR>
+"Close current buffer
+map <F12> :bd!<CR>
 
 
 

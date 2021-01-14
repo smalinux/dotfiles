@@ -15,5 +15,9 @@ git config --global user.email sohaibfacebook396@gmail.com
 git config --global core.editor vim
 git config --global alias.g 'log --oneline --decorate --graph --all'
 
+git config --global alias.ack '-c color.grep.linenumber="bold yellow"
+ 	-c color.grep.filename="bold green"
+	-c color.grep.match="reverse yellow"
+	grep --break --heading --line-number'
 #$ show		- How to see the command attached to a bash alias?
 #		- see: https://askubuntu.com/a/103524

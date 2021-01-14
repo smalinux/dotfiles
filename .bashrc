@@ -164,3 +164,12 @@ alias checkpatch='git apply --check'
 alias applypatch='git am --signoff'
 alias getpatch='git am --signoff'
 alias getpatch='git am --signoff'
+
+# use vim keybinding in bash
+set -o vi
+# powerline for bash
+# Add this to your PATH if it’s not already declared
+export PATH=$PATH:$HOME/.local/bin
+export VISUAL=/usr/bin/vim
+export EDITOR=/usr/bin/vim
+

@@ -65,4 +65,6 @@ sh ~/dotfiles/VMware.sh
 
 echo "ToDO:"
 echo "Google: vim youcompleteme linux kernel" # how to use ycm plugin with kernel
+
+
 echo "that's it!"
