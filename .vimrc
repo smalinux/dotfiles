@@ -25,6 +25,7 @@ set cursorline
 "set undofile
 " incase search, search while i am typing ....
 set is
+:set autoread | au CursorHold * checktime | call feedkeys("lh")
 
 "# useful when split vim windows 
 ":vsp [filename] & ctl w v
@@ -341,6 +342,10 @@ let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 " ctags
 Plugin 'ludovicchabant/vim-gutentags'
 
+"
+"auto-load
+Plugin 'djoshea/vim-autoread'
+
 
 " ==========================================================
 
@@ -446,7 +451,7 @@ map <F7> :pwd<CR>
 map <F12> :bd!<CR>
 
 
-
-
-
+" copy to ...
+vnoremap <C-c> "+y
+map <C-v> "+P
 

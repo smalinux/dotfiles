@@ -165,11 +165,19 @@ alias applypatch='git am --signoff'
 alias getpatch='git am --signoff'
 alias getpatch='git am --signoff'
 
-# use vim keybinding in bash
+# vi-mode in bash
 set -o vi
 # powerline for bash
 # Add this to your PATH if it’s not already declared
 export PATH=$PATH:$HOME/.local/bin
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
+# https://unix.stackexchange.com/a/104101/265591
+# clear screen: Ctrl+l
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+# 
+bind -m vi-insert 'Control-p: previous-history'
+bind -m vi-insert 'Control-n: next-history'
+# end: vi-mode
 
