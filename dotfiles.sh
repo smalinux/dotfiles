@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # fedora yum dependencies
 sudo chmod +x ~/dotfiles/yum.sh
 sudo sh ~/dotfiles/yum.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yes | sudo yum install qemu nasm libmpc-devel cmake ack
+yes | sudo yum install qemu nasm libmpc-devel cmake ack vim
 
 # Start PCP preformance Copilot
 # As you see, PCP my be blooted. 
