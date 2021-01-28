@@ -13,11 +13,7 @@ set cursorline
 
 
 "set noerrorbells
-"set tabstop=4 softtabstop=4
-"set expandtab
-"set smartindent
 "set backspace=indent,eol,start  " more powerful backspacing
-"set autoindent
 "set cindent
 "set shiftwidth=2
 "set smartcase
@@ -76,7 +72,6 @@ set pastetoggle=<F3>
 
 " I like to be scroll free ;)
 ""set scrolloff
-
 
 
 
@@ -454,4 +449,15 @@ map <F12> :bd!<CR>
 " copy to ...
 vnoremap <C-c> "+y
 map <C-v> "+P
+
+
+" vim backgrund transparent
+hi Normal guibg=NONE ctermbg=NONE
+
+" these lines of indent size in c code
+set expandtab
+set shiftwidth=4 	" size of indent = 4
+set tabstop=4 softtabstop=4
+set smartindent
+set autoindent
 
