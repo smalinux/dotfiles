@@ -66,5 +66,7 @@ sh ~/dotfiles/VMware.sh
 echo "ToDO:"
 echo "Google: vim youcompleteme linux kernel" # how to use ycm plugin with kernel
 
+" change this maximum screencast length to a different value
+gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 60000
 
 echo "that's it!"
