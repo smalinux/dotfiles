@@ -14,7 +14,7 @@ infiniband-diags-devel
 yes | su -c "yum install gparted"
 yes | sudo dnf install gcc make bison openssl-devel elfutils-libelf-devel snapd
 sudo ln -s /var/lib/snapd/snap /snap
-yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign
+yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign most git-credential-libsecret 
 yes | sudo yum group install "Development Tools"
 yes | sudo yum install bison openssl-devel global zathura
 yes | yum install kernel-headers kernel-devel SDL2-devel qemu-user strace
