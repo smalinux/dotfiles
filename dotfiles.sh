@@ -67,4 +67,11 @@ echo "Google: vim youcompleteme linux kernel" # how to use ycm plugin with kerne
 " change this maximum screencast length to a different value
 gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 60000
 
+# take keybindings of "less" and but them into "most"
+# reference: https://unix.stackexchange.com/a/271252
+cp /usr/share/doc/most/lesskeys.rc ~/.mostrc
+
+# rm passwd of login.keyring https://askubuntu.com/a/65294
+rm ~/.local/share/keyrings/login.keyring
+
 echo "that's it!"

@@ -181,3 +181,5 @@ bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
+# Set most as default, instead of less
+export PAGER="most"
