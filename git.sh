@@ -10,10 +10,12 @@
 #$ git grep --files-with-match <pattern>
 #	I love this. list all filenames only that match this "pattern"
 
-git config --global user.name "Sohaib Mohammed"
-git config --global user.email sohaibfacebook396@gmail.com
+git config --global user.name "Sohaib"
+git config --global user.email sohaib.amhmd@gmail.com
 git config --global core.editor vim
 git config --global alias.g 'log --oneline --decorate --graph --all'
+# cache password for fedora: https://stackoverflow.com/a/5343146
+git config --global credential.helper /usr/libexec/git-core/git-credential-libsecret
 
 git config --global alias.ack '-c color.grep.linenumber="bold yellow"
  	-c color.grep.filename="bold green"
