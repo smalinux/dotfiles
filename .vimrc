@@ -164,46 +164,46 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Cscope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ripped off from Cosmin Ratiu, on SO list; 30 Jun 2009
-if has("cscope")
-        " Look for a 'cscope.out' file starting from the current directory,
-        " going up to the root directory.
-        let s:dirs = split(getcwd(), "/")
-        while s:dirs != []
-                let s:path = "/" . join(s:dirs, "/")
-                if (filereadable(s:path . "/cscope.out"))
-                        execute "cs add " . s:path . "/cscope.out " . s:path . " -v"
-                        break
-                endif
-                let s:dirs = s:dirs[:-2]
-        endwhile
-
-        set csto=0	" Use cscope first, then ctags
-        set cst		" Only search cscope
-        set csverb	" Make cs verbose
-
-        nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-        nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-        nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-        nmap <C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-        nmap <C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-        nmap <C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
-
-        " Open a quickfix window for the following queries.
-        set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
-endif
-
+"" Ripped off from Cosmin Ratiu, on SO list; 30 Jun 2009
+"if has("cscope")
+"        " Look for a 'cscope.out' file starting from the current directory,
+"        " going up to the root directory.
+"        let s:dirs = split(getcwd(), "/")
+"        while s:dirs != []
+"                let s:path = "/" . join(s:dirs, "/")
+"                if (filereadable(s:path . "/cscope.out"))
+"                        execute "cs add " . s:path . "/cscope.out " . s:path . " -v"
+"                        break
+"                endif
+"                let s:dirs = s:dirs[:-2]
+"        endwhile
+"
+"        set csto=0	" Use cscope first, then ctags
+"        set cst		" Only search cscope
+"        set csverb	" Make cs verbose
+"
+"        nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"        nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"        nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+"
+"        nmap <C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+"        nmap <C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+"        nmap <C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"        nmap <C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+"
+"        " Open a quickfix window for the following queries.
+"        set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
+"endif
+"
 
 
 
@@ -335,12 +335,20 @@ let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 
 "
 " ctags
-Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
+"Plugin 'skywind3000/gutentags_plus' " for Cscope automation
 
 "
 "auto-load
 Plugin 'djoshea/vim-autoread'
 
+Plugin 'jewes/Conque-shell'     " Run interactive shell inside a Vim Buffer
+Plugin 'mileszs/ack.vim'
+Plugin 'preservim/tagbar'       "<F8> button
+nmap <F8> :TagbarToggle <CR>
+
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plugin 'junegunn/fzf.vim'
 
 
 " ==========================================================
@@ -429,7 +437,14 @@ set cursorline
 
 "[gutentags] Don't pollute project dirs
 let g:gutentags_cache_dir = '~/.vim/tags/'
+let g:gutentags_gtags_options_file = '~/dotfiles/tags.conf'
 set statusline+=%{gutentags#statusline()}
+" Cscope gutentags_plus config
+"let g:gutentags_modules = ['ctags', 'gtags_scope']      " Enable gtags module
+"let g:gutentags_projetct_root = ['.root']           " Config project markers.
+"let g:gutentags_cache_dir = expand('~/.cache/tags') " generate datebases in my cache directory, prevent gtags files polluting my project
+"let g:gutentags_plus_switch = 1 " change focus to quickfix window after search 
+
 
 
 "Buttons for going to previous/next file (buffer)
