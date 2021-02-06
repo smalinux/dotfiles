@@ -22,7 +22,7 @@ yes | yum install kernel-headers kernel-devel SDL2-devel qemu-user strace
 yes | sudo dnf install module-build-service fedpkg R-R.cache discord
 yes | yum install grubby libusb-devel make automake gcc gcc-c++ kernel-devel
 yes | sudo yum install ctags indent xchm cscope kscope
-yes | sudo yum install libXft-devel
+yes | sudo yum install libXft-devel ccls
 yes | sudo yum install Xorg asciidoctor
 yes | sudo yum install ncurses-devel bison flex elfutils-libelf-devel openssl-devel
 yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex

@@ -19,8 +19,8 @@ set smartindent
 set autoindent
 set lbr
 set tw=500
-:set mouse=n
-:set ttymouse=xterm2
+set mouse=n
+"set ttymouse=xterm2
 set nocompatible              " be iMproved, required
 filetype off                  " required
 let mapleader = ','
@@ -32,13 +32,13 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-airline/vim-airline' 
 Plugin 'vim-airline/vim-airline-themes' 
 Plugin 'notpratheek/vim-luna' 
-Plugin 'oblitum/youcompleteme'
 Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
 Plugin 'djoshea/vim-autoread'
 Plugin 'mileszs/ack.vim'
 Plugin 'preservim/tagbar'       "<F8> button
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plugin 'junegunn/fzf.vim'
+"Plugin 'dense-analysis/ale'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,8 +57,6 @@ let g:lightline = {
 let g:rainbow_active = 1
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
-" YouCompleteMe config
-let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 " Distraction-free config
 "Theming
 syntax enable
@@ -70,6 +68,8 @@ set cursorline
 let g:gutentags_cache_dir = '~/.vim/tags/'
 let g:gutentags_gtags_options_file = '~/dotfiles/tags.conf'
 set statusline+=%{gutentags#statusline()}
+"{Ale.vim]
+"let g:ale_linters = {'c': ['gcc']}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key binding
@@ -97,3 +97,4 @@ map <C-l> <C-w>l
 inoremap <CAPS> <BS>
 "map <F5> i{<Esc>$a}<Esc>    " Click F5 to surround a line with {}
 nmap <F8> :TagbarToggle <CR>
+
