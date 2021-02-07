@@ -162,8 +162,7 @@ alias out="gnome-session-quit --logout"
 alias statpatch='git apply --stat'
 alias checkpatch='git apply --check'
 alias applypatch='git am --signoff'
-alias getpatch='git am --signoff'
-alias getpatch='git am --signoff'
+alias getpatch='git format-patch'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
 
 # vi-mode in bash
 set -o vi
