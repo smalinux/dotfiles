@@ -3,7 +3,7 @@
 yes | sudo yum install qemu nasm libmpc-devel cmake ack vim
 
 # Start PCP preformance Copilot
-# As you see, PCP my be blooted. 
+# As you see, PCP my be blooted.
 # please don't depend on this packages of ever.
 # depend on istractions on GitHub: https://github.com/performancecopilot/pcp/blob/master/INSTALL.md
 # I wrote them for quick start & backup reasons. [NOW: 15/1/2021]
@@ -14,7 +14,7 @@ infiniband-diags-devel
 yes | su -c "yum install gparted"
 yes | sudo dnf install gcc make bison openssl-devel elfutils-libelf-devel snapd
 sudo ln -s /var/lib/snapd/snap /snap
-yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign most git-credential-libsecret 
+yes | sudo dnf install fedpkg fedora-packager rpmdevtools pesign most git-credential-libsecret
 yes | sudo yum group install "Development Tools"
 yes | sudo yum group install fzf bat the_silver_searcher ripgrep
 yes | sudo yum install bison openssl-devel global zathura
@@ -22,7 +22,7 @@ yes | yum install kernel-headers kernel-devel SDL2-devel qemu-user strace
 yes | sudo dnf install module-build-service fedpkg R-R.cache discord
 yes | yum install grubby libusb-devel make automake gcc gcc-c++ kernel-devel
 yes | sudo yum install ctags indent xchm cscope kscope
-yes | sudo yum install libXft-devel ccls
+yes | sudo yum install libXft-devel ccls bear
 yes | sudo yum install Xorg asciidoctor
 yes | sudo yum install ncurses-devel bison flex elfutils-libelf-devel openssl-devel
 yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex

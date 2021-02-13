@@ -147,7 +147,7 @@ alias ....='cd ..; cd ..; cd ..'
 
 # Record screencast
 #@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
-#@ Google: How to Configure Xorg as Default GNOME Session in Fedora 
+#@ Google: How to Configure Xorg as Default GNOME Session in Fedora
 #@ https://fedoraproject.org/wiki/ScreenCasting
 alias record='simplescreenrecorder'
 
@@ -175,10 +175,31 @@ export EDITOR=/usr/bin/vim
 # clear screen: Ctrl+l
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
-# 
+#
 bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
 # Set most as default, instead of less
 export PAGER="most"
+alias vim="nvim"
+
+# LSP
+alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
+alias lsp_bear="bear make"
+: '
+{
+"languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+  }
+}
+}
+'
