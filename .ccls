@@ -1,0 +1,4 @@
+%compile_commands.json
+-I/usr/local/include
+-I/usr/lib64/clang/10.0.1/include
+-I/usr/include

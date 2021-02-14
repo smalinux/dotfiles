@@ -186,6 +186,7 @@ alias vim="nvim"
 
 # LSP
 alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
+alias lsp_make_ccls="cp /home/ibrahim/dotfiles/.ccls ."
 alias lsp_bear="bear make"
 : '
 {

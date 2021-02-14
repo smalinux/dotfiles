@@ -113,7 +113,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> H :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -268,17 +268,14 @@ nnoremap <esc>^[ <esc>^[
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Buttons for going to previous/next file (buffer)
-"map <F2> :bprevious<CR>
-"map <F3> :bnext<CR>
-" FZF oldfiles
-map <F4> :History<CR>
 "Show name of file and path relative to current working directory
 map <F6> :echo @%<CR>
 "Show current working directory
 map <F7> :pwd<CR>
 "Close current buffer
 map <F12> :bd!<CR>
+"run make
+map <F5> :make<CR>
 " vim backgrund transparent
 hi Normal guibg=NONE ctermbg=NONE
 " Move between windows
@@ -287,20 +284,17 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 inoremap <CAPS> <BS>
-"map <F5> i{<Esc>$a}<Esc>    " Click F5 to surround a line with {}
 nmap <F8> :TagbarToggle <CR>
+
 " Easy motion plugin
-" <Leader>f{char} to move to {char}
-"map  f <Plug>(easymotion-bd-f)
 let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-overwin-f)
-nmap <CR> <Plug>(easymotion-s2)     " F then enter to repeat with same char
+nmap <CR> <Plug>(easymotion-s2)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"nnoremap <Leader>f :Files<CR>
+" FZF
+nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
-
-" jump to references .. https://vi.stackexchange.com/a/4976
-nnoremap <F5> :grep! "\<<cword>\>" . -r<CR>:copen<CR>
+nnoremap <Leader>h :History<CR>
