@@ -1,3 +1,15 @@
+# -----------------------------------------------------------------------------
+# CapLK is a useless key in a great location
+# -----------------------------------------------------------------------------
+# Now: I use gnome-tweak-tool for maping keys..
+# later I will make my own systemd unit:  https://unix.stackexchange.com/a/626970
+
+# KeyTweak windows app for maping CapLK key: https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_Windows
+
+# Later: try to make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
+# -----------------------------------------------------------------------------
+
+
 # fedora yum dependencies
 sudo chmod +x ~/dotfiles/yum.sh
 sudo sh ~/dotfiles/yum.sh

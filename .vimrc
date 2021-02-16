@@ -245,11 +245,11 @@ set statusline+=%{gutentags#statusline()}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper daemons works in background
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Automatically strip trailing spaces on save - https://unix.stackexchange.com/a/75438
+" Auto strip trailing spaces when save - https://vi.stackexchange.com/a/456
 function! <SID>StripTrailingWhitespaces()
-    let save_cursor = getpos(".")
-    %s/\s\+$//e
-    call setpos('.', save_cursor)
+   let l:save = winsaveview()
+   keeppatterns %s/\s\+$//e
+   call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
@@ -259,7 +259,17 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
-"silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+" This function to clean multi-word aliases - https://stackoverflow.com/a/3879737
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+" :mm <arg> in vert split
+" :m <arg> for horisontal split
+call SetupCommandAlias("mm", "vert Man")
+call SetupCommandAlias("m", "Man")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom functions
