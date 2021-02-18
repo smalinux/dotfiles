@@ -20,6 +20,8 @@ set autoindent
 set lbr
 set tw=500
 set mouse=n
+runtime! ftplugin/man.vim
+let $PAGER='most'
 "set ttymouse=xterm2
 set nocompatible              " be iMproved, required
 filetype off                  " required

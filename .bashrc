@@ -135,10 +135,20 @@ alias F='sudo find / -name'
 alias ll='ls -la'
 alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
 # package manager alieases
-alias i='sudo yum install'
-alias s='yum search'
-alias r='sudo yum remove'
-alias k='cd ~smalinux/linux-kernel-module-cheat/'
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    VER=$VERSION_ID
+    if [ $OS == "Ubuntu" ]; then
+      alias i='sudo apt install'
+      alias s='apt search'
+      alias r='sudo apt remove'
+    elif [ $OS == "Fedora" ]; then
+      alias i='sudo yum install'
+      alias s='yum search'
+      alias r='sudo yum remove'
+    fi
+fi
 
 
 alias ..='cd ..'
@@ -180,9 +190,12 @@ bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
-# Set most as default, instead of less
-export PAGER="most"
+# Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
+# also you could use just q for quit.
+alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
 alias vim="nvim"
+
+#alias vim="nvim"
 
 # LSP
 alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
