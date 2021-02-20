@@ -1,3 +1,5 @@
+" Ur coc-extensions
+":CocInstall coc-clangd coc-cmake coc-elixir coc-fzf-preview coc-highlight coc-json coc-just-complete coc-lists coc-lsp-wl coc-tsserver coc-vimlsp coc-yank
 syntax on
 set nu relativenumber
 set cursorline
@@ -276,6 +278,21 @@ call SetupCommandAlias("m", "Man")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Zoom / Restore window. <C-w>o
+" https://stackoverflow.com/a/26551079/5688267
+function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
+command! ZoomToggle call s:ZoomToggle()
+nnoremap <silent> <C-w>o :ZoomToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key binding

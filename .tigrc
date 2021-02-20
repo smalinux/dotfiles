@@ -1,0 +1,3 @@
+bind main F !git commit --fixup %(commit)
+bind main X !git revert %(commit)
+bind main R !git rebase -i --autosquash %(commit)

@@ -14,8 +14,19 @@ git config --global user.name "Sohaib"
 git config --global user.email sohaib.amhmd@gmail.com
 git config --global core.editor vim
 git config --global alias.g 'log --oneline --decorate --graph --all'
+git config --global pull.rebase true
 # cache password for fedora: https://stackoverflow.com/a/5343146
-git config --global credential.helper /usr/libexec/git-core/git-credential-libsecret
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    VER=$VERSION_ID
+    if [ $OS == "Ubuntu" ]; then
+	git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	git config --global credential.helper store
+    elif [ $OS == "Fedora" ]; then
+	git config --global credential.helper /usr/libexec/git-core/git-credential-libsecret
+    fi
+fi
 
 git config --global alias.ack '-c color.grep.linenumber="bold yellow"
  	-c color.grep.filename="bold green"
