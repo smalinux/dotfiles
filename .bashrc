@@ -190,6 +190,9 @@ bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
+# forground command, this very helpful if want to toggle vim background
+bind -x '"\C-f":"fg"'
+
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
 alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
