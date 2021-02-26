@@ -191,7 +191,8 @@ bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
 # forground command, this very helpful if want to toggle vim background
-bind -x '"\C-f":"fg"'
+# https://stackoverflow.com/a/66349559/5688267
+bind -x '"\C-f":"stty sane;fg"'
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.

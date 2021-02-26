@@ -136,8 +136,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>ff  <Plug>(coc-format-selected)
+nmap <leader>ff  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -274,6 +274,11 @@ endfun
 " :m <arg> for horisontal split
 call SetupCommandAlias("mm", "vert Man")
 call SetupCommandAlias("m", "Man")
+
+" How to open the file from last place I was in it - https://stackoverflow.com/q/66331167/5688267
+augroup vimStartup | au!
+    autocmd BufRead * call setpos('.', getpos("'\""))
+augroup end
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom functions
