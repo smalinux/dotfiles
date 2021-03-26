@@ -303,7 +303,7 @@ nnoremap <silent> <C-w>o :ZoomToggle<CR>
 " Key binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Show name of file and path relative to current working directory
-map <F6> :echo @%<CR>
+map <F6> :!make run<CR>
 "Show current working directory
 map <F7> :pwd<CR>
 "Close current buffer

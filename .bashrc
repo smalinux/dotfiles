@@ -221,3 +221,4 @@ alias lsp_bear="bear make"
 }
 }
 '
+source "$HOME/.cargo/env"
