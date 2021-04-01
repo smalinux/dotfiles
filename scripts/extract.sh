@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ $# -lt 1 ];then
   echo "Usage: `basename $0` FILES"

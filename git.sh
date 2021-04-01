@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # I uses also bash alias!
 # u can find them in ~/.bashrc

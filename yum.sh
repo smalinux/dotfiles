@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 yes | sudo yum install qemu nasm libmpc-devel cmake ack vim
 
