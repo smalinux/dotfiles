@@ -52,6 +52,12 @@ ln -sf ~/dotfiles/suckless/dmenu/dmenu_run ~/bin/dmenu_run
 ln -sf ~/dotfiles/suckless/dmenu/dmenu_path ~/bin/dmenu_path
 ln -sf ~/dotfiles/suckless/dmenu/stest ~/bin/stest
 
+# install Tabular
+cd ~
+mkdir -p ~/.vim/bundle
+cd ~/.vim/bundle
+git clone git://github.com/godlygeek/tabular.git
+
 # install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
