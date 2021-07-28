@@ -1,0 +1,31 @@
+# Un/Set password cache commands
+#$    git config --global --unset credential.helper
+#$    git config --global credential.helper cache
+
+# Store pass forever
+#$    git config --global credential.helper store
+[user]
+	name = Sohaib Mohamed
+	email = sohaib.amhmd@gmail.com
+[core]
+	editor = vim
+	trustctime = false
+[alias]
+	g = log --oneline --decorate --graph --all
+	ack = -c color.grep.linenumber=\"bold yellow\"\n \t-c color.grep.filename=\"bold green\"\n\t-c color.grep.match=\"reverse yellow\"\n\tgrep --break --heading --line-number
+[pull]
+	rebase = true
+[merge]
+	tool = kdiff3
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[sendemail]
+   smtpuser = sohaib.amhmd@gmail.com
+   smtpserver = smtp.gmail.com
+   smtpencryption = tls
+   smtpserverport = 587
+   suppresscc = self
+   chainreplyto = false
+[credential]
+	helper = cache
