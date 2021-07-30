@@ -355,3 +355,11 @@ nnoremap q <Nop>
 
 " highlight these words for me.
 syn keyword celTodo contained TODO FIXME XXX NOTE
+
+" Update vimrc no the fly
+" what if you want to update your vimrc file in the middle of an editing session?
+" and you want to use these settings in this current session...
+" this next snippet do that
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
