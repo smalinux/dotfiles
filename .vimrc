@@ -15,8 +15,7 @@ set nobackup
 set nowb
 set noswapfile
 set expandtab
-set shiftwidth=3 	" size of indent = 4
-set tabstop=3 softtabstop=3
+set tabstop=3 softtabstop=3 shiftwidth=3 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
@@ -46,6 +45,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-repeat'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -320,6 +320,9 @@ map <C-l> <C-w>l
 inoremap <CAPS> <BS>
 nmap <F8> :TagbarToggle <CR>
 
+" map Ctrl+w s to Ctrl+w n because it is nicer
+nnoremap <C-w>n <C-w>s
+
 " Easy motion plugin
 let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-overwin-f)
@@ -332,3 +335,23 @@ nmap <CR> <Plug>(easymotion-s2)
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :History<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Yggdroot/indentLine - for indention
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+set list lcs=nbsp:␣,trail:.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Working with tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" I don't like tabs! messier and hard to open.
+" Just one tab is enough for me.
+
+" no need for ex mode. - move record macro to Q
+" reference: https://stackoverflow.com/q/10956261/5688267
+nnoremap Q q
+nnoremap q <Nop>
+
+" highlight these words for me.
+syn keyword celTodo contained TODO FIXME XXX NOTE
