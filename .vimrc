@@ -28,6 +28,15 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 let mapleader = ','
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" lookat these plugins later
+" ==========================
+" https://github.com/tpope/vim-abolish
+" https://github.com/tpope/vim-repeat
+" https://github.com/tpope/vim-unimpaired
+" https://github.com/vim-scripts/Align
+" https://github.com/prabirshrestha/async.vim
+" https://github.com/SirVer/ultisnips
+"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
