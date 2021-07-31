@@ -53,13 +53,14 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-repeat'
 Plugin 'Yggdroot/indentLine'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'bronson/vim-visual-star-search'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Coc.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
@@ -226,7 +227,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lightline.vim config
@@ -255,7 +255,6 @@ set statusline+=%{gutentags#statusline()}
 "{Ale.vim]
 "let g:ale_linters = {'c': ['gcc']}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper daemons works in background
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto strip trailing spaces when save - https://vi.stackexchange.com/a/456
@@ -289,7 +288,6 @@ augroup vimStartup | au!
     autocmd BufRead * call setpos('.', getpos("'\""))
 augroup end
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Zoom / Restore window. <C-w>o
@@ -308,7 +306,6 @@ endfunction
 command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <C-w>o :ZoomToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Show name of file and path relative to current working directory
@@ -337,7 +334,6 @@ let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-overwin-f)
 nmap <CR> <Plug>(easymotion-s2)
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
@@ -345,13 +341,11 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :History<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Yggdroot/indentLine - for indention
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 set list lcs=nbsp:␣,trail:.
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Working with tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " I don't like tabs! messier and hard to open.
@@ -359,16 +353,34 @@ set list lcs=nbsp:␣,trail:.
 
 " no need for ex mode. - move record macro to Q
 " reference: https://stackoverflow.com/q/10956261/5688267
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap Q q
 nnoremap q <Nop>
 
 " highlight these words for me.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syn keyword celTodo contained TODO FIXME XXX NOTE
 
 " Update vimrc no the fly
 " what if you want to update your vimrc file in the middle of an editing session?
 " and you want to use these settings in this current session...
 " this next snippet do that
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"if has("autocmd")
+  "autocmd bufwritepost .vimrc source $MYVIMRC
+"endif
+
+" :terminal
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Please don't use :terminal every. I really hate it.
+" use any tailing window manager instead
+
+" Folding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent               " not as cool as syntax, but faster
+set foldlevelstart=1               " start unfolded
+" Toggle fold at current position.
+nnoremap <Tab> za
+
+" Foucs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
