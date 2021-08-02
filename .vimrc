@@ -380,7 +380,26 @@ syn keyword celTodo contained TODO FIXME XXX NOTE
 set foldmethod=indent               " not as cool as syntax, but faster
 set foldlevelstart=1               " start unfolded
 " Toggle fold at current position.
-nnoremap <Tab> za
+nnoremap <tab> za
 
 " Foucs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Vimscript
+" =============================================================================
+echo "Hi, Sohaib ^.^"
+
+"nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Abbreviations
+iabbrev @@ sohaib.amhmd@gmail.com
+iabbrev ccopy Copyright 2021 Sohaib Mohammed, all rights reserved.
+
+" map H and L
+" Map H in normal mode to go to the beginning of the current line.
+" Since h moves left you can think of H as a "stronger" h.
+nnoremap H ^
+nnoremap L $
+nnoremap 0 <nop>
+nnoremap $ <nop>
