@@ -203,7 +203,7 @@ alias vim="nvim"
 
 # LSP
 alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
-alias lsp_make_ccls="cp /home/ibrahim/dotfiles/.ccls ."
+alias lsp_make_ccls="cp /home/sohiab/dotfiles/.ccls ."
 alias lsp_bear="bear make"
 : '
 {
@@ -222,3 +222,5 @@ alias lsp_bear="bear make"
 }
 '
 source "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
