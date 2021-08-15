@@ -5,3 +5,7 @@ yes | sudo apt install gawk chrpath debhelper dh-python python3-all python3-dev 
 
 yes | sudo apt install most ctags fzf fish ripgrep bear libsecret-1-0 libsecret-1-dev clangd ccls clang ack tig \
    silversearcher-ag bat weechat
+
+yes | sudo snap install slack --classic
+
+yes | sudo apt install iwyu astyle cmake
