@@ -57,6 +57,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'godlygeek/tabular'
+Plugin 'vivien/vim-linux-coding-style'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -377,10 +378,10 @@ syn keyword celTodo contained TODO FIXME XXX NOTE
 
 " Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldmethod=indent               " not as cool as syntax, but faster
-set foldlevelstart=1               " start unfolded
+"set foldmethod=indent               " not as cool as syntax, but faster
+"set foldlevelstart=1               " start unfolded
 " Toggle fold at current position.
-nnoremap <tab> za
+"nnoremap <tab> za
 
 " Foucs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -403,3 +404,7 @@ nnoremap H ^
 nnoremap L $
 nnoremap 0 <nop>
 nnoremap $ <nop>
+
+"" :LinuxCodingStyle Plugin
+"let g:linuxsty_patterns = [ "/home/sohiab/htop-master", "/linux" ]
+"nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
