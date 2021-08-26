@@ -57,7 +57,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'godlygeek/tabular'
-Plugin 'vivien/vim-linux-coding-style'
+Plugin 'kamykn/spelunker.vim'
+"Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -408,3 +409,11 @@ nnoremap $ <nop>
 "" :LinuxCodingStyle Plugin
 "let g:linuxsty_patterns = [ "/home/sohiab/htop-master", "/linux" ]
 "nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
+"
+
+" Plugin 'kamykn/spelunker.vim'
+" Improved vim spelling plugin (with camel case support)!
+" https://github.com/kamykn/spelunker.vim
+" ======================================================
+" Zl
+" ZT
