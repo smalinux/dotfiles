@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# sudo -s
+# curl -sL install-node.now.sh/lts | bash
+# exit
+# then, run this script
+
 set -o nounset    # error when referencing undefined variable
 set -o errexit    # exit when command fails
 
