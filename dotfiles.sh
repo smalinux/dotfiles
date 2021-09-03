@@ -40,6 +40,7 @@ ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
+ln -sf ~/dotfiles/keys.sh ~/keys.sh
 
 
 # Suckless
