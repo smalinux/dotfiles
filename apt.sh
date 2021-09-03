@@ -11,3 +11,4 @@ yes | sudo snap install slack --classic
 yes | sudo apt install iwyu astyle cmake doxygen neovim brightnessctl cmdtest
 
 yes | sudo snap install vlc
+yes | sudo snap install ripgrep --classic
