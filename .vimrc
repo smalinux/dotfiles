@@ -346,7 +346,6 @@ nnoremap <Leader>h :History<CR>
 " Yggdroot/indentLine - for indention
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-set list lcs=nbsp:␣,trail:.
 
 " Working with tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
