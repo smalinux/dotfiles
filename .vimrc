@@ -58,6 +58,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'godlygeek/tabular'
 Plugin 'kamykn/spelunker.vim'
+Plugin 'airblade/vim-gitgutter'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
