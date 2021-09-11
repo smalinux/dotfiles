@@ -221,6 +221,6 @@ alias lsp_bear="bear make"
 }
 }
 '
-source "$HOME/.cargo/env"
+#source "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
