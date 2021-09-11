@@ -8,7 +8,9 @@ yes | sudo apt install most ctags fzf fish ripgrep bear libsecret-1-0 libsecret-
 
 yes | sudo snap install slack --classic
 
-yes | sudo apt install iwyu astyle cmake doxygen neovim brightnessctl cmdtest
+yes | sudo apt install iwyu astyle cmake doxygen neovim brightnessctl cmdtest terminator rofi
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
+yes | sudo snap install telegram-desktop
+
