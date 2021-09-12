@@ -1,0 +1,41 @@
+https://i3wm.org/docs/keyboard-layer1.png
+https://i3wm.org/docs/keyboard-layer2.png
+f | Full screen mode
+d | dmenu
+s |
+w |
+e |
+$mod+Enter |
+$mod+v
+$mod+h
+
+### Modes
+
+h/v | splith/splitv
+s | stacking
+w | tabbed
+e | default container style
+$mod+Shift+Space | Floating mode
+
+### Go back
+* There is also a global fullscreen mode in i3 in which the client will span all available outputs (the command is fullscreen toggle global).
+
+### close window
+ctrl+w
+shift+ctrl+q
+
+$mod+num | switch between workspaces
+$mod+Shift+num | Moving windows to workspaces
+
+2.8. Resizing ???
+
+$mod+Shift+r | Restarting i3 inplace
+
+$mod+Shift+e | Exiting i3
+
+$mod+a | focus on the parent container
+
+
+
+
+
