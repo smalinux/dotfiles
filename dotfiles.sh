@@ -1,13 +1,11 @@
-# -----------------------------------------------------------------------------
 # CapLK is a useless key in a great location
-# -----------------------------------------------------------------------------
+
 # Now: I use gnome-tweak-tool for maping keys..
 # later I will make my own systemd unit:  https://unix.stackexchange.com/a/626970
 
 # KeyTweak windows app for maping CapLK key: https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_Windows
 
 # Later: try to make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
-# -----------------------------------------------------------------------------
 
 
 # Setup Neovim
@@ -72,6 +70,9 @@ sh ~/dotfiles/VMware.sh
 echo "ToDO:"
 echo "Google: vim youcompleteme linux kernel" # how to use ycm plugin with kernel
 
+# tweaks
+./~/dotfiles/tweaks.sh
+
 " change this maximum screencast length to a different value
 gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 60000
 
@@ -81,5 +82,6 @@ cp /usr/share/doc/most/lesskeys.rc ~/.mostrc
 
 # rm passwd of login.keyring https://askubuntu.com/a/65294
 rm ~/.local/share/keyrings/login.keyring
+
 
 echo "that's it!"
