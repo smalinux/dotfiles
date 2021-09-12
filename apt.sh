@@ -14,3 +14,7 @@ yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
 yes | sudo snap install telegram-desktop
 
+# install i3-gaps
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt update
+sudo apt install i3-gaps
