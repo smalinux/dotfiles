@@ -42,17 +42,6 @@ ln -sf ~/dotfiles/.tigrc ~/.tigrc
 sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
 ln -sf ~/dotfiles/keys.sh ~/keys.sh
 
-
-# Suckless
-cd ~
-ln -sf ~/dotfiles/suckless/dwm ~/bin/dwm
-ln -sf ~/dotfiles/suckless/st ~/bin/st
-echo "exec dwm" > ~/.xinitrc
-ln -sf ~/dotfiles/suckless/dmenu/dmenu ~/bin/dmenu
-ln -sf ~/dotfiles/suckless/dmenu/dmenu_run ~/bin/dmenu_run
-ln -sf ~/dotfiles/suckless/dmenu/dmenu_path ~/bin/dmenu_path
-ln -sf ~/dotfiles/suckless/dmenu/stest ~/bin/stest
-
 # install Tabular
 cd ~
 mkdir -p ~/.vim/bundle
