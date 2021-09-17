@@ -23,6 +23,7 @@ https://onebitbug.me/wiki/dotvim/
 my fav terminal background color: #292E30
 ////
 
+
 === Remove passwd
 ```
 sudo passwd -d root
@@ -42,10 +43,21 @@ cd dotfiles
 
 ```
 
-### Install coc.vim
+=== Fix fzf installation
+```
+cd ~/.vim/bundle/fzf/
+sudo ./uninstall
+sudo ./install
+```
+
+=== Install coc.vim
 ```
 sudo -s
 curl -sL install-node.now.sh/lts | bash
 exit
 sh ~/dotfiles/coc.vim.sh
 ```
+
+=== Later...
+* link:https://t.me/joinchat/BsGfP5xLkrlkOGVk[Telegram related channel]
+
