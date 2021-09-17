@@ -16,3 +16,11 @@ sudo add-apt-repository ppa:regolith-linux/release
 sudo apt update
 sudo apt install i3-gaps
 # }}}
+
+# {{{ Installing Brave on Linux
+yes | sudo apt install apt-transport-https curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+yes | sudo apt install brave-browser
+# }}}
