@@ -52,6 +52,7 @@ ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
 ln -sf ~/dotfiles/keys.sh ~/keys.sh
+ln -sf ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 # }}}
 
 # {{{ install vundleVim plugin manager
