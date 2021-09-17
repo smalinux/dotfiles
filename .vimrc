@@ -396,7 +396,7 @@ echo "Hi, Sohaib ^.^"
 
 " Abbreviations
 iabbrev @@ sohaib.amhmd@gmail.com
-iabbrev ccopy Copyright 2021 Sohaib Mohammed, all rights reserved.
+iabbrev ccopy (C) 2021 Sohaib Mohamed.
 
 " map H and L
 " Map H in normal mode to go to the beginning of the current line.
