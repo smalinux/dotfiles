@@ -24,6 +24,8 @@ touch ~/.config/nvim/init.vim
 if [ "$OS" = "\"Ubuntu\"" ];
 then
    sudo sh ~/dotfiles/apt.sh
+   # install brave
+   sudo sh ~/dotfiles/brave.sh
 fi
 
 # {{{ fedora yum dependencies
