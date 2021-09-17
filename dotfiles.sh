@@ -43,8 +43,8 @@ gsettings set org.gnome.desktop.sound event-sounds false
 
 # {{{ soft links
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/i3/config ~/.config/i3/config
-ln -sf ~/dotfiles/terminator/config ~/.config/terminator/config
+ln -sf ~/dotfiles/i3/ ~/.config/
+ln -sf ~/dotfiles/terminator/ ~/.config/
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/update.sh ~/update.sh
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
