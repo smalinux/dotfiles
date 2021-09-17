@@ -1,0 +1,48 @@
+# How to setup my dotfiles step-by-step
+:smalinux-media-base: https://github.com/smalinux/dotfiles
+:description: Setup smalinux dotfiles
+:
+:idprefix:
+:idseparator: -
+:nofooter:
+:sectanchors:
+:sectlinks:
+:sectnumlevels: 6
+:sectnums:
+:toc-title:
+:toc: macro
+:toclevels: 6
+
+toc::[]
+
+////
+=== Vim
+https://onebitbug.me/wiki/dotvim/
+my fav terminal background color: #292E30
+////
+
+=== Remove passwd
+```
+sudo passwd -d root
+sudo passwd -d smalinux
+```
+
+=== Main setup
+```
+sudo apt update
+yes | sudo apt install git
+
+cd ~
+git clone https://github.com/smalinux/dotfiles
+
+cd dotfiles
+./dotfiles.sh
+
+```
+
+### Install coc.vim
+```
+sudo -s
+curl -sL install-node.now.sh/lts | bash
+sh ~/dotfiles/coc.vim.sh
+```
