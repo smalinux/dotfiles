@@ -48,7 +48,7 @@ Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
 Plugin 'djoshea/vim-autoread'
 Plugin 'mileszs/ack.vim'
 Plugin 'preservim/tagbar'       "<F8> button
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
+"Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
