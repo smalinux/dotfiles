@@ -58,6 +58,13 @@ exit
 sh ~/dotfiles/coc.vim.sh
 ```
 
+=== Keep up-to-date
+link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]
+```
+cd ~/newsboat/
+make push
+```
+
 === Later...
 * link:https://t.me/joinchat/BsGfP5xLkrlkOGVk[Telegram related channel]
 
