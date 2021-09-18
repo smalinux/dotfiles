@@ -214,3 +214,10 @@ alias lsp_bear="bear make"
 #source "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# How can I copy the output of a command directly into my clipboard?
+# https://stackoverflow.com/a/5130969/5688267
+alias "cc=xclip -selection clipboard"
+alias "vv=xclip -o -selection clipboard"
+# ls | cc
+# vv
