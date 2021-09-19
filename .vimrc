@@ -1,3 +1,4 @@
+
 " Ur coc-extensions
 ":CocInstall coc-clangd coc-cmake coc-elixir coc-fzf-preview coc-highlight coc-json coc-just-complete coc-lists coc-lsp-wl coc-tsserver coc-vimlsp coc-yank
 syntax on
@@ -233,7 +234,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" lightline.vim config
+" {{{ lightline.vim config
 set laststatus=2
 " No show Mode! lightlinw.vim will take care!
 set noshowmode " No show Mode! lightlinw.vim will take care!
@@ -241,41 +242,44 @@ set noshowmode " No show Mode! lightlinw.vim will take care!
 let g:lightline = {
       \ 'colorscheme': 'Tomorrow',
       \ }
-" Rainbow brackets config ({{{{}}}})
+" }}}
+
+" {{{ Rainbow brackets config ({{{{}}}})
 let g:rainbow_active = 1
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
-" Distraction-free config
-"Theming
+" }}}
+
+" {{{ Theming
 syntax enable
 colorscheme luna-term
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1 "Requires powerline fonts!
 set cursorline
-"[gutentags] Don't pollute project dirs
+" }}}
+
+" {{{ [gutentags] Don't pollute project dirs
 let g:gutentags_cache_dir = '~/.vim/tags/'
 let g:gutentags_gtags_options_file = '~/dotfiles/tags.conf'
 set statusline+=%{gutentags#statusline()}
-"{Ale.vim]
-"let g:ale_linters = {'c': ['gcc']}
+" }}}
 
-" Helper daemons works in background
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Auto strip trailing spaces when save - https://vi.stackexchange.com/a/456
+" {{{ Auto strip trailing spaces when save - https://vi.stackexchange.com/a/456
 function! <SID>StripTrailingWhitespaces()
    let l:save = winsaveview()
    keeppatterns %s/\s\+$//e
    call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+" }}}
 
-" Clean last search highlighting - https://stackoverflow.com/a/1037182
-" Clear highlighting on escape in normal mode
-" I use <esc> over than <space> becuase it is more logical
+" {{{ Clean last search highlighting - https://stackoverflow.com/a/1037182
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+" }}}
 
-" This function to clean multi-word aliases - https://stackoverflow.com/a/3879737
+" {{{
+" multi-word aliases function - https://stackoverflow.com/a/3879737
 fun! SetupCommandAlias(from, to)
   exec 'cnoreabbrev <expr> '.a:from
         \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
@@ -286,15 +290,16 @@ endfun
 " :m <arg> for horisontal split
 call SetupCommandAlias("mm", "vert Man")
 call SetupCommandAlias("m", "Man")
+" }}}
 
-" How to open the file from last place I was in it - https://stackoverflow.com/q/66331167/5688267
+" {{{ open the file at last place I was in it
+" https://stackoverflow.com/q/66331167/5688267
 augroup vimStartup | au!
     autocmd BufRead * call setpos('.', getpos("'\""))
 augroup end
+" }}}
 
-" Custom functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Zoom / Restore window. <C-w>o
+" {{{ Zoom / Restore window. <C-w>o
 " https://stackoverflow.com/a/26551079/5688267
 function! s:ZoomToggle() abort
     if exists('t:zoomed') && t:zoomed
@@ -309,9 +314,9 @@ function! s:ZoomToggle() abort
 endfunction
 command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <C-w>o :ZoomToggle<CR>
+" }}}
 
-" Key binding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ Key binding
 "Show name of file and path relative to current working directory
 map <F6> :!make run<CR>
 "Show current working directory
@@ -329,40 +334,40 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 inoremap <CAPS> <BS>
 nmap <F8> :TagbarToggle <CR>
-
-" map Ctrl+w s to Ctrl+w n because it is nicer
+" hidden feature ;-)
 nnoremap <C-w>n <C-w>s
+" }}}
 
-" Easy motion plugin
+" {{{ Easy motion plugin
 let g:EasyMotion_smartcase = 1
 nmap f <Plug>(easymotion-overwin-f)
 nmap <CR> <Plug>(easymotion-s2)
+" }}}
 
-" Leader binding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FZF
+" {{{ FZF
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :History<CR>
+" }}}
 
-" Yggdroot/indentLine - for indention
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ Yggdroot/indentLine - for indention
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" }}}
 
-" Working with tabs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ Working with tabs
 " I don't like tabs! messier and hard to open.
 " Just one tab is enough for me.
+" }}}
 
-" no need for ex mode. - move record macro to Q
-" reference: https://stackoverflow.com/q/10956261/5688267
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ no need for ex mode. - move record macro to Q
+" https://stackoverflow.com/q/10956261/5688267
 nnoremap Q q
 nnoremap q <Nop>
+" }}}
 
-" highlight these words for me.
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ highlight these words for me.
 syn keyword celTodo contained TODO FIXME XXX NOTE
+" }}}
 
 " Update vimrc no the fly
 " what if you want to update your vimrc file in the middle of an editing session?
@@ -373,76 +378,69 @@ syn keyword celTodo contained TODO FIXME XXX NOTE
   "autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
 
-" :terminal
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ :terminal
 " Please don't use :terminal every. I really hate it.
 " use any tailing window manager instead
+" }}}
 
-" Folding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ Folding
 "set foldmethod=indent               " not as cool as syntax, but faster
 "set foldlevelstart=1               " start unfolded
 " Toggle fold at current position.
 "nnoremap <tab> za
-
-" Foucs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Vimscript
-" =============================================================================
-echo "Hi, Sohaib ^.^"
+" }}}
 
 "nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 "nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Abbreviations
+" {{{ Abbreviations
 iabbrev @@ sohaib.amhmd@gmail.com
 iabbrev ccopy (C) 2021 Sohaib Mohamed.
+" }}}
 
-" map H and L
+" {{{ map H and L
 " Map H in normal mode to go to the beginning of the current line.
-" Since h moves left you can think of H as a "stronger" h.
 nnoremap H ^
 nnoremap L $
 nnoremap 0 <nop>
 nnoremap $ <nop>
+" }}}
 
 "" :LinuxCodingStyle Plugin
 "let g:linuxsty_patterns = [ "/home/sohiab/htop-master", "/linux" ]
 "nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
 "
 
-" Plugin 'kamykn/spelunker.vim'
+" {{{ Plugin 'kamykn/spelunker.vim'
 " Improved vim spelling plugin (with camel case support)!
 " https://github.com/kamykn/spelunker.vim
 " ======================================================
 " Zl
 " ZT
-"
+" }}}
 
+" {{{
 " Remove newbie crutches in Command Mode
 cnoremap <Down> <Nop>
 cnoremap <Left> <Nop>
 cnoremap <Right> <Nop>
 cnoremap <Up> <Nop>
-
 " Remove newbie crutches in Insert Mode
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 inoremap <Up> <Nop>
-
 " Remove newbie crutches in Normal Mode
 nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
-
 " Remove newbie crutches in Visual Mode
 vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
+" }}}
 
 " {{{ Plugin 'puremourning/vimspector'
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -451,4 +449,8 @@ nmap <leader>dx :VimspectorReset<CR>
 nmap <leader>de :VimspectorEval
 nmap <leader>dw :VimspectorWatch
 nmap <leader>do :VimspectorShowOutput
+" }}}
+
+" {{{
+echo "Hi, Sohaib ^.^"
 " }}}
