@@ -1,0 +1,14 @@
+{
+  "configurations": {
+      "Launch": {
+         "adapter": "vscode-cpptools",
+         "configuration": {
+            "request": "launch",
+            "program": "${fileBasenameNoExtension}",
+            "cwd": "${fileDirname}",
+            "externalConsole": true,
+            "MIMode": "gdb"
+         }
+     }
+  }
+}

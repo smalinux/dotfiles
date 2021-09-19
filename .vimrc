@@ -59,6 +59,7 @@ Plugin 'bronson/vim-visual-star-search'
 Plugin 'godlygeek/tabular'
 Plugin 'kamykn/spelunker.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'puremourning/vimspector'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
@@ -442,3 +443,12 @@ vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
+
+" {{{ Plugin 'puremourning/vimspector'
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <leader>dd :call vimspector#Launch()<CR>
+nmap <leader>dx :VimspectorReset<CR>
+nmap <leader>de :VimspectorEval
+nmap <leader>dw :VimspectorWatch
+nmap <leader>do :VimspectorShowOutput
+" }}}

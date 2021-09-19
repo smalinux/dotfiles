@@ -61,6 +61,16 @@ exit
 sh ~/dotfiles/coc.vim.sh
 ```
 
+=== vimspector
+Install:
+```
+cd /home/smalinux/.vim/bundle/vimspector
+./install_gadget.py --enable-c
+```
+bash command to copy .vimspector.json to current directory:
+```
+vimspector
+```
 
 === Keep up-to-date
 link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]:

@@ -221,3 +221,7 @@ alias "cc=xclip -selection clipboard"
 alias "vv=xclip -o -selection clipboard"
 # ls | cc
 # vv
+
+# {{{ copy vimspector.json to current dir
+alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
+# }}}
