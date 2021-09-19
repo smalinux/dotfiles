@@ -23,6 +23,9 @@ https://onebitbug.me/wiki/dotvim/
 my fav terminal background color: #292E30
 ////
 
+* My Network driver
+link:https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software[r8125-9.006.04]
+
 
 === Remove passwd
 ```
@@ -58,8 +61,9 @@ exit
 sh ~/dotfiles/coc.vim.sh
 ```
 
+
 === Keep up-to-date
-link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]
+link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]:
 ```
 cd ~/newsboat/
 make push
