@@ -366,7 +366,8 @@ nnoremap q <Nop>
 " }}}
 
 " {{{ highlight these words for me.
-syn keyword celTodo contained TODO FIXME XXX NOTE
+autocmd Syntax * syntax keyword myTodo NOTE NOTES PAGE SOHAIB
+   \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
 " Update vimrc no the fly
