@@ -218,3 +218,6 @@ focus_follows_mouse no
 # wallpaper
 #exec_always --no-startup-id feh --bg-fill --randomize .dotfiles/wms/wallpapers/*.jpg
 exec_always --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1080?random
+
+# mod+tab key
+bindsym $mod+Tab workspace back_and_forth
