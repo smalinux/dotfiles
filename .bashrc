@@ -151,9 +151,6 @@ alias ....='cd ..; cd ..; cd ..'
 #@ https://fedoraproject.org/wiki/ScreenCasting
 alias record='simplescreenrecorder'
 
-
-
-alias R='yes | rm -r'
 alias map='xmodmap dotfiles/.Xmodmap'
 alias mapo='xmodmap dotfiles/xmodmap_original'
 alias out="gnome-session-quit --logout"
@@ -182,7 +179,7 @@ bind -m vi-insert 'Control-n: next-history'
 
 # forground command, this very helpful if want to toggle vim background
 # https://stackoverflow.com/a/66349559/5688267
-bind -x '"\C-f":"stty sane;fg"'
+bind -x '"\C-f":"stty sane;fg;"'
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
@@ -225,3 +222,7 @@ alias "vv=xclip -o -selection clipboard"
 # {{{ copy vimspector.json to current dir
 alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
 # }}}
+
+# Power aliases
+alias R='yes | rm -r'
+alias cp='cp -r'
