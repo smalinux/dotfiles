@@ -72,6 +72,11 @@ bash command to copy .vimspector.json to current directory:
 vimspector
 ```
 
+=== your log
+```
+git clone https://gist.github.com/smalinux/d89e73828510fbbd09c744419e5ebab7 ~/log
+```
+
 === Keep up-to-date
 link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]:
 ```
