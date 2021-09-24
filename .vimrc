@@ -366,7 +366,8 @@ nnoremap q <Nop>
 " }}}
 
 " {{{ highlight these words for me.
-autocmd Syntax * syntax keyword myTodo NOTE NOTES PAGE SOHAIB
+autocmd Syntax * syntax keyword myTodo
+         \ NOTE NOTES PAGE SOHAIB SECTION
    \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
