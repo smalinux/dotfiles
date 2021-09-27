@@ -227,3 +227,5 @@ alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
 alias R='yes | rm -r'
 alias cp='cp -r'
 alias make='bear make' # because of coc.vim
+alias nn='newsboat'
+alias n='nnn'
