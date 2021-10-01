@@ -72,6 +72,12 @@ bash command to copy .vimspector.json to current directory:
 vimspector
 ```
 
+=== setup your mutt
+```
+# config file here:
+~/dotfiles/muttrc
+```
+
 === your log
 ```
 git clone https://gist.github.com/smalinux/d89e73828510fbbd09c744419e5ebab7 ~/log
