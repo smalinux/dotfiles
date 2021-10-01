@@ -22,7 +22,7 @@ yes | sudo apt install libvirt-daemon-system libdevmapper-dev net-tools mariadb-
 yes | sudo apt install docker.io feh most ctags fzf fish ripgrep bear libsecret-1-0 libsecret-1-dev
 yes | sudo apt install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
 yes | sudo apt install doxygen neovim brightnessctl cmdtest terminator rofi i3-wm i3lock newsboat xclip
-yes | sudo apt install graphviz git-email kdiff3
+yes | sudo apt install graphviz git-email kdiff3 neomutt
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
