@@ -15,8 +15,8 @@ set hls
 set nobackup
 set nowb
 set noswapfile
-set expandtab
-set tabstop=3 softtabstop=3 shiftwidth=3 	" size of indent = 4
+"set expandtab
+set tabstop=8 softtabstop=8 shiftwidth=8 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
@@ -367,7 +367,7 @@ nnoremap q <Nop>
 
 " {{{ highlight these words for me.
 autocmd Syntax * syntax keyword myTodo
-         \ NOTE NOTES PAGE SOHAIB SECTION
+         \ NOTE NOTES PAGE SOHAIB SECTION WARNING ERROR
    \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
