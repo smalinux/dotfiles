@@ -177,6 +177,10 @@ bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
+# {{{ https://askubuntu.com/a/1098331
+LC_TIME=en_US.utf8
+# }}}
+
 # forground command, this very helpful if want to toggle vim background
 # https://stackoverflow.com/a/66349559/5688267
 bind -x '"\C-f":"stty sane;fg;"'
