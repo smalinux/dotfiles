@@ -16,7 +16,7 @@
 [pull]
 	rebase = true
 [merge]
-	tool = kdiff3
+	tool = vimdiff
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
@@ -28,4 +28,4 @@
    suppresscc = self
    chainreplyto = false
 [credential]
-	helper = cache
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
