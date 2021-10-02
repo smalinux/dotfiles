@@ -115,9 +115,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# {{{ grep color
+alias grep='grep --color=always'
+# }}}
 
-
-alias p='zathura'
 # $ f
 # $ F
 alias f='sudo find . -name'
