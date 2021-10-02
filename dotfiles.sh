@@ -55,6 +55,18 @@ ln -sf ~/dotfiles/keys.sh ~/keys.sh
 ln -sf ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 # }}}
 
+# {{{ Setup .gitconfig
+rm -r ~/.gitconfig
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+# }}}
+
+# {{{ Setup newsboat
+git clone https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc ~/newsboat
+cd ~/newsboat/
+make
+cd ~
+# }}}
+
 # {{{ install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
