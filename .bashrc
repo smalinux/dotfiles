@@ -214,7 +214,6 @@ alias lsp_bear="bear make"
 '
 #source "$HOME/.cargo/env"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # How can I copy the output of a command directly into my clipboard?
 # https://stackoverflow.com/a/5130969/5688267
@@ -255,3 +254,5 @@ send_patch_next() {
 alias checkpatch='/home/smalinux/linux-stable/scripts/checkpatch.pl'
 
 # }}}
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
