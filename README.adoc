@@ -83,6 +83,11 @@ vimspector
 ./pkg.sh
 ./dotfiles-pkg.sh
 ```
+TODO: Catch these files
+```
+~/.xinitrc
+~/.dwm/autostart.sh
+```
 
 === your log
 ```
