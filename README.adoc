@@ -78,6 +78,12 @@ vimspector
 ~/dotfiles/muttrc
 ```
 
+=== FreeBSD
+```
+./pkg.sh
+./dotfiles-pkg.sh
+```
+
 === your log
 ```
 git clone https://gist.github.com/smalinux/d89e73828510fbbd09c744419e5ebab7 ~/log
