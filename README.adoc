@@ -87,6 +87,7 @@ TODO: Catch these files
 ```
 ~/.xinitrc
 ~/.dwm/autostart.sh
+change st font dynamically with ctrl+shift+ +, -
 ```
 
 === your log
