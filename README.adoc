@@ -75,7 +75,8 @@ vimspector
 === setup your mutt
 ```
 # config file here:
-~/dotfiles/muttrc
+~/dotfiles/muttrc ~/.muttrc
+# then edit the file, set your passwd
 ```
 
 === FreeBSD
