@@ -89,6 +89,7 @@ TODO: Catch these files
 ~/.dwm/autostart.sh
 change st font dynamically with ctrl+shift+ +, -
 ```
+* Link:https://github.com/smalinux/dwm-1/commit/8b05ae4b07195cec38db7922fa615927805b49ad[My LukeSmith dwm version - checkout here]
 
 === your log
 ```
