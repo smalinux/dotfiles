@@ -240,15 +240,15 @@ alias m='neomutt'
    #$ send_patch_stable 0001-your-patch-name.patch
    # that's it ;)
 send_patch_stable() {
-    git send-email --cc-cmd=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-stable/scripts/get_maintainer.pl -norolestats' "$1"
+    git send-email --cc=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-stable/scripts/get_maintainer.pl -norolestats' "$1"
 }
 
 send_patch_torvalds() {
-    git send-email --cc-cmd=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-torvalds/scripts/get_maintainer.pl -norolestats' "$1"
+    git send-email --cc=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-torvalds/scripts/get_maintainer.pl -norolestats' "$1"
 }
 
 send_patch_next() {
-    git send-email --cc-cmd=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-next/scripts/get_maintainer.pl -norolestats' "$1"
+    git send-email --cc=sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-next/scripts/get_maintainer.pl -norolestats' "$1"
 }
 
 
