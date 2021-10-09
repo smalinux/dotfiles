@@ -36,6 +36,7 @@ sudo passwd -d smalinux
 === Main setup
 ```
 sudo apt update
+sudo apt-file update
 yes | sudo apt install git
 
 cd ~
