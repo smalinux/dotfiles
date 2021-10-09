@@ -23,7 +23,9 @@ yes | sudo apt install docker.io feh most ctags fzf fish ripgrep bear libsecret-
 yes | sudo apt install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
 yes | sudo apt install doxygen neovim brightnessctl cmdtest terminator rofi i3-wm i3lock newsboat xclip
 yes | sudo apt install graphviz git-email kdiff3 neomutt tree asciinema bison flex
-yes | sudo apt install simplescreenrecorder
+yes | sudo apt install simplescreenrecorder compton libxft-dev
+yes | sudo apt install apt-file # wow https://askubuntu.com/a/655194
+yes | sudo apt install fonts-symbola
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
