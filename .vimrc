@@ -453,9 +453,5 @@ nmap <leader>dw :VimspectorWatch
 nmap <leader>do :VimspectorShowOutput
 " }}}
 
-" {{{
-echo "Hi, Sohaib ^.^"
-" }}}
-
 " stop CoC by default (but Coc is enabled)
 "let g:coc_start_at_startup=0
