@@ -159,7 +159,7 @@ alias out="gnome-session-quit --logout"
 ##### git aliases
 alias statpatch='git apply --stat'
 alias checkpatch='git apply --check'
-alias applypatch='git am --signoff'
+alias applypatch='patch -p1 < '
 alias getpatch='git format-patch'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
 
 # vi-mode in bash
@@ -169,6 +169,7 @@ set -o vi
 export PATH=$PATH:$HOME/.local/bin
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
+export BROWSER=/usr/bin/brave-browser
 # https://unix.stackexchange.com/a/104101/265591
 # clear screen: Ctrl+l
 bind -m vi-command 'Control-l: clear-screen'
@@ -232,9 +233,9 @@ alias R='yes | rm -r'
 alias cp='cp -r'
 alias make='bear make' # because of coc.vim
 alias nn='newsboat'
-alias n='nnn'
+alias n='ranger'
 alias m='neomutt'
-alias aptfile='apt-file search'
+alias strc='xrdb ~/.strc' # Update strc
 
 # {{{ Linux Kernel
 
@@ -258,3 +259,8 @@ alias checkpatch='/home/smalinux/linux-stable/scripts/checkpatch.pl'
 # }}}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# aptfile functions
+aptfile() {
+	apt-file search "$1" | grep "$1"
+}
