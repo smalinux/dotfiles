@@ -42,7 +42,7 @@ gsettings set org.gnome.desktop.sound event-sounds false
 # }}}
 
 # {{{ soft links
-bash ~/dotfiles/smlinks.sh
+~/dotfiles/smlinks.sh
 # }}}
 
 # {{{ Setup .gitconfig
