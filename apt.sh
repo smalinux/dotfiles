@@ -25,7 +25,7 @@ yes | sudo apt install doxygen neovim brightnessctl cmdtest terminator rofi i3-w
 yes | sudo apt install graphviz git-email kdiff3 neomutt tree asciinema bison flex
 yes | sudo apt install simplescreenrecorder compton libxft-dev
 yes | sudo apt install apt-file # wow https://askubuntu.com/a/655194
-yes | sudo apt install fonts-symbola
+yes | sudo apt install fonts-symbola vim-gtk3 patchutils nnn pip
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
@@ -35,7 +35,7 @@ yes | sudo snap install slack --classic
 # {{{ install i3-gaps
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt update
-sudo apt install i3-gaps
+yes | sudo apt install i3-gaps
 # }}}
 
 # {{{ Installing Brave on Linux
