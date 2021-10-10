@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.strc ~/.strc
 ln -sf ~/dotfiles/i3/ ~/.config/
 ln -sf ~/dotfiles/terminator/ ~/.config/
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
@@ -13,3 +14,6 @@ sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
 ln -sf ~/dotfiles/keys.sh ~/keys.sh
 ln -sf ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 sudo ln -sf ~/dotfiles/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
+
+# {{{ my scripts
+sudo ln -sf ~/dotfiles/scripts/* /usr/bin/
