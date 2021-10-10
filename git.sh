@@ -10,7 +10,7 @@
 #$ git grep --files-with-match <pattern>
 #	I love this. list all filenames only that match this "pattern"
 
-git config --global user.name "Sohaib Mohmed"
+git config --global user.name "Sohaib Mohamed"
 git config --global user.email sohaib.amhmd@gmail.com
 git config --global core.editor vim
 git config --global alias.g 'log --oneline --decorate --graph --all'
