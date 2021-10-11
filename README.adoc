@@ -15,7 +15,7 @@
 
 toc::[]
 
-image::https://raw.githubusercontent.com/smalinux/dotfiles/master/screenshots/Screenshot%20from%202021-09-17%2014-59-17.png[screenshot]
+image::https://raw.githubusercontent.com/smalinux/dotfiles/master/screenshots/main.png[screenshot]
 
 ////
 === Vim
@@ -34,6 +34,7 @@ sudo passwd -d smalinux
 ```
 
 === Main setup
+Please `MAKE SURE TO RUN ./apt.sh MULTIPLE TIMES`...
 ```
 sudo apt update
 sudo apt-file update
@@ -76,8 +77,25 @@ vimspector
 === setup your mutt
 ```
 # config file here:
-~/dotfiles/muttrc ~/.muttrc
+~/dotfiles/.muttrc ~/.muttrc
 # then edit the file, set your passwd
+```
+
+=== How to apply suckless patches
+this command
+```
+cd /project/dir
+patch -p1 < dwm-autostart-20210120-cb3f58a.diff
+```
+sometimes this command fail. if he fail to apply specific hunk will generate
+file called `file.rej`
+
+so open your `file` and `file.rej`, compare ... apply them manually...
+
+=== Update my `st` Link:https://st.suckless.org/patches/xresources/[Xresources]
+Edit this file `~/.strc` and just hit this command:
+```
+strc
 ```
 
 === FreeBSD
