@@ -131,7 +131,7 @@ if [ -f /etc/os-release ]; then
     OS=$NAME
     VER=$VERSION_ID
     if [ $OS == "Ubuntu" ]; then
-      alias i='sudo apt install'
+      alias i='sudo aptitude install'
       alias s='apt search'
       alias r='sudo apt remove'
     elif [ $OS == "Fedora" ]; then
