@@ -20,7 +20,8 @@ set tabstop=8 softtabstop=8 shiftwidth=8 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
-set tw=500
+set tw=80
+"set tw=500
 set mouse=n
 runtime! ftplugin/man.vim
 let $PAGER='most'
@@ -61,6 +62,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'kamykn/spelunker.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'puremourning/vimspector'
+Plugin 'vimwiki/vimwiki'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
