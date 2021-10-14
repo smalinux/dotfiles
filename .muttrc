@@ -14,11 +14,11 @@ set from = "sohaib.amhmd@gmail.com"
 set realname = "Sohaib Mohamed"
 # IMAP settings
 set imap_user = "sohaib.amhmd@gmail.com"
-set imap_pass = "SET-YOUR-PASSWORD-HERE"
+set imap_pass = "password"
 
 # SMTP settings
 set smtp_url = "smtps://sohaib.amhmd@smtp.gmail.com"
-set smtp_pass = "SET-YOUR-PASSWORD-HERE"
+set smtp_pass = "password"
 # Remote Gmail folders
 set folder = "imaps://imap.gmail.com/"
 set spoolfile = "+INBOX"
