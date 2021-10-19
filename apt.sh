@@ -27,6 +27,8 @@ yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bis
 yes | sudo aptitude install simplescreenrecorder compton libxft-dev
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
+# perf
+yes | sudo aptitude install linux-tools-common linux-tools-generic linux-tools-`uname -r`
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
