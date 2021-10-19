@@ -111,6 +111,11 @@ change st font dynamically with ctrl+shift+ +, -
 ```
 * Link:https://github.com/smalinux/dwm-1/commit/8b05ae4b07195cec38db7922fa615927805b49ad[My LukeSmith dwm version - checkout here]
 
+=== [device driver] ZOTAC GAMING GeForce GTX 1650 OC
+1- disable Nouveau kernel driver Link:https://askubuntu.com/a/951892/767136[link]
+2- Google: "vga zotac gaming geforce gtx 1650 oc amp 4gb gddr6 linux driver"
+Link:https://www.zotac.com/us/files/download/by_product?p_nid=855804&driver_type=235&os=246[link]
+
 === your log
 ```
 git clone https://gist.github.com/smalinux/d89e73828510fbbd09c744419e5ebab7 ~/log
