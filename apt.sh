@@ -31,7 +31,7 @@ yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 yes | sudo aptitude install linux-tools-`uname -r` # FIXME this line anybe not not useful for you!
 yes | sudo aptitude install linux-tools-common linux-tools-generic
 yes | sudo aptitude install libbfd-dev libperl-dev libzstd-dev libunwind-dev
-yes | sudo aptitude install asciidoc
+yes | sudo aptitude install asciidoc libgtk2.0-dev libslang2-dev
 # zsh
 yes | sudo aptitude install zsh zsh-syntax-highlighting
 
