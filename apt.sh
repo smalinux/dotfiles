@@ -28,7 +28,12 @@ yes | sudo aptitude install simplescreenrecorder compton libxft-dev
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 # perf
-yes | sudo aptitude install linux-tools-common linux-tools-generic linux-tools-`uname -r`
+yes | sudo aptitude install linux-tools-`uname -r` # FIXME this line anybe not not useful for you!
+yes | sudo aptitude install linux-tools-common linux-tools-generic
+yes | sudo aptitude install libbfd-dev libperl-dev libzstd-dev libunwind-dev
+yes | sudo aptitude install asciidoc
+# zsh
+yes | sudo aptitude install zsh zsh-syntax-highlighting
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
