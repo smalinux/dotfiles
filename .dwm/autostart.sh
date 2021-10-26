@@ -17,4 +17,4 @@ feh --bg-fill --randomize https://unsplash.it/1920/1080?random
 # make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
 exec_always xset r rate 300 50
 
-strc
+xrdb ~/.strc
