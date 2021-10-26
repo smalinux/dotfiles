@@ -236,6 +236,8 @@ alias nn='newsboat'
 alias n='ranger'
 alias m='neomutt'
 alias strc='xrdb ~/.strc' # Update strc
+alias p='perf'
+alias time='date +"%w) %A %d/%m/%Y %X"'
 
 # {{{ Linux Kernel
 
