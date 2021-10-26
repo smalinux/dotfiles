@@ -255,6 +255,13 @@ send_patch_next() {
     git send-email --cc sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-next/scripts/get_maintainer.pl -norolestats' "$1"
 }
 
+vol() {
+   # list all my sound devices..
+	pactl set-sink-volume alsa_output.usb-Solid_State_System_Co._Ltd._USBFC1_WENC_000000000000-00.iec958-stereo $1%
+	pactl set-sink-volume alsa_output.pci-0000_07_00.4.iec958-stereo $1%
+	pactl set-sink-volume alsa_output.pci-0000_05_00.1.hdmi-stereo $1%
+}
+
 
 alias checkpatch='/home/smalinux/linux-stable/scripts/checkpatch.pl'
 
