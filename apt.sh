@@ -29,11 +29,17 @@ yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 # perf
 yes | sudo aptitude install linux-tools-`uname -r` # FIXME this line anybe not not useful for you!
-yes | sudo aptitude install linux-tools-common linux-tools-generic
+yes | sudo aptitude install linux-tools-common linux-tools-generic libdw-dev libcap-dev
+yes | sudo aptitude install libnuma-dev binutils-dev libbabeltrace-dev
+yes | sudo aptitude install libiberty-dev
 yes | sudo aptitude install libbfd-dev libperl-dev libzstd-dev libunwind-dev
 yes | sudo aptitude install asciidoc libgtk2.0-dev libslang2-dev
+# bpf
+yes | sudo aptitude install bpfcc-tools
 # zsh
 yes | sudo aptitude install zsh zsh-syntax-highlighting
+# lstopo
+yes | sudo aptitude install hwloc
 
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
