@@ -28,5 +28,7 @@
    smtpserverport = 587
    suppresscc = self
    chainreplyto = false
+   confirm = always
+   annotate = true
 [credential]
 	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
