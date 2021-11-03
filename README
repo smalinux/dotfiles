@@ -1,0 +1,17 @@
+### work with patches ###
+
+step 1:
+$ git am xxx.patch
+or
+$ git am -3 xxx.patch
+
+step 2:
+$ patch -p1 xxx.patch
+or
+$ patch -p2 xxx.patch
+
+step 3:
+$ git add modified-files.ch
+
+step 4:
+$ git am --continue
