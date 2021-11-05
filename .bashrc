@@ -160,7 +160,10 @@ alias out="gnome-session-quit --logout"
 alias statpatch='git apply --stat'
 alias checkpatch='git apply --check'
 alias applypatch='patch -p1 < '
-alias getpatch='git format-patch'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
+# f = format p = patch
+alias git-fp='git format-patch --base=auto --cover-letter'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
+# DONT USE THIS, this just a reference, The canonical git-send-email(1) args
+alias git-se='git send-email --base=auto --cover-letter'
 
 # vi-mode in bash
 set -o vi
