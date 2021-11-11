@@ -239,7 +239,8 @@ alias nn='newsboat'
 alias n='ranger'
 alias m='neomutt'
 alias strc='xrdb ~/.strc' # Update strc
-alias p='perf'
+alias p='cd ~/repos/acme-perf/tools/perf/'
+alias pp='sudo ./perf'
 alias time='date +"%n%w) %A%n%d/%m/%Y%n%X%n"'
 
 # {{{ Linux Kernel
