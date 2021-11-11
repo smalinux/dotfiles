@@ -370,6 +370,7 @@ nnoremap q <Nop>
 " {{{ highlight these words for me.
 autocmd Syntax * syntax keyword myTodo
          \ NOTE NOTES PAGE SOHAIB SECTION WARNING ERROR
+         \ DONE SMA smalinux SMALINUX
    \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
@@ -457,3 +458,5 @@ nmap <leader>do :VimspectorShowOutput
 
 " stop CoC by default (but Coc is enabled)
 "let g:coc_start_at_startup=0
+
+" mutt quotes messages
