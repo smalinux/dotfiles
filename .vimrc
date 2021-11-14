@@ -12,6 +12,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 set history=500
 set ic
 set hls
+set undofile
 set nobackup
 set nowb
 set noswapfile
@@ -460,3 +461,7 @@ nmap <leader>do :VimspectorShowOutput
 "let g:coc_start_at_startup=0
 
 " mutt quotes messages
+
+" undo
+" Google: keep undo  after close vim
+set undodir=~/.vim/undodir

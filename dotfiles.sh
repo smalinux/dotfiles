@@ -76,6 +76,10 @@ git clone git://github.com/godlygeek/tabular.git
 # {{{ cache GitHub passwd
 # Reference: https://stackoverflow.com/a/5343146/5688267
 
+# {{{ make undo dir for vim
+mkdir ~/.vim/undodir
+# }}}
+
 # if Ubuntu
 if [ "$OS" = "\"Ubuntu\"" ];
 then
