@@ -24,7 +24,7 @@ yes | sudo aptitude install docker.io feh most ctags fzf fish ripgrep bear libse
 yes | sudo aptitude install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
 yes | sudo aptitude install doxygen neovim brightnessctl cmdtest terminator rofi i3-wm i3lock newsboat xclip
 yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bison flex
-yes | sudo aptitude install simplescreenrecorder compton libxft-dev
+yes | sudo aptitude install simplescreenrecorder compton libxft-dev dwarves
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 # perf
