@@ -15,3 +15,6 @@ $ git add modified-files.ch
 
 step 4:
 $ git am --continue
+
+Important:
+https://stackoverflow.com/a/47756467/5688267
