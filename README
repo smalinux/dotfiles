@@ -18,3 +18,8 @@ $ git am --continue
 
 Important:
 https://stackoverflow.com/a/47756467/5688267
+
+# one day I couldn't make a new gdm xsession on Fedora system..
+	so, $ F "i3.session"
+	and modified these files to pick /bin/dwm
+	! :)
