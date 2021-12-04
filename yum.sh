@@ -26,12 +26,18 @@ yes | sudo yum install libXft-devel ccls bear
 yes | sudo yum install Xorg asciidoctor fish tig
 yes | sudo yum install ncurses-devel bison flex elfutils-libelf-devel openssl-devel
 yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
-yes | sudo dnf install dwarves tig
+yes | sudo dnf install dwarves tig newsboat bear neovim zsh
 sudo dnf -y install sublime-merge gcc-c++-arm-linux-gnu
 sudo dnf -y install binutils-devel libX11-devel libXft-devel libXinerama-devel nitrogen xorg-x11-xinit-session
 sudo dnf -y install xinit mpv nnn zathura-pdf-mupdf youtube-dl
 sudo dnf -y install sublime-text gnome-tweak-tool gcc-c++-aarch64-linux-gnu binutils-arm-linux-gnu gcc-arm-linux-gnu glibc-arm-linux-gnu
 yes | sudo yum groupinstall 'Development Tools'
+yes | sudo dnf -y install i3
+yes | sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+yes | sudo dnf install vlc
+yes | sudo dnf install kdiff3 htop xclip simplescreenrecorder
+yes | sudo dnf install feh calc
+yes | sudo dnf install dh-autoreconf
 
 
 
@@ -45,3 +51,5 @@ sudo yum -y update
 # xcalc
 # https://snapcraft.io/store
 
+sudo pip3 install xdot
+sudo pip3 install numpy
