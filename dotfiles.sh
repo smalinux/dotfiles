@@ -27,7 +27,7 @@ then
 fi
 
 # {{{ fedora yum dependencies
-if [ "$OS" = "\"Fedora\"" ];
+if [ "$OS" = "\"Fedora Linux\"" ];
 then
    sudo sh ~/dotfiles/yum.sh
 fi
@@ -90,7 +90,7 @@ fi
 
 # if Fedora
 
-if [ "$OS" = "\"Fedora\"" ];
+if [ "$OS" = "\"Fedora Linux\"" ];
 then
    sudo dnf install git-credential-libsecret
    git config --global credential.helper /usr/libexec/git-core/git-credential-libsecret

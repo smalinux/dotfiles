@@ -23,10 +23,10 @@ if [ -f /etc/os-release ]; then
     . /etc/os-release
     OS=$NAME
     VER=$VERSION_ID
-    if [ $OS == "Ubuntu" ]; then
+    if [ "$OS" = "Ubuntu" ]; then
       git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
       git config --global credential.helper store
-    elif [ $OS == "Fedora" ]; then
+    elif [ "$OS" = "Fedora Linux" ]; then
       git config --global credential.helper /usr/libexec/git-core/git-credential-libsecret
     fi
 fi

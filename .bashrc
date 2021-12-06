@@ -130,14 +130,16 @@ if [ -f /etc/os-release ]; then
     . /etc/os-release
     OS=$NAME
     VER=$VERSION_ID
-    if [ $OS == "Ubuntu" ]; then
+    if [ "$OS" = "Ubuntu" ]; then
       alias i='sudo aptitude install'
       alias s='apt search'
       alias r='sudo apt remove'
-    elif [ $OS == "Fedora" ]; then
+      alias make='bear make' # because of coc.vim
+    elif [ "$OS" = "Fedora Linux" ]; then
       alias i='sudo yum install'
       alias s='yum search'
       alias r='sudo yum remove'
+      alias make='bear -- make' # because of coc.vim
     fi
 fi
 
@@ -199,8 +201,8 @@ alias vim="nvim"
 
 # LSP
 alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
-alias lsp_make_ccls="cp /home/sohiab/dotfiles/.ccls ."
-alias lsp_bear="bear make"
+alias lsp_make_ccls="cp ~/dotfiles/.ccls ."
+#alias lsp_bear="bear make"
 : '
 {
 "languageserver": {
@@ -234,7 +236,6 @@ alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
 # Power aliases
 alias R='yes | rm -r'
 alias cp='cp -r'
-alias make='bear make' # because of coc.vim
 alias nn='newsboat'
 alias n='ranger'
 alias m='neomutt'
