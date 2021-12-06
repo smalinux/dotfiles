@@ -15,7 +15,7 @@ git config --global user.email sohaib.amhmd@gmail.com
 git config --global core.editor vim
 git config --global alias.g 'log --oneline --decorate --graph --all'
 git config --global pull.rebase true
-git config --global merge.tool vimdiff
+git config --global merge.tool kdiff3
 git config --global merge.conflictstyle diff3
 git config --global mergetool.prompt false
 # cache password for fedora: https://stackoverflow.com/a/5343146
