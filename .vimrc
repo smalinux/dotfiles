@@ -460,6 +460,9 @@ nmap <leader>do :VimspectorShowOutput
 " stop CoC by default (but Coc is enabled)
 "let g:coc_start_at_startup=0
 
+" Disable vim plugins for large files - https://superuser.com/q/830207/952491
+" $ vim --noplugin filename
+
 " mutt quotes messages
 
 " undo
