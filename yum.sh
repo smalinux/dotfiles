@@ -36,8 +36,8 @@ yes | sudo dnf -y install i3
 yes | sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 yes | sudo dnf install vlc
 yes | sudo dnf install kdiff3 htop xclip simplescreenrecorder
-yes | sudo dnf install feh calc
-yes | sudo dnf install dh-autoreconf
+yes | sudo dnf install feh calc compton
+yes | sudo dnf install dh-autoreconf help2man
 
 
 
