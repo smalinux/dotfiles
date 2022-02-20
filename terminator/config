@@ -5,7 +5,7 @@
     background_color = "#010101"
     background_darkness = 0.97
     cursor_color = "#7f7f7f"
-    font = Consolas 13
+    font = Consolas 11
     foreground_color = "#f2f2f2"
     show_titlebar = False
     scrollbar_position = hidden
