@@ -134,7 +134,7 @@ if [ -f /etc/os-release ]; then
       alias i='sudo aptitude install'
       alias s='apt search'
       alias r='sudo apt remove'
-      alias make='bear make' # because of coc.vim
+      alias make='bear -- make' # because of coc.vim
     elif [ "$OS" = "Fedora Linux" ]; then
       alias i='sudo yum install'
       alias s='yum search'
@@ -278,3 +278,14 @@ alias checkpatch='/home/smalinux/linux-stable/scripts/checkpatch.pl'
 aptfile() {
 	apt-file search "$1" | grep "$1"
 }
+
+
+alias libbpf='cd ~/repos/linux/tools/lib/bpf/'
+alias cd_man='cd /usr/share/man'
+# To search for a specific tag and open Vim to its definition, run the following
+# command in your shell:
+# Run Ctags recursively over the entire kernel to generate the tags file. For
+# Linux 2.6.13, this should only take a minute or so:
+#$ ctags -R *
+alias tag='vim -t'
+
