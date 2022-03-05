@@ -63,6 +63,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'kamykn/spelunker.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vimwiki/vimwiki'
+Plugin 'preservim/vimux'
+Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required

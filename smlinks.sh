@@ -15,6 +15,7 @@ sudo ln -sf ~/dotfiles/soh /usr/share/X11/xkb/symbols/soh
 ln -sf ~/dotfiles/keys.sh ~/keys.sh
 ln -sf ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 sudo ln -sf ~/dotfiles/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # {{{ my scripts
 sudo ln -sf ~/dotfiles/scripts/* /usr/bin/
