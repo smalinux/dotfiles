@@ -62,7 +62,6 @@ Plugin 'bronson/vim-visual-star-search'
 Plugin 'godlygeek/tabular'
 Plugin 'kamykn/spelunker.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'puremourning/vimspector'
 Plugin 'vimwiki/vimwiki'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
@@ -335,6 +334,18 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+" for terminal
+tnoremap <C-h> <C-\><C-n><C-h>
+tnoremap <C-j> <C-\><C-n><C-j>
+tnoremap <C-k> <C-\><C-n><C-k>
+tnoremap <C-l> <C-\><C-n><C-l>
+"
+" fixup relative to vim terminal
+autocmd WinEnter *
+ \ if &buftype ==# 'terminal' |
+ \  startinsert |
+ \ endif
+
 inoremap <CAPS> <BS>
 nmap <F8> :TagbarToggle <CR>
 " hidden feature ;-)
@@ -446,15 +457,6 @@ vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
-" }}}
-
-" {{{ Plugin 'puremourning/vimspector'
-let g:vimspector_enable_mappings = 'HUMAN'
-nmap <leader>dd :call vimspector#Launch()<CR>
-nmap <leader>dx :VimspectorReset<CR>
-nmap <leader>de :VimspectorEval
-nmap <leader>dw :VimspectorWatch
-nmap <leader>do :VimspectorShowOutput
 " }}}
 
 " stop CoC by default (but Coc is enabled)
