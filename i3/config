@@ -209,7 +209,7 @@ new_window 1pixel
 client.focused    #ff006d #ff006d #ff006d
 
 # i3-gaps
-gaps inner 15
+gaps inner 0
 gaps outer 0
 
 # No Focus mouse
