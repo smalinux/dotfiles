@@ -19,8 +19,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -60,9 +60,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+	PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+	PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
+    #PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
+	PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
 fi
 unset color_prompt force_color_prompt
 
@@ -289,3 +291,9 @@ alias cd_man='cd /usr/share/man'
 #$ ctags -R *
 alias tag='vim -t'
 
+
+
+# startup tmux
+#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  #exec tmux
+#fi
