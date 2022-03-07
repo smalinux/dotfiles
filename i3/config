@@ -198,6 +198,8 @@ bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 exec_always ~/dotfiles/keys.sh
 # make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
 exec_always xset r rate 300 50
+exec_always xset s off
+exec_always xset -dpms
 
 # gaps
 #gaps inner 10
