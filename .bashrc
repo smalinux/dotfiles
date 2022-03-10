@@ -192,7 +192,9 @@ LC_TIME=en_US.utf8
 
 # forground command, this very helpful if want to toggle vim background
 # https://stackoverflow.com/a/66349559/5688267
-bind -x '"\C-f":"stty sane;fg;"'
+#bind -x '"\C-f":"stty sane;fg;"'
+#bind -x '"\C-f":"vim $(fzf);"'
+#bind -x '"\C-t":"cd **;"'
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
