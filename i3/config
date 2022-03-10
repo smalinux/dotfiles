@@ -192,10 +192,6 @@ bindsym $mod+Shift+y		resize grow width 3 px or 3 ppt
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
-# auto start scripts
-#
-# english <-> arabic
-exec_always ~/dotfiles/keys.sh
 # make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
 exec_always xset r rate 300 50
 exec_always xset s off
