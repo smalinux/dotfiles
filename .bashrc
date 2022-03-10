@@ -61,10 +61,10 @@ fi
 
 if [ "$color_prompt" = yes ]; then
 	PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
-	PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+	#PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
-	PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
+	#PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
 fi
 unset color_prompt force_color_prompt
 
@@ -198,7 +198,7 @@ LC_TIME=en_US.utf8
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
-alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
+#alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
 alias vim="nvim"
 
 #alias vim="nvim"
@@ -294,8 +294,27 @@ alias cd_man='cd /usr/share/man'
 alias tag='vim -t'
 
 
+# --- alias ---
+# copy any line (ex: link) into any file
+# ex $ fl dotfiles
+#
+fc() {
+	cat "$1" | fzf | xclip -selection clipboard
+}
+
+# --- mpv aliases ---
+#
+# https://github.com/jgreco/mpv-youtube-quality
+
 
 # startup tmux
-#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  #exec tmux
-#fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
+
+#
+# autojump python tool
+#
+[[ -s /home/smalinux/.autojump/etc/profile.d/autojump.sh ]] && source /home/smalinux/.autojump/etc/profile.d/autojump.sh
+
