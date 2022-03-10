@@ -20,7 +20,7 @@ yes | sudo aptitude install libpython3-dev libnspr4-dev libnss3-dev libnss3-tool
 yes | sudo aptitude install systemtap-sdt-dev smartmontools auditd lm-sensors xfsprogs
 yes | sudo aptitude install openjdk-11-jre-headless redis-server redis-tools redis-redisearch libvirt-daemon
 yes | sudo aptitude install libvirt-daemon-system libdevmapper-dev net-tools mariadb-client-core-10.3
-yes | sudo aptitude install docker.io feh most ctags fzf fish ripgrep bear libsecret-1-0 libsecret-1-dev
+yes | sudo aptitude install docker.io feh most ctags fish ripgrep bear libsecret-1-0 libsecret-1-dev
 yes | sudo aptitude install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
 yes | sudo aptitude install doxygen neovim brightnessctl cmdtest terminator rofi i3-wm i3lock newsboat xclip
 yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bison flex
@@ -34,6 +34,8 @@ yes | sudo aptitude install libnuma-dev binutils-dev libbabeltrace-dev
 yes | sudo aptitude install libiberty-dev
 yes | sudo aptitude install libbfd-dev libperl-dev libzstd-dev libunwind-dev
 yes | sudo aptitude install asciidoc libgtk2.0-dev libslang2-dev
+yes | sudo apt install fd-find
+yes | sudo apt install mpv
 # bpf
 yes | sudo aptitude install bpfcc-tools
 # zsh
