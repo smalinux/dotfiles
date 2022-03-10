@@ -48,11 +48,22 @@ cd dotfiles
 
 ```
 
-=== Fix fzf installation
+=== Fix vim-fzf installation
 ```
 cd ~/.vim/bundle/fzf/
 sudo ./uninstall
 sudo ./install
+```
+
+=== Install FZF
+Don't use the package manager for this package.
+```
+sh ~/dotfiles/install-fzf.sh
+```
+you can pip any thing any time to fzf and your life will be much faster :)
+```
+# fzf wiki
+https://github.com/junegunn/fzf/wiki/examples
 ```
 
 === Install coc.vim
@@ -63,6 +74,9 @@ exit
 sh ~/dotfiles/coc.vim.sh
 ```
 Run `:CheckHealth` is a very nice command.
+```
+:cocInstall coc-git
+```
 
 === vimspector
 Install:
