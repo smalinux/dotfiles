@@ -307,11 +307,18 @@ fc() {
 # https://github.com/jgreco/mpv-youtube-quality
 
 
-# startup tmux
+# --- tmux ---
+# This snippet allow me to login into tmux by default, and prevent tmux from
+# make new sessions after bootup.
+#
+# tmux session exist? if yes = attach, no (after boot) = then exec tmux and
+# tmux-resurrect plugin will take care of the restore & attach
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  cmdout=$(exec tmux attach 2>&1)
+  if (($?)); then
+	exec tmux
+  fi
 fi
-
 
 #
 # autojump python tool
