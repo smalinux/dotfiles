@@ -320,14 +320,8 @@ nnoremap <silent> <C-w>o :ZoomToggle<CR>
 " }}}
 
 " {{{ Key binding
-"Show name of file and path relative to current working directory
-map <F6> :!make run<CR>
-"Show current working directory
-map <F7> :pwd<CR>
 "Close current buffer
 map <F12> :bd!<CR>
-"run make
-map <F5> :make<CR>
 " vim backgrund transparent
 hi Normal guibg=NONE ctermbg=NONE
 " Move between windows
