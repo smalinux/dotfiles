@@ -1,0 +1,158 @@
+Compile kernel:
+
+https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html
+
+sudo apt-get -y update
+sudo apt-get -y install openssh-server  ## this is not needed but I installed to have easy ssh to my test machine from my Macbook.
+sudo apt-get -y install libssl-dev
+sudo apt-get -y install libncurses5 libncurses5-dev   ## Needed for make menuconfig
+
+_____________________________________________________________________________________________________________________________
+
+
+01 - Go to https://www.kernel.org/
+---	mainline version:	> 	[browse]
+	git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+
+
+cp -v /boot/config-$(uname -r) .config
+
+
+02 	$ make menuconfig				; selects all normal defaults and create config file
+-- 	$ make oldconfig 				; takes your current confing from /dev
+  	$ make config 					; the hard way - will ask you for evey single option
+  	$ make gconfig					; you need to have gtk to able to use this
+  	$ make nconfig					; text based but will gave you a color!
+  	$ make defconfig				; similar to oldconfig
+  	$ make allyesconfig				; :D
+  	$ make allmodconfig				; define all options as modules as possible
+  	$ make allnoconfig				; no drivers as possible - no modules - just the core kernel
+  	$ make randconfig				; pick random options - this for testers only
+  	$ make localyesconfig
+
+03 $ make menuconfig > enable loadable module support
+----	> Forced module loading option: enable it
+		< back
+		> file systems > DOS/FAT/NT Filesystems 
+				> NTFS file system support: *
+				> NTFS debugging support: *
+				> NTFS write support: *
+		< back
+		> General setup > local version: type prefix as identifire
+						> Automaticall append version: *
+
+04 $ vi .config 					; to view the created config file
+	set CONFIG_LOCALVERSION_AUTO=y
+	set CONFIG_DEBUG_FS
+----
+It will be nice if you have more than one pocessor to use ... to speen up your work
+05 $ cat /proc/cpuinfo   > see processor, if = 0 menus you have one processor, 1 == 2 processor ...
+---
+06 $ make -j $(nproc) bzImage && make -j $(nproc) modules
+---	07 $ make -j 2 bzImage			; make core only ; 2 = 2threads for 1 processor, if you have 2 processor then use 4
+	08 $ make -j 2 modules			; will compile el modules ..
+	10 $ times (make -j 2 bzImage && make modules)
+
+# REMEMBER - ordering is very important ....................................................
+
+11 $ sudo make -j4 modules_install		; to see if modules add or not: cd /lib/modules
+
+12 $ sudo make install
+
+Grub
+# 14 $ grub2-mkconfig -o /boot/grup2/grub.cfg
+14 $ sudo grub2-mkconfig -o "$(readlink -e /etc/grub2.conf)"
+
+If your system not booted properly
+______________________________________________________________________________________________________________________________
+
+
+Google: show grub menu startup fedora
+	sudo vim /boot/grub2/grub.cfg >> find line: "set timeout_style=hidden"
+		change to: set timeout_style=visible
+
+Google: Change boot order in dual boot Fedora grub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo mkdir -p /usr/src/kernel
+sudo chown -R myuser_id:myuser_id /usr/src/kernel
+cd /usr/src/kernel
+wget https://git.kernel.org/torvalds/t/linux-4.12-rc4.tar.gz
+tar xvfz https://git.kernel.org/torvalds/t/linux-4.12-rc4.tar.gz
+cd linux-4.12-rc4
+cp /boot/config-4.2.0-27-generic .config    ## Check if your boot has the same config as mine or replace with the appropriate version.
+make menuconfig
+From inside the menuconfig, select load, choose .config, save, exit. In any doubt then watch the video how make menuconfig works.
+make -j4 bzImage && make -j4 modules && sudo make -j4 modules_install
+
+
+
+## Installation of kernel modules and initramfs using mkinitramfs:-
+-----------------------------------------------------
+sudo cp arch/x86/boot/bzImage /boot/vmlinuz-4.12.0-rc4   ## substitute with the appropriate version
+
+
+
+sudo mkinitramfs /lib/modules/4.12.0-rc4 -o /boot/initrd.img-4.12.0-rc4 ## Chekc the kernel version you downloaded and compiled
+sudo grub-mkconfig -o /boot/grub/grub.cfg     ## When you run this command please ensure as party of output that both your intramfs and vmlinuz with appropriate versions are detected and entered in grub.cfg
+
+sudo update-grub2 
+
+## reboot and select the kernel which you have compiled.
+-----------------------------------------------------
