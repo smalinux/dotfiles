@@ -47,6 +47,17 @@ cd dotfiles
 ./dotfiles.sh
 
 ```
+=== install-*.sh scripts
+run this scripts as you need.
+```
+dotfiles/install/install-bat.sh
+dotfiles/install/install-bcc.sh
+dotfiles/install/install-fd.sh
+dotfiles/install/install-fzf.sh
+dotfiles/install/install-mpvplugin.sh
+dotfiles/install/install-pcp.sh
+dotfiles/install/install-tpm.sh
+```
 
 === Fix vim-fzf installation
 ```
