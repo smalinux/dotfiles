@@ -16,8 +16,8 @@ set undofile
 set nobackup
 set nowb
 set noswapfile
-"set expandtab
-set tabstop=8 softtabstop=8 shiftwidth=8 	" size of indent = 4
+set expandtab " use space instead tabs for indentation"
+set tabstop=4 softtabstop=4 shiftwidth=4 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
