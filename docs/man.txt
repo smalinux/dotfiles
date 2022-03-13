@@ -22,9 +22,11 @@ after you master any linux subsystem
 ______________________________________________
 Read "Linux from scratch" book
 ______________________________________________
-suckless & vim & workflow-lifestyle 
+suckless & vim & workflow-lifestyle
 ______________________________________________
 
+deal with scripts:
+https://gist.github.com/maelvls/79d49740ce9208c26d6a1b10b0d95b5e
 
 
 
@@ -46,9 +48,9 @@ ______________________________________________
 1. sss
 2. djdjddd
 3.  jdksjkdsj
-4. jdkfjdk 
+4. jdkfjdk
 
-* djhfjdsh 
+* djhfjdsh
   ddfdsfsd
   - fsd
   - dfds
