@@ -1,9 +1,12 @@
+#
+# sudo apt install libsecret-1-0 libsecret-1-dev libglib2.0-dev
+# sudo make --directory=/usr/share/doc/git/contrib/credential/libsecret
+#
 # Un/Set password cache commands
-#$    git config --global --unset credential.helper
-#$    git config --global credential.helper cache
-
+#    git config --global --unset credential.helper
+#    git config --global credential.helper cache
 # Store pass forever
-#$    git config --global credential.helper store
+#    git config --global credential.helper store
 [user]
 	name = Sohaib Mohamed
 	email = sohaib.amhmd@gmail.com
