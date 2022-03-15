@@ -467,3 +467,21 @@ vnoremap <Up> <Nop>
 " undo
 " Google: keep undo  after close vim
 set undodir=~/.vim/undodir
+
+
+" {{{
+" Auto resize Vim splits to active split
+set winwidth=104
+set winheight=5
+set winminheight=5
+set winheight=999
+
+" resize panes
+nnoremap <silent> <Right> :vertical resize +5<cr>
+nnoremap <silent> <Left> :vertical resize -5<cr>
+nnoremap <silent> <Up> :resize +5<cr>
+nnoremap <silent> <Down> :resize -5<cr>
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+" }}}
