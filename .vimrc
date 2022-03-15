@@ -377,7 +377,7 @@ nnoremap q <Nop>
 " {{{ highlight these words for me.
 autocmd Syntax * syntax keyword myTodo
          \ NOTE NOTES PAGE SOHAIB SECTION WARNING ERROR
-         \ DONE SMA smalinux SMALINUX
+         \ DONE SMA smalinux SMALINUX REMOVEME
    \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
@@ -429,6 +429,8 @@ nnoremap $ <nop>
 " ======================================================
 " Zl
 " ZT
+set nospell
+let g:enable_spelunker_vim = 0
 " }}}
 
 " {{{
