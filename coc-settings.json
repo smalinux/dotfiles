@@ -1,4 +1,9 @@
 {
+// {{{ General setup }}}
+    "diagnostic.messageTarget": "echo",
+    "diagnostic.messageDelay": 50,
+    "signature.target": "echo",
+// {{{ languageserver }}}
 "languageserver": {
   "ccls": {
     "command": "ccls",
