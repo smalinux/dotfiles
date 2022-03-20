@@ -305,6 +305,7 @@ fc() {
 # --- mpv aliases ---
 #
 # https://github.com/jgreco/mpv-youtube-quality
+alias sound="mpv --no-video"
 
 
 # --- tmux ---
