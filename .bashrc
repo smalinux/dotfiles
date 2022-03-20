@@ -67,7 +67,7 @@ if [ -f /etc/os-release ]; then
     VER=$VERSION_ID
     if [ "$OS" = "Ubuntu" ]; then
         if [ "$color_prompt" = yes ]; then
-            PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+            PS1='Ubuntu\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
             #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
         else
             PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
@@ -75,7 +75,7 @@ if [ -f /etc/os-release ]; then
         fi
     elif [ "$OS" = "Fedora Linux" ]; then
         if [ "$color_prompt" = yes ]; then
-            PS1='ssh\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+            PS1='Fedora\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
             #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
         else
             PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
