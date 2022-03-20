@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo yum -y update
 
 yes | sudo yum install qemu nasm libmpc-devel cmake ack vim
 
@@ -46,15 +47,12 @@ yes | sudo dnf install timeshift
 
 
 
-sudo yum -y update
-# END OF FILE
+# {{{ snap
+sudo snap install ccls --classic
+# }}} snap
 
-# iotop
-# htop
-# ascii
-# $epiphany # web browser
-# xcalc
-# https://snapcraft.io/store
-
+# {{{ pip
+pip3 install --user pynvim
 sudo pip3 install xdot
 sudo pip3 install numpy
+# }}} pip
