@@ -40,6 +40,9 @@ yes | sudo dnf install vlc
 yes | sudo dnf install kdiff3 htop xclip simplescreenrecorder
 yes | sudo dnf install feh calc compton
 yes | sudo dnf install dh-autoreconf help2man
+yes | sudo dnf install clang
+# btrfs
+yes | sudo dnf install timeshift
 
 
 
