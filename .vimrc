@@ -55,7 +55,8 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'Raimondi/delimitMate'
+"Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'bronson/vim-visual-star-search'
@@ -307,19 +308,19 @@ augroup end
 
 " {{{ Zoom / Restore window. <C-w>o
 " https://stackoverflow.com/a/26551079/5688267
-function! s:ZoomToggle() abort
-    if exists('t:zoomed') && t:zoomed
-        execute t:zoom_winrestcmd
-        let t:zoomed = 0
-    else
-        let t:zoom_winrestcmd = winrestcmd()
-        resize
-        vertical resize
-        let t:zoomed = 1
-    endif
-endfunction
-command! ZoomToggle call s:ZoomToggle()
-nnoremap <silent> <C-w>o :ZoomToggle<CR>
+" function! s:ZoomToggle() abort
+"     if exists('t:zoomed') && t:zoomed
+"         execute t:zoom_winrestcmd
+"         let t:zoomed = 0
+"     else
+"         let t:zoom_winrestcmd = winrestcmd()
+"         resize
+"         vertical resize
+"         let t:zoomed = 1
+"     endif
+" endfunction
+" command! ZoomToggle call s:ZoomToggle()
+" nnoremap <silent> <C-w>o :ZoomToggle<CR>
 " }}}
 
 " {{{ Key binding
