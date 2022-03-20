@@ -16,6 +16,7 @@ wget https://github.com/sharkdp/fd/releases/download/v${VERSION}/$DEBIAN_PACKAGE
 sudo dpkg -i $DEBIAN_PACKAGE
 rm $DEBIAN_PACKAGE
 
-echo
-echo '"fd" is now on the path'
+sudo cp /usr/bin/fdfind /usr/bin/fd
+
+echo -n '"fd" is now on the path'
 
