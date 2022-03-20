@@ -69,7 +69,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Coc.vim
+" Start: Coc.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -234,6 +234,9 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" End: Coc.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -472,8 +475,8 @@ set undodir=~/.vim/undodir
 " {{{
 " Auto resize Vim splits to active split
 set winwidth=104
-set winheight=5
-set winminheight=5
+set winheight=10
+set winminheight=10
 set winheight=999
 
 " resize panes
@@ -484,4 +487,13 @@ nnoremap <silent> <Down> :resize -5<cr>
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+" }}}
+
+" {{{
+" --- vimux ---
+let g:VimuxUseNearestPane = 1
+map <Leader>rp :VimuxPromptCommand<CR>
+map <Leader>rl :VimuxRunLastCommand<CR>
+"map <Leader>vc :CloseVimTmuxPanes<CR>
+map <Leader>ri :VimuxInterruptRunner<CR>
 " }}}
