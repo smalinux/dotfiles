@@ -59,13 +59,32 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-	PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
-	#PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
-	#PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    VER=$VERSION_ID
+    if [ "$OS" = "Ubuntu" ]; then
+        if [ "$color_prompt" = yes ]; then
+            PS1='sohaib\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+            #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+        else
+            PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
+            #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+        fi
+    elif [ "$OS" = "Fedora Linux" ]; then
+        if [ "$color_prompt" = yes ]; then
+            PS1='ssh\[\033[01;31m\]@\[\033[00m\]\[\033[01;34m\]\W\[\033[00m\]\<3 '
+            #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+        else
+            PS1='${debian_chroot:+($debian_chroot)}\u@\h \W\<3 '
+            #PS1="$(echo -e '\033[031m${USER}\033[033m:${PWD}\033[0m\n$ ')"
+        fi
+    fi
 fi
+
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
