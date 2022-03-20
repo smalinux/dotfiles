@@ -41,6 +41,7 @@ yes | sudo apt install clang
 yes | sudo apt install bear
 yes | sudo apt install xkbset
 yes | sudo apt install universal-ctags
+yes | sudo apt install openssh-server
 
 # BCC
 yes | sudo apt install libelf-dev
