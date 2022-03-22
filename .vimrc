@@ -56,7 +56,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "Plugin 'Raimondi/delimitMate'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'Raimondi/delimitMate'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'bronson/vim-visual-star-search'
