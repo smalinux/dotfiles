@@ -318,7 +318,7 @@ alias tag='vim -t'
 # ex $ fl dotfiles
 #
 fc() {
-	cat "$1" | fzf | xclip -selection clipboard
+	cat "$1" | fzf --reverse | xclip -selection clipboard
 }
 
 # --- mpv aliases ---
