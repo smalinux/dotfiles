@@ -15,7 +15,11 @@
 
 toc::[]
 
-image::https://raw.githubusercontent.com/smalinux/dotfiles/master/screenshots/main.png[screenshot]
+image::https://raw.githubusercontent.com/smalinux/dotfiles/master/screenshots/main.png[dwm-screenshot]
+```
+I'm using i3 & dwm - Fedora(btrfs) & Ubuntu(ZFS) ALL the time.
+```
+image::https://raw.githubusercontent.com/smalinux/dotfiles/master/screenshots/i3.png[i3-screenshot]
 
 ////
 === Vim
