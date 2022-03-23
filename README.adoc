@@ -38,7 +38,7 @@ sudo passwd -d smalinux
 ```
 
 === Main setup
-Please `MAKE SURE TO RUN ./apt.sh MULTIPLE TIMES`...
+Please `MAKE SURE TO RUN .~/dotfiles/scripts/apt.sh MULTIPLE TIMES`...
 ```
 sudo apt update
 sudo apt-file update
@@ -48,7 +48,7 @@ cd ~
 git clone https://github.com/smalinux/dotfiles
 
 cd dotfiles
-./dotfiles.sh
+./main.sh
 
 ```
 === install-*.sh scripts
@@ -86,7 +86,7 @@ https://github.com/junegunn/fzf/wiki/examples
 sudo -s
 curl -sL install-node.now.sh/lts | bash
 exit
-sh ~/dotfiles/coc.vim.sh
+sh ~/dotfiles/scripts/coc.vim.sh
 ```
 Run `:CheckHealth` is a very nice command.
 ```
@@ -135,8 +135,8 @@ https://stackoverflow.com/questions/5343068/is-there-a-way-to-cache-https-creden
 
 === FreeBSD
 ```
-./pkg.sh
-./dotfiles-pkg.sh
+./scripts/pkg.sh
+./scripts/dotfiles-pkg.sh
 ```
 TODO: Catch these files
 ```

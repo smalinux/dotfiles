@@ -6,7 +6,7 @@ ln -sf ~/dotfiles/i3/ ~/.config/
 ln -sf ~/dotfiles/terminator/ ~/.config/
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/update.sh ~/update.sh
+ln -sf ~/dotfiles/scripts/update.sh ~/update.sh
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.tigrc ~/.tigrc

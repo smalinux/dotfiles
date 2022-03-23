@@ -23,18 +23,18 @@ touch ~/.config/nvim/init.vim
 # {{{ Ubuntu apt dependencies
 if [ "$OS" = "\"Ubuntu\"" ];
 then
-   sudo sh ~/dotfiles/apt.sh
+   sudo sh ~/dotfiles/scripts/apt.sh
 fi
 
 # {{{ fedora yum dependencies
 if [ "$OS" = "\"Fedora Linux\"" ];
 then
-   sudo sh ~/dotfiles/yum.sh
+   sudo sh ~/dotfiles/scripts/yum.sh
 fi
 # }}}
 
 # {{{ .git config
-sh ~/dotfiles/git.sh
+sh ~/dotfiles/scripts/git.sh
 # }}}
 
 # {{{ Mute Gnome alerts
@@ -42,7 +42,7 @@ gsettings set org.gnome.desktop.sound event-sounds false
 # }}}
 
 # {{{ soft links
-~/dotfiles/smlinks.sh
+~/dotfiles/scripts/smlinks.sh
 # }}}
 
 # {{{ download all my important repos
@@ -122,7 +122,7 @@ echo "Open GNOME terminal preferences > Profiles > scrolling > Scrollbar is: (Di
 ## }}}
 #
 ## {{{ VMware related stuff
-#sh ~/dotfiles/VMware.sh
+#sh ~/dotfiles/scripts/VMware.sh
 ## }}}
 
 #echo "ToDO:"
