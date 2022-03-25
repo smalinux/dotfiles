@@ -5,6 +5,7 @@ ln -sf ~/dotfiles/.strc ~/.strc
 ln -sf ~/dotfiles/i3/ ~/.config/
 ln -sf ~/dotfiles/terminator/ ~/.config/
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/scripts/update.sh ~/update.sh
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap

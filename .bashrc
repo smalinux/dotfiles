@@ -60,7 +60,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 
-
 if [ -f /etc/os-release ]; then
     . /etc/os-release
     OS=$NAME
@@ -96,31 +95,13 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
-fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -135,58 +116,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# {{{ grep color
-alias grep='grep --color=always'
-# }}}
-
-# $ f
-# $ F
-alias f='sudo find . -name'
-alias F='sudo find / -name'
-alias ll='ls -la'
-alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
-# package manager alieases
-if [ -f /etc/os-release ]; then
-    . /etc/os-release
-    OS=$NAME
-    VER=$VERSION_ID
-    if [ "$OS" = "Ubuntu" ]; then
-      alias i='sudo aptitude install'
-      alias s='apt search'
-      alias r='sudo apt remove'
-      alias make='bear -- make' # because of coc.vim
-    elif [ "$OS" = "Fedora Linux" ]; then
-      alias i='sudo yum install'
-      alias s='yum search'
-      alias r='sudo yum remove'
-      alias make='bear -- make' # because of coc.vim
-    fi
-fi
-
-
-alias ..='cd ..'
-alias ...='cd ..; cd ..'
-alias ....='cd ..; cd ..; cd ..'
-
-# Record screencast
-#@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
-#@ Google: How to Configure Xorg as Default GNOME Session in Fedora
-#@ https://fedoraproject.org/wiki/ScreenCasting
-alias record='simplescreenrecorder'
-
-alias map='xmodmap dotfiles/.Xmodmap'
-alias mapo='xmodmap dotfiles/xmodmap_original'
-alias out="gnome-session-quit --logout"
-
-##### git aliases
-alias statpatch='git apply --stat'
-alias checkpatch='git apply --check'
-alias applypatch='patch -p1 < '
-# f = format p = patch
-alias git-fp='git format-patch --base=auto --cover-letter'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
-# DONT USE THIS, this just a reference, The canonical git-send-email(1) args
-alias git-se='git send-email --base=auto --cover-letter'
 
 # vi-mode in bash
 set -o vi
@@ -205,127 +134,10 @@ bind -m vi-insert 'Control-p: previous-history'
 bind -m vi-insert 'Control-n: next-history'
 # end: vi-mode
 
-# {{{ https://askubuntu.com/a/1098331
+# https://askubuntu.com/a/1098331
 LC_TIME=en_US.utf8
-# }}}
-
-# forground command, this very helpful if want to toggle vim background
-# https://stackoverflow.com/a/66349559/5688267
-#bind -x '"\C-f":"stty sane;fg;"'
-#bind -x '"\C-f":"vim $(fzf);"'
-#bind -x '"\C-t":"cd **;"'
-
-# Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
-# also you could use just q for quit.
-#alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
-alias vim="nvim"
-
-#alias vim="nvim"
-
-# LSP
-alias lsp_ccls="clang -fsyntax-only -v -xc /dev/null"
-alias lsp_make_ccls="cp ~/dotfiles/.ccls ."
-#alias lsp_bear="bear make"
-: '
-{
-"languageserver": {
-  "ccls": {
-    "command": "ccls",
-    "filetypes": ["c"],
-    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-    "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        }
-      }
-  }
-}
-}
-'
-#source "$HOME/.cargo/env"
-
-
-# How can I copy the output of a command directly into my clipboard?
-# https://stackoverflow.com/a/5130969/5688267
-alias "cc=xclip -selection clipboard"
-alias "vv=xclip -o -selection clipboard"
-# ls | cc
-# vv
-
-# {{{ copy vimspector.json to current dir
-alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
-# }}}
-
-# Power aliases
-alias R='yes | rm -r'
-alias cp='cp -r'
-alias nn='newsboat'
-alias n='ranger'
-alias m='neomutt'
-alias strc='xrdb ~/.strc' # Update strc
-alias p='cd ~/repos/acme-perf/tools/perf/'
-alias pp='sudo ./perf'
-alias time='date +"%n%w) %A%n%d/%m/%Y%n%X%n"'
-
-# {{{ Linux Kernel
-
-   #$ send_patch_stable 0001-your-patch-name.patch
-   # that's it ;)
-send_patch_stable() {
-    git send-email --cc sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-stable/scripts/get_maintainer.pl -norolestats' "$1"
-}
-
-send_patch_torvalds() {
-    git send-email --cc sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-torvalds/scripts/get_maintainer.pl -norolestats' "$1"
-}
-
-send_patch_next() {
-    git send-email --cc sohaib.amhmd@gmail.com --cc-cmd='/home/smalinux/linux-next/scripts/get_maintainer.pl -norolestats' "$1"
-}
-
-vol() {
-   # list all my sound devices..
-	pactl set-sink-volume alsa_output.usb-Solid_State_System_Co._Ltd._USBFC1_WENC_000000000000-00.iec958-stereo $1%
-	pactl set-sink-volume alsa_output.pci-0000_07_00.4.iec958-stereo $1%
-	pactl set-sink-volume alsa_output.pci-0000_05_00.1.hdmi-stereo $1%
-}
-
-
-alias checkpatch='/home/smalinux/linux-stable/scripts/checkpatch.pl'
-
-# }}}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# aptfile functions
-aptfile() {
-	apt-file search "$1" | grep "$1"
-}
-
-
-alias libbpf='cd ~/repos/linux/tools/lib/bpf/'
-alias cd_man='cd /usr/share/man'
-# To search for a specific tag and open Vim to its definition, run the following
-# command in your shell:
-# Run Ctags recursively over the entire kernel to generate the tags file. For
-# Linux 2.6.13, this should only take a minute or so:
-#$ ctags -R *
-alias tag='vim -t'
-
-
-# --- alias ---
-# copy any line (ex: link) into any file
-# ex $ fl dotfiles
-#
-fc() {
-	cat "$1" | fzf --reverse | xclip -selection clipboard
-}
-
-# --- mpv aliases ---
-#
-# https://github.com/jgreco/mpv-youtube-quality
-alias sound="mpv --no-video"
-
 
 # --- tmux ---
 # This snippet allow me to login into tmux by default, and prevent tmux from
@@ -340,8 +152,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   fi
 fi
 
-#
 # autojump python tool
-#
 [[ -s /home/smalinux/.autojump/etc/profile.d/autojump.sh ]] && source /home/smalinux/.autojump/etc/profile.d/autojump.sh
 
