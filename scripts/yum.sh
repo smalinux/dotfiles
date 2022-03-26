@@ -56,3 +56,10 @@ pip3 install --user pynvim
 sudo pip3 install xdot
 sudo pip3 install numpy
 # }}} pip
+
+# {{{ brave
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+# }}} brave
