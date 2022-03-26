@@ -37,10 +37,6 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {} & wc -
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
-alias bat="bat"
-alias cat="bat --paging=never"
-
-
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # source local settings

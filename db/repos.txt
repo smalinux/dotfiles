@@ -2,3 +2,5 @@ https://github.com/smalinux/docs ~/docs
 https://gist.github.com/smalinux/72249469e922f6963ae960151797539e ~/music
 https://github.com/smalinux/simOS ~/repos/simOS
 https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc ~/newsboat
+https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+https://github.com/smalinux/autojump ~/tools/autojump

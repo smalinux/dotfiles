@@ -32,7 +32,7 @@ fi
 alias f='sudo find . -name'
 alias F='sudo find / -name'
 alias ll='ls -la'
-alias x='~/dotfiles/scripts/extract.sh' # extract any kind of archive
+alias x='~/dotfiles/scripts/extract' # extract any kind of archive
 alias make='bear -- make' # because of coc.vim
 alias ..='cd ..'
 alias ...='cd ..; cd ..'
