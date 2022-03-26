@@ -17,6 +17,8 @@ ln -sf ~/dotfiles/coc-settings.json ~/.config/nvim/coc-settings.json
 sudo ln -sf ~/dotfiles/xsessions/dwm.desktop /usr/share/xsessions/dwm.desktop
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.profile ~/.profile
+# SSH
+ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
 
 # {{{ my scripts
 sudo ln -sf ~/dotfiles/scripts/* /usr/bin/
