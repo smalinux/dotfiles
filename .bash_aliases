@@ -92,8 +92,7 @@ aptfile() {
 # command in your shell:
 # Run Ctags recursively over the entire kernel to generate the tags file. For
 # Linux 2.6.13, this should only take a minute or so:
-#$ ctags -R *
-alias tag='vim -t'
+alias tags='ctags -R *'
 
 # copy any line (ex: link) into any file
 # $ fc dotfiles
