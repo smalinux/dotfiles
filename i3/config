@@ -193,9 +193,9 @@ bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
 # make j & k keybindings faster : https://youtu.be/d8XtNXutVto?t=492
-exec_always xset r rate 300 50
-exec_always xset s off
-exec_always xset -dpms
+exec_always --no-startup-id xset r rate 300 50
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
 
 # gaps
 #gaps inner 10
@@ -222,3 +222,5 @@ bindsym $mod+Tab workspace back_and_forth
 
 # slock bind
 bindsym $mod+Control+l --release exec slock
+
+exec --no-startup-id sh -c 'exec terminator;'
