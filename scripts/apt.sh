@@ -62,6 +62,12 @@ yes | sudo snap install ripgrep --classic
 yes | sudo snap install telegram-desktop
 yes | sudo snap install slack --classic
 
+# {{{ obs-studio
+yes | sudo add-apt-repository ppa:obsproject/obs-studio
+yes | sudo apt-get update
+yes | sudo apt-get install obs-studio
+# }}}
+
 # {{{ install i3-gaps
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt update
