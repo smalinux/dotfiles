@@ -260,9 +260,9 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " {{{ Theming
 syntax enable
 colorscheme luna-term
-let g:airline_theme='luna'
-let g:airline_powerline_fonts=1 "Requires powerline fonts!
-set cursorline
+"let g:airline_theme='luna'
+"let g:airline_powerline_fonts=1 "Requires powerline fonts!
+"set cursorline
 " }}}
 
 " {{{ [gutentags] Don't pollute project dirs
