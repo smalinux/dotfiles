@@ -261,8 +261,15 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 syntax enable
 colorscheme luna-term
 let g:airline_theme='sohaib'
-
-"let g:airline_powerline_fonts=1 "Requires powerline fonts!
+"let g:airline_section_y='smalinux'
+let g:airline_section_y=0
+"let g:airline_section_y= airline#section#create(['%b'])
+"let g:airline_section_y= airline#section#create(['hi',' hello', ' %b'])
+"let g:airline_section_y = '%t'
+"let g:airline_section_z = 0
+let g:airline_section_z = "%p%% 👻 %l/%L 👻 Col:%c"
+" remove filetype:
+au VimEnter * let g:airline_section_x = airline#section#create_right(['tagbar']) | :AirlineRefresh
 "set cursorline
 " }}}
 
