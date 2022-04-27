@@ -45,7 +45,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'smalinux/vim-airline-themes'
 Plugin 'notpratheek/vim-luna'
 Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
 Plugin 'djoshea/vim-autoread'
@@ -260,7 +260,7 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " {{{ Theming
 syntax enable
 colorscheme luna-term
-"let g:airline_theme='luna'
+let g:airline_theme='sohaib'
 "let g:airline_powerline_fonts=1 "Requires powerline fonts!
 "set cursorline
 " }}}
