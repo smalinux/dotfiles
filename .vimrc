@@ -261,6 +261,7 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 syntax enable
 colorscheme luna-term
 let g:airline_theme='sohaib'
+
 "let g:airline_powerline_fonts=1 "Requires powerline fonts!
 "set cursorline
 " }}}
