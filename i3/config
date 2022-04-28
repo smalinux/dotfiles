@@ -204,7 +204,7 @@ exec_always --no-startup-id xset -dpms
 for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
-client.focused    #ff006d #ff006d #ff006d
+client.focused    #ff006d #ff006d #ff006d #98e2f5
 
 # i3-gaps
 gaps inner 0
