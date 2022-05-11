@@ -92,7 +92,7 @@ aptfile() {
 # command in your shell:
 # Run Ctags recursively over the entire kernel to generate the tags file. For
 # Linux 2.6.13, this should only take a minute or so:
-alias tags='ctags -R *'
+alias ctags='ctags -R *'
 
 # copy any line (ex: link) into any file
 # $ fc dotfiles

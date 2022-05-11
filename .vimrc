@@ -65,6 +65,7 @@ Plugin 'kamykn/spelunker.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'preservim/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'preservim/nerdtree'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
@@ -241,6 +242,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{ nerdtree
+nnoremap <F9> :NERDTreeToggle<CR>
+" }}}
+
 " {{{ lightline.vim config
 set laststatus=2
 " No show Mode! lightlinw.vim will take care!
