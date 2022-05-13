@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 fg = '\033[38;5;'
 bg = '\033[48;5;'
