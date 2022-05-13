@@ -370,6 +370,13 @@ nmap f <Plug>(easymotion-overwin-f)
 nmap <CR> <Plug>(easymotion-s2)
 " }}}
 
+" {{{ vim tabs
+nnoremap <Leader>tt :tabnew<CR>
+nnoremap <Leader>tq :tabclose<CR>
+"nnoremap <Leader>tl :tabnext<CR>
+"nnoremap <Leader>th :tabprev<CR>
+" }}}
+
 " {{{ FZF
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
