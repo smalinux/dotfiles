@@ -5,7 +5,7 @@ syntax on
 set nu relativenumber
 set cursorline
 set is
-:set autoread | au CursorHold * checktime | call feedkeys("lh")
+set autoread | au CursorHold * checktime | call feedkeys("lh")
 set splitbelow splitright
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -66,6 +66,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'preservim/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'preservim/nerdtree'
+Plugin 'airblade/vim-gitgutter'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
@@ -244,6 +245,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " {{{ nerdtree
 nnoremap <F9> :NERDTreeToggle<CR>
+" }}}
+
+" {{{ vim-gitgutter
+let g:gitgutter_map_keys = 0
 " }}}
 
 " {{{ lightline.vim config
