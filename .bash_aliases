@@ -68,7 +68,7 @@ alias R='yes | rm -r'
 alias cp='cp -r'
 alias nn='newsboat'
 alias n='ranger'
-alias m='neomutt'
+alias mutt='neomutt'
 alias strc='xrdb ~/.strc' # Update strc
 alias time='date +"%n%w) %A%n%d/%m/%Y%n%X%n"'
 

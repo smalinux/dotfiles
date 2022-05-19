@@ -66,6 +66,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'preservim/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'preservim/nerdtree'
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
@@ -244,7 +245,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " {{{ nerdtree
-nnoremap <F9> :NERDTreeToggle<CR>
+nnoremap <F10> :NERDTreeToggle<CR>
 " }}}
 
 " {{{ vim-gitgutter
@@ -365,6 +366,7 @@ autocmd WinEnter *
 
 inoremap <CAPS> <BS>
 nmap <F8> :TagbarToggle <CR>
+nmap <F9> :Git blame <CR>
 " hidden feature ;-)
 nnoremap <C-w>n <C-w>s
 " }}}
