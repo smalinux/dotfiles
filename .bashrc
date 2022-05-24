@@ -155,3 +155,6 @@ fi
 # autojump python tool
 [[ -s /home/smalinux/.autojump/etc/profile.d/autojump.sh ]] && source /home/smalinux/.autojump/etc/profile.d/autojump.sh
 
+xset r rate 300 50
+xset s off
+xset -dpms
