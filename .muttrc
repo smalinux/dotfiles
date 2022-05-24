@@ -29,6 +29,11 @@ set editor="vim"
 # }}}
 # wqlj zcxm aary qmdg
 
+#
+#scroll inside the message rather than the index
+bind pager <up> previous-line
+bind pager <down> next-line
+
 
 # {{{ Start colors ------------------------------------------------------------------------
 #
