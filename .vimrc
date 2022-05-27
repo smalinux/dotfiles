@@ -504,7 +504,7 @@ set undodir=~/.vim/undodir
 " Auto resize Vim splits to active split
 set winwidth=104
 set winheight=10
-set winminheight=10
+set winminheight=5
 set winheight=999
 
 " resize panes
