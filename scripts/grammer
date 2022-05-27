@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# FIXME TODO Create user app based on the terminal that interact with these
+# websites.... to speed your workflow.
+
+brave-browser https://writer.com/grammar-checker/
+brave-browser https://quillbot.com/grammar-check
+
+brave-browser https://www.reverso.net/spell-checker/english-spelling-grammar/
+brave-browser https://www.gingersoftware.com/grammarcheck
