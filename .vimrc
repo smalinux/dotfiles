@@ -68,6 +68,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
@@ -403,6 +405,9 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " https://stackoverflow.com/q/10956261/5688267
 nnoremap Q q
 nnoremap q <Nop>
+
+" stop <leader>s
+nnoremap <leader>s <Nop>
 " }}}
 
 " {{{ highlight these words for me.
@@ -525,3 +530,18 @@ map <Leader>rl :VimuxRunLastCommand<CR>
 "map <Leader>vc :CloseVimTmuxPanes<CR>
 map <Leader>ri :VimuxInterruptRunner<CR>
 " }}}
+
+" {{{ session management - auto save vim session on quit and auto reload on start
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "yes"
+let g:session_command_aliases = 1
+nnoremap <leader>so :OpenSession<CR>
+nnoremap <leader>ss :SaveSession
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
+" }}}
+
+"{{{ Welcome message 😈
+autocmd VimEnter * echo "😈 <leader>so 😈"
+"}}}
