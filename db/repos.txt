@@ -5,3 +5,4 @@ https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc ~/newsboat
 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 https://github.com/smalinux/autojump ~/tools/autojump
 https://github.com/smalinux/scripts ~/repos/scripts
+https://gist.github.com/smalinux/584b8de472a49b9246aa9d384d96de81 ~/repos/urls
