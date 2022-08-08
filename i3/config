@@ -197,18 +197,11 @@ exec_always --no-startup-id xset r rate 300 50
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 
-# gaps
-#gaps inner 10
-
 # hide window title bar
 for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
 client.focused    #ff006d #ff006d #ff006d #98e2f5
-
-# i3-gaps
-gaps inner 0
-gaps outer 0
 
 # No Focus mouse
 focus_follows_mouse no
