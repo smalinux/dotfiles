@@ -13,7 +13,7 @@ yes | sudo aptitude install libxml-libxml-perl libxml-tokeparser-perl libfile-sl
 yes | sudo aptitude install liblist-moreutils-perl librrds-perl libspreadsheet-read-perl
 yes | sudo aptitude install libspreadsheet-writeexcel-perl libspreadsheet-readsxc-perl
 yes | sudo aptitude install libspreadsheet-xlsx-perl libtext-csv-xs-perl libjson-perl libnet-snmp-perl
-yes | sudo aptitude install sysstat socat nmap curl valgrind bsd-mailx apache2-bin unbound libdbd-mysql-perl
+yes | sudo aptitude install sysstat socat nmap curl valgrind apache2-bin unbound libdbd-mysql-perl
 yes | sudo aptitude install memcached zabbix-agent postgresql-client-common gfs2-utils qtchooser qtchooser
 yes | sudo aptitude install libqt5svg5-dev libsoqt520-dev libcoin-dev libsoqt520-dev python2-dev
 yes | sudo aptitude install libpython3-dev libnspr4-dev libnss3-dev libnss3-tools libssl-dev sasl2-bin
