@@ -70,6 +70,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
+Plugin 'junegunn/goyo.vim' " Full screen mode :Goyo
 "Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 
 call vundle#end()            " required
@@ -551,4 +552,24 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+" }}}
+
+" {{{ goyo: full screen mode
+nmap <F7> :Goyo <CR>
+let g:goyo_height='80%'
+let g:goyo_width='80%'
+
+function! s:goyo_enter()
+  set number
+  set relativenumber
+  set linebreak
+endfunction
+
+function! s:goyo_leave()
+  set nolinebreak
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 " }}}
