@@ -42,6 +42,7 @@ let mapleader = ','
 "
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+"Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-airline/vim-airline'
@@ -70,8 +71,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
+Plugin 'goerz/jupytext.vim' "Jupyter ipynb files: pip install --user jupytext
 Plugin 'junegunn/goyo.vim' " Full screen mode :Goyo
-"Plugin 'vivien/vim-linux-coding-style' " don't enable that if you don't play with linux codestyle
+"Plugin 'davidhalter/jedi-vim' " Python man pages
+"Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -141,8 +144,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
-nnoremap <silent> H :call <SID>show_documentation()<CR>
+" Use Y to show documentation in preview window.
+nnoremap <silent> Y :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -445,6 +448,9 @@ autocmd Syntax * syntax keyword myTodo
 " {{{ Abbreviations
 iabbrev @@ sohaib.amhmd@gmail.com
 iabbrev ccopy (C) 2021 Sohaib Mohamed.
+iabbrev fff // SMA FIXME
+iabbrev rrr // SMA REMOVEME
+iabbrev sss // ~~SMA~~
 " }}}
 
 " {{{ map H and L
@@ -573,3 +579,40 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " }}}
+
+" {{{
+
+" replace currently selected text with default register
+" without yanking it
+" https://superuser.com/a/321726
+vnoremap p "_dP
+" }}}
+
+" good habit try to use viw -> y then, past over to use viw -> p
+" good habit: viW    select by capital W
+" motion:  f  t   ;  F   T  https://stackoverflow.com/a/23223763/5688267
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
