@@ -17,7 +17,7 @@ set nobackup
 set nowb
 set noswapfile
 set expandtab " use space instead tabs for indentation"
-set tabstop=4 softtabstop=4 shiftwidth=4 	" size of indent = 4
+set tabstop=3 softtabstop=3 shiftwidth=3 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
@@ -54,7 +54,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'preservim/tagbar'       "<F8> button
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plugin 'junegunn/fzf.vim'
-Plugin 'easymotion/vim-easymotion'
+"Plugin 'easymotion/vim-easymotion'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "Plugin 'Raimondi/delimitMate'
 Plugin 'Raimondi/delimitMate'
@@ -75,6 +75,7 @@ Plugin 'goerz/jupytext.vim' "Jupyter ipynb files: pip install --user jupytext
 Plugin 'junegunn/goyo.vim' " Full screen mode :Goyo
 "Plugin 'davidhalter/jedi-vim' " Python man pages
 "Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plugin 'junegunn/vim-emoji'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -378,9 +379,9 @@ nnoremap <C-w>n <C-w>s
 " }}}
 
 " {{{ Easy motion plugin
-let g:EasyMotion_smartcase = 1
-nmap f <Plug>(easymotion-overwin-f)
-nmap <CR> <Plug>(easymotion-s2)
+" let g:EasyMotion_smartcase = 1
+" nmap f <Plug>(easymotion-overwin-f)
+" nmap <CR> <Plug>(easymotion-s2)
 " }}}
 
 " {{{ vim tabs
@@ -436,10 +437,10 @@ autocmd Syntax * syntax keyword myTodo
 " }}}
 
 " {{{ Folding
-"set foldmethod=indent               " not as cool as syntax, but faster
-"set foldlevelstart=1               " start unfolded
+set foldmethod=indent               " not as cool as syntax, but faster
+set foldlevelstart=1               " start unfolded
 " Toggle fold at current position.
-"nnoremap <tab> za
+nnoremap <tab> za
 " }}}
 
 "nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -514,12 +515,12 @@ set undodir=~/.vim/undodir
 
 " {{{
 " Auto resize Vim splits to active split
-set winwidth=104
-set winheight=10
-set winminheight=5
-set winheight=999
-
-" resize panes
+" set winwidth=104
+" set winheight=10
+" set winminheight=5
+" set winheight=999
+"
+" " resize panes
 nnoremap <silent> <Right> :vertical resize +5<cr>
 nnoremap <silent> <Left> :vertical resize -5<cr>
 nnoremap <silent> <Up> :resize +5<cr>
@@ -529,8 +530,7 @@ nnoremap <silent> <Down> :resize -5<cr>
 autocmd VimResized * :wincmd =
 " }}}
 
-" {{{
-" --- vimux ---
+" {{{ -- vimux --- 😘 💋
 let g:VimuxUseNearestPane = 1
 map <Leader>rp :VimuxPromptCommand<CR>
 map <Leader>rl :VimuxRunLastCommand<CR>
@@ -577,7 +577,15 @@ endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" }}}
 
+" {{{ Plugin 'junegunn/vim-emoji'
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+
+set completefunc=emoji#complete
 " }}}
 
 " {{{

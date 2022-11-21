@@ -123,7 +123,7 @@ set -o vi
 # Add this to your PATH if it’s not already declared
 export PATH=$PATH:$HOME/.local/bin
 export VISUAL=/usr/bin/vim
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/brave-browser
 # https://unix.stackexchange.com/a/104101/265591
 # clear screen: Ctrl+l

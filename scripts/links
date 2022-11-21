@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# FIXME TODO Create user app based on the terminal that interact with these
+# websites.... to speed your workflow.
+
+brave-browser smalinux.github.io/main
