@@ -8,3 +8,5 @@ https://github.com/smalinux/scripts ~/repos/scripts
 https://gist.github.com/smalinux/584b8de472a49b9246aa9d384d96de81 ~/repos/urls
 https://github.com/smalinux/re ~/repos/re
 https://github.com/smalinux/python ~/repos/python
+https://github.com/smalinux/python ~/repos/python
+--depth 1 https://git.sr.ht/~heckyel/yt-local  ~/repos/yt-local

@@ -171,3 +171,5 @@ make push
 === Later...
 * link:https://t.me/joinchat/BsGfP5xLkrlkOGVk[Telegram related channel]
 
+=== yt-local 🥰
+https://git.sr.ht/~heckyel/yt-local
