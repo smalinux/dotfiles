@@ -156,23 +156,10 @@ Link:https://www.zotac.com/us/files/download/by_product?p_nid=855804&driver_type
 === SSH
 https://askubuntu.com/a/430838/767136
 
-=== your log
-```
-git clone https://gist.github.com/smalinux/d89e73828510fbbd09c744419e5ebab7 ~/log
-```
-
-=== Keep up-to-date
-link:https://gist.github.com/smalinux/1fec75973e213e046cb9c5f4d1665afc[Your RSS urls]:
-```
-cd ~/newsboat/
-make push
-```
-
-=== Later...
-* link:https://t.me/joinchat/BsGfP5xLkrlkOGVk[Telegram related channel]
 
 === yt-local 🥰
 https://git.sr.ht/~heckyel/yt-local
+
 
 === crontab & backup
 update you dotfiles manually!
