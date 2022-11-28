@@ -437,10 +437,10 @@ autocmd Syntax * syntax keyword myTodo
 " }}}
 
 " {{{ Folding
-set foldmethod=indent               " not as cool as syntax, but faster
-set foldlevelstart=1               " start unfolded
-" Toggle fold at current position.
-nnoremap <tab> za
+" set foldmethod=indent               " not as cool as syntax, but faster
+" set foldlevelstart=1               " start unfolded
+" " Toggle fold at current position.
+" nnoremap <tab> za
 " }}}
 
 "nnoremap <leader>ev :vsplit $MYVIMRC<cr>
