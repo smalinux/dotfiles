@@ -173,3 +173,24 @@ make push
 
 === yt-local 🥰
 https://git.sr.ht/~heckyel/yt-local
+
+=== crontab & backup
+update you dotfiles manually!
+
+-important- take copy from your yt-local subscription list.
+
+append to $ crontab -e
+```
+# yt-local
+@reboot python3 /home/smalinux/repos/yt-local/server.py
+
+# Update my Git repos
+0 2 * * * bash /home/smalinux/dotfiles/scripts/crontab.sh
+0 14 * * * bash /home/smalinux/dotfiles/scripts/crontab.sh
+```
+
+```
+sudo systemctl status cron.service
+sudo systemctl enable cron.service
+```
+
