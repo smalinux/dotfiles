@@ -70,7 +70,7 @@ alias nn='newsboat'
 alias n='ranger'
 alias mutt='neomutt'
 alias strc='xrdb ~/.strc' # Update strc
-alias time='date +"%n%w) %A%n%d/%m/%Y%n%X%n"'
+alias t='date +"%n%w) %A%n%d/%m/%Y%n%X%n"'
 
 # {{{ Linux Kernel
 
