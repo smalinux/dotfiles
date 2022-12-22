@@ -21,8 +21,7 @@ set tabstop=3 softtabstop=3 shiftwidth=3 	" size of indent = 4
 set smartindent
 set autoindent
 set lbr
-set tw=80
-"set tw=500
+"set tw=80
 set mouse=n
 runtime! ftplugin/man.vim
 let $PAGER='most'
@@ -76,6 +75,7 @@ Plugin 'junegunn/goyo.vim' " Full screen mode :Goyo
 "Plugin 'davidhalter/jedi-vim' " Python man pages
 "Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plugin 'junegunn/vim-emoji'
+Plugin 'mechatroner/rainbow_csv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
