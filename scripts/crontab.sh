@@ -9,8 +9,8 @@ pushd ~
    cd /home/smalinux/repos/problem_solving/ && make
    cd /home/smalinux/repos/urls/ && make
    cd /home/smalinux/newsboat/ && make
-   cd /home/smalinux/python/ && make
-   cd /home/smalinux/repos/web_scraping/ && make push
+   cd /home/smalinux/python/ && make push
+   cd /home/smalinux/venv/web_scraping/ && make push
 
 
 popd
