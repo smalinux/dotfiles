@@ -91,7 +91,7 @@ sh ~/dotfiles/scripts/coc.vim.sh
 Run `:CheckHealth` is a very nice command.
 ```
 :cocInstall coc-git
-:cocInstall coc-pyright coc-snippets coc-word coc-python
+:cocInstall coc-pyright coc-snippets coc-word
 ```
 
 === vimspector
