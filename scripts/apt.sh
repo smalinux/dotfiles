@@ -61,7 +61,6 @@ yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
 yes | sudo snap install telegram-desktop
 yes | sudo snap install slack --classic
-yes | sudo snap install orange-app
 
 # {{{ obs-studio
 yes | sudo add-apt-repository ppa:obsproject/obs-studio
