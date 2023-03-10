@@ -2,6 +2,7 @@
 // {{{ General setup }}}
     //"diagnostic.messageTarget": "echo",
     "diagnostic.messageDelay": 50,
+    "suggest.noselect": true,
     //"signature.target": "echo",
 // {{{ languageserver }}}
 "languageserver": {
@@ -15,6 +16,9 @@
         }
       }
   }
-}
+},
+   "snippets.ultisnips.pythonPrompt": false,
+   "pyright.inlayHints.functionReturnTypes": false,
+   "pyright.inlayHints.variableTypes": false,
 }
 
