@@ -49,6 +49,7 @@ yes | sudo apt install libclang-dev
 yes | sudo apt install netperf
 yes | sudo apt install iperf
 yes | sudo apt install arping
+yes | sudo apt-get install llvm
 
 # bpf
 yes | sudo aptitude install bpfcc-tools
