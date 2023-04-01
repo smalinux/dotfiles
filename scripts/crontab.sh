@@ -12,7 +12,7 @@ pushd ~
    cd /home/smalinux/python/ && make push
    cd /home/smalinux/repos/scripts/ && make push # rand python scripts
    # data science section
-   cd /home/smalinux/venv/web_scraping/ && make push
+   cd /home/smalinux/web_scraping/ && make push
    cd /home/smalinux/data_science/ && make push
 
 
