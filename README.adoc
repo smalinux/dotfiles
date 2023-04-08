@@ -186,3 +186,21 @@ sudo systemctl enable cron.service
 ```
 sudo snap install ~/dotfiles/obsidian_1.1.16_amd64.snap --dangerous --classic
 ```
+
+=== Block this stupid sites
+add these lines to `/etc/hosts`
+```
+127.0.0.1       localhost
+127.0.1.1       pc
+127.0.0.1       mysite.com
+127.0.0.1       lichess.org
+127.0.0.1       chess.com
+127.0.0.1       whatsapp.com
+127.0.0.1       web.whatsapp.com
+127.0.0.1       web.telegram.org
+127.0.0.1       telegram.org
+127.0.0.1       twitter.com
+127.0.0.1       linkedin.com
+127.0.0.1       instagram.com
+
+```
