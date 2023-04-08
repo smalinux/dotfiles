@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.emacs ~/.emacs
 ln -sf ~/dotfiles/.strc ~/.strc
 ln -sf ~/dotfiles/i3/ ~/.config/
 ln -sf ~/dotfiles/terminator/ ~/.config/
