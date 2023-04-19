@@ -30,6 +30,27 @@ my fav terminal background color: #292E30
 * My Network driver
 link:https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software[r8125-9.006.04]
 
+=== Backup EVERYTHING before ruining your machine
+
+BlockTube
+```
+chrome-extension://bbeaicapbccfllodepmimpkgecanonai/src/ui/options.html
+```
+
+AdBlock — best ad blocker
+```
+chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/options.html#customize
+```
+
+Redirector
+```
+chrome-extension://ocgpenflpmgnfapjedencafcfakcekcd/redirector.html
+```
+
+User JavaScript and CSS
+```
+chrome-extension://nbhcbdghjpllgmfilhnhkllmkecfmpld/options.html
+```
 
 === Remove passwd
 ```
