@@ -37,7 +37,8 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {} & wc -
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="nvim +Man!"
+export MANWIDTH=999
 
 # source local settings
 if [ -f "$HOME/.bashrc" ] ; then
