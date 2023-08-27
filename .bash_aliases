@@ -66,7 +66,6 @@ alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
 # Power aliases
 alias R='yes | rm -r'
 alias cp='cp -r'
-alias nn='newsboat'
 alias n='ranger'
 alias mutt='neomutt'
 alias strc='xrdb ~/.strc' # Update strc

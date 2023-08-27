@@ -29,7 +29,7 @@ yes | sudo yum install libXft-devel ccls bear
 yes | sudo yum install Xorg asciidoctor fish tig
 yes | sudo yum install ncurses-devel bison flex elfutils-libelf-devel openssl-devel
 yes | sudo dnf install ncurses-devel libXt-devel libXaw-devel byacc flex
-yes | sudo dnf install dwarves tig newsboat bear neovim zsh
+yes | sudo dnf install dwarves tig bear neovim zsh
 sudo dnf -y install sublime-merge gcc-c++-arm-linux-gnu
 sudo dnf -y install binutils-devel libX11-devel libXft-devel libXinerama-devel nitrogen xorg-x11-xinit-session
 sudo dnf -y install xinit mpv nnn zathura-pdf-mupdf youtube-dl

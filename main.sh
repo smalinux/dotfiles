@@ -54,12 +54,6 @@ rm -r ~/.gitconfig
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 # }}}
 
-# {{{ Setup newsboat
-cd ~/newsboat/
-make
-cd ~
-# }}}
-
 # {{{ install vundleVim plugin manager
 mkdir -p ~/.vim/bundle/Vundle.vim/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

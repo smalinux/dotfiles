@@ -8,7 +8,6 @@ pushd ~
    cd /home/smalinux/repos/pwn.college/ && make push
    cd /home/smalinux/repos/problem_solving/ && make push
    cd /home/smalinux/repos/urls/ && make push
-   cd /home/smalinux/newsboat/ && make push
    cd /home/smalinux/python/ && make push
    cd /home/smalinux/repos/scripts/ && make push # rand python scripts
    # data science section
