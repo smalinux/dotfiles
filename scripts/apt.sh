@@ -38,6 +38,7 @@ yes | sudo apt install fd-find
 yes | sudo apt install mpv
 yes | sudo apt install tmux
 yes | sudo apt install clang
+yes | sudo apt install unrar # unzip rar file - this app really saved my life
 yes | sudo apt install bear
 yes | sudo apt install xkbset
 yes | sudo apt install universal-ctags
