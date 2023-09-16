@@ -111,3 +111,29 @@ alias git-fp='git format-patch --base=auto --cover-letter'  # ex$ git format-pat
 # DONT USE THIS, this just a reference, The canonical git-send-email(1) args
 alias git-se='git send-email --base=auto --cover-letter'
 # }}}
+
+ss() {
+   brave-browser https://www.linkedin.com/in/smalinux/
+   #brave-browser https://www.instagram.com/smalinux/
+   #brave-browser https://soundcloud.com/smalinux
+   #brave-browser https://github.com/smalinux
+   #brave-browser https://web.whatsapp.com
+   #brave-browser https://twitter.com
+   #brave-browser https://facebook.com
+}
+
+# $ b google.com
+function b() {
+   brave-browser --app="https://$1"
+}
+
+alias linkedin='brave-browser --app=https://www.linkedin.com/in/smalinux/'
+alias insta='brave-browser --app=https://www.instagram.com/smalinux/'
+alias soundcloud='brave-browser --app=https://soundcloud.com/smalinux'
+alias github='brave-browser --app=https://github.com/smalinux'
+alias whatsapp='brave-browser --app=https://web.whatsapp.com'
+alias twitter='brave-browser --app=https://twitter.com'
+alias facebook='brave-browser --app=https://facebook.com'
+alias gmail='brave-browser --app=https://gmail.com'
+alias cal='brave-browser --app=https://calendar.google.com/calendar/u/0/r/week' # Calendar
+alias keep='brave-browser --app=https://keep.google.com/u/0/?pli=1#home' # Google Keep
