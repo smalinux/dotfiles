@@ -181,6 +181,19 @@ https://askubuntu.com/a/430838/767136
 === yt-local 🥰
 https://git.sr.ht/~heckyel/yt-local
 
+redirector:
+```
+Description:
+YouTube
+Example URL:
+https://www.youtube.com/watch?v=dWa0UTkq1bc&ab_channel=BugsWriter
+Include pattern:
+^(https?://(?:[a-zA-Z0-9_-]*\.)?(?:youtube\.com|youtu\.be|youtube-nocookie\.com)/.*)
+Redirect to:
+http://localhost:9010/$1
+
+```
+
 
 === crontab & backup
 update you dotfiles manually!
