@@ -190,7 +190,10 @@ update you dotfiles manually!
 append to $ crontab -e
 ```
 # yt-local
-@reboot python3 /home/smalinux/repos/yt-local/server.py
+# --------
+# run:
+# conda create --name yt-local python=3.9.0
+@reboot /home/smalinux/anaconda3/envs/yt-local/bin/python3 /home/smalinux/repos/yt-local/server.py 2>> /home/smalinux/yt-local
 
 # Update my Git repos
 0 */3 * * * bash /home/smalinux/dotfiles/scripts/crontab.sh
