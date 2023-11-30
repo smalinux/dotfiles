@@ -23,3 +23,7 @@ ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
 
 # {{{ my scripts
 sudo ln -sf ~/dotfiles/scripts/* /usr/bin/
+# }}}
+
+# mpv
+ln -sf ~/dotfiles/mpv.conf ~/.config/mpv/mpv.conf
