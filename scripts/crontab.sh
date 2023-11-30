@@ -13,6 +13,7 @@ pushd ~
    # data science section
    cd /home/smalinux/web_scraping/ && make push
    cd /home/smalinux/data_science/ && make push
+   cd /home/smalinux/repos/sc-backup/ && make push
 
 
 popd
