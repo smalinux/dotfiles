@@ -14,6 +14,8 @@ pushd ~
    cd /home/smalinux/web_scraping/ && make push
    cd /home/smalinux/data_science/ && make push
    cd /home/smalinux/repos/sc-backup/ && make push
+   # Update my docs repos (Obsidian) every 3 hours
+   cd /home/smalinux/docs/ && make push
 
 
 popd
