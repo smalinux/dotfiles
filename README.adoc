@@ -218,6 +218,7 @@ append to $ crontab -e
 ```
 sudo systemctl status cron.service
 sudo systemctl enable cron.service
+sudo systemctl restart cron.service
 ```
 
 
@@ -268,3 +269,17 @@ bluetoothctl disconnect FC:69:47:7C:9D:A3
 bluetoothctl block FC:69:47:7C:9D:A3
 ```
 
+=== VPN
+https://mullvad.net/[mullvad]
+
+```
+mullvad connect # enables wireguard VPN systemwide
+mullvad disconnect # disables VPN
+```
+- Google: `seedbox`
+- Google: how to hide vpn mullvad
+- Google: how to encrypt connection mullvad
+- Google: how to encrypt connection vpn
+- Google: how to hide connection vpn
+- Google: how to hide connection vpn torrent
+- Google: vpn mullvad europe torrenting guide
