@@ -1,7 +1,6 @@
 https://github.com/smalinux/docs ~/docs
 https://github.com/smalinux/simOS ~/repos/simOS
 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-https://github.com/smalinux/autojump ~/tools/autojump
 https://github.com/smalinux/scripts ~/repos/scripts
 https://github.com/smalinux/re ~/repos/re
 https://github.com/smalinux/python ~/repos/python
