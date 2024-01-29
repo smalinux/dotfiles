@@ -171,3 +171,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# {{{ zoxide
+
+#  https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init bash)"
+
+# }}}

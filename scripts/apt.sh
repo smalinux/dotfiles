@@ -27,7 +27,15 @@ yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bis
 yes | sudo aptitude install simplescreenrecorder compton libxft-dev dwarves
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
+
+
+# Misc
+###############################################################################
+yes | sudo apt install zoxide
+
+
 # perf
+###############################################################################
 yes | sudo aptitude install linux-tools-`uname -r` # FIXME this line anybe not not useful for you!
 yes | sudo aptitude install linux-tools-common linux-tools-generic libdw-dev libcap-dev
 yes | sudo aptitude install libnuma-dev binutils-dev libbabeltrace-dev
@@ -45,6 +53,7 @@ yes | sudo apt install universal-ctags
 yes | sudo apt install openssh-server
 
 # BCC
+###############################################################################
 yes | sudo apt install libelf-dev
 yes | sudo apt install libclang-dev
 yes | sudo apt install netperf
@@ -53,12 +62,19 @@ yes | sudo apt install arping
 yes | sudo apt-get install llvm
 
 # bpf
+###############################################################################
 yes | sudo aptitude install bpfcc-tools
+
 # zsh
+###############################################################################
 yes | sudo aptitude install zsh zsh-syntax-highlighting
+
 # lstopo
+###############################################################################
 yes | sudo aptitude install hwloc
 
+# snap
+###############################################################################
 yes | sudo snap install vlc
 yes | sudo snap install ripgrep --classic
 yes | sudo snap install telegram-desktop
