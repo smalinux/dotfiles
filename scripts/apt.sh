@@ -31,7 +31,11 @@ yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 
 # Misc
 ###############################################################################
-yes | sudo apt install zoxide
+yes | sudo apt install zoxide # Autojump-like app, smart cd command
+yes | sudo apt install calc   # calculator
+yes | sudo apt install youtube-dl
+yes | sudo snap install spotify
+
 
 
 # perf
