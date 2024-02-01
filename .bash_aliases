@@ -100,7 +100,7 @@ fc() {
 }
 
 # https://github.com/jgreco/mpv-youtube-quality
-alias sound="mpv --no-video --loop"
+alias music="mpv --no-video --loop"
 
 # {{{ git aliases
 alias statpatch='git apply --stat'
@@ -137,3 +137,4 @@ alias facebook='brave-browser --app=https://facebook.com'
 alias gmail='brave-browser --app=https://gmail.com'
 alias cal='brave-browser --app=https://calendar.google.com/calendar/u/0/r/week' # Calendar
 alias keep='brave-browser --app=https://keep.google.com/u/0/?pli=1#home' # Google Keep
+alias c='calc' # sudo apt install calc
