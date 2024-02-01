@@ -283,3 +283,15 @@ mullvad disconnect # disables VPN
 - Google: how to hide connection vpn
 - Google: how to hide connection vpn torrent
 - Google: vpn mullvad europe torrenting guide
+
+=== wifi Connection via CLI
+https://unix.stackexchange.com/a/327756
+```bash
+# For a new connection:
+nmcli dev wifi connect <mySSID> password <myPassword>
+
+# Or if a connection was already set up:
+nmcli con up <mySSID>
+
+# (or if that does not work, try nmcli con up id <mySSID>)
+```
