@@ -8,3 +8,4 @@ https://github.com/smalinux/c_ ~/repos/c_
 https://git.sr.ht/~heckyel/yt-local  ~/repos/yt-local
 https://github.com/smalinux/buildroot  ~/repos/buildroot
 https://github.com/smalinux/cheatsheet  ~/repos/cheatsheet
+https://github.com/smalinux/rss_db_backup  ~/repos/rss_db_backup
