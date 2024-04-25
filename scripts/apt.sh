@@ -27,6 +27,9 @@ yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bis
 yes | sudo aptitude install simplescreenrecorder compton libxft-dev dwarves
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
+yes | sudo apt install suckless-tools xss-lock i3lock
+
+
 
 
 # Misc

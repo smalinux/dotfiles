@@ -214,6 +214,6 @@ exec_always --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1
 bindsym $mod+Tab workspace back_and_forth
 
 # slock bind
-bindsym $mod+Control+l --release exec slock
+bindsym $mod+l --release exec slock
 
 exec --no-startup-id sh -c 'exec terminator;'
