@@ -138,3 +138,10 @@ alias gmail='brave-browser --app=https://gmail.com'
 alias cal='brave-browser --app=https://calendar.google.com/calendar/u/0/r/week' # Calendar
 alias keep='brave-browser --app=https://keep.google.com/u/0/?pli=1#home' # Google Keep
 alias c='calc' # sudo apt install calc
+
+# I got this error when I invoked gnome-control-center:
+# Running gnome-control-center is only supported under GNOME and Unity, exiting
+# And here is the solution:
+# https://discourse.gnome.org/t/gnome-control-center-outside-of-gnome/15771
+alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+
