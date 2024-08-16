@@ -11,7 +11,7 @@
 #
 # Remap keyboard
 #------------------------------------------------------------------------------
-setxkbmap -layout us,ar
+setxkbmap -layout us,ara
 setxkbmap -option 'grp:ctrls_toggle'
 setxkbmap -option caps:swapescape
 
