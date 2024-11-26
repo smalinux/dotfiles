@@ -106,3 +106,8 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update
 yes | sudo apt install brave-browser
 # }}}
+
+
+
+pip3 install --user fzf-dirhistory --break-system-packages
+

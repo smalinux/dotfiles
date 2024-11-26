@@ -177,3 +177,14 @@ unset __conda_setup
 eval "$(zoxide init bash)"
 
 # }}}
+
+# {{{ fzfdirhist
+PROMPT_COMMAND='python3 -m fzfdirhist log "$(pwd)"'
+
+fdh() {
+  local dir=$(python3 -m fzfdirhist show | fzf --height=40% --reverse +m)
+  cd "$dir"
+}
+
+bind '"\C-e": "\C-k\C-u fdh\n"'
+# }}}
