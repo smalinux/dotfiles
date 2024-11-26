@@ -47,7 +47,7 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'vim-airline/vim-airline'
 Plugin 'smalinux/vim-airline-themes'
 Plugin 'notpratheek/vim-luna'
-Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
+"Plugin 'ludovicchabant/vim-gutentags' " for Ctags automation
 Plugin 'djoshea/vim-autoread'
 Plugin 'mileszs/ack.vim'
 Plugin 'preservim/tagbar'       "<F8> button
@@ -288,11 +288,11 @@ au VimEnter * let g:airline_section_x = airline#section#create_right(['tagbar'])
 "set cursorline
 " }}}
 
-" {{{ [gutentags] Don't pollute project dirs
-let g:gutentags_cache_dir = '~/.vim/tags/'
-let g:gutentags_gtags_options_file = '~/dotfiles/tags.conf'
-set statusline+=%{gutentags#statusline()}
-" }}}
+"" {{{ [gutentags] Don't pollute project dirs
+"let g:gutentags_cache_dir = '~/.vim/tags/'
+"let g:gutentags_gtags_options_file = '~/dotfiles/tags.conf'
+"set statusline+=%{gutentags#statusline()}
+"" }}}
 
 " {{{ Auto strip trailing spaces when save - https://vi.stackexchange.com/a/456
 function! <SID>StripTrailingWhitespaces()
@@ -415,7 +415,7 @@ nnoremap <leader>s <Nop>
 " {{{ highlight these words for me.
 autocmd Syntax * syntax keyword myTodo
          \ NOTE NOTES PAGE SOHAIB SECTION WARNING ERROR
-         \ DONE SMA smalinux SMALINUX REMOVEME
+         \ DONE SMA smalinux SMALINUX REMOVEME DELETEME
    \ containedin=ALL | highlight def link myTodo TODO
 " }}}
 
