@@ -249,7 +249,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " plugin Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " {{{ nerdtree
-nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap <F10> :NERDTreeFind<CR>
 " }}}
 
 " {{{ vim-gitgutter
