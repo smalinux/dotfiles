@@ -13,7 +13,7 @@
 #------------------------------------------------------------------------------
 setxkbmap -layout us,ara
 setxkbmap -option 'grp:ctrls_toggle'
-setxkbmap -option caps:swapescape
+#setxkbmap -option caps:swapescape
 
 # no mouse
 setxkbmap -option keypad:pointerkeys
