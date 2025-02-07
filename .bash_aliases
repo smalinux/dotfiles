@@ -108,6 +108,11 @@ alias checkpatch='git apply --check'
 alias applypatch='patch -p1 < '
 # f = format p = patch
 alias git-fp='git format-patch --base=auto --cover-letter'  # ex$ git format-patch -1 HEAD    # where 1 == number of commit
+
+# ex$ git format-patch -1 HEAD    # where 1 == number of commit
+function git-make-patch() {
+   git format-patch -$1 HEAD
+}
 # DONT USE THIS, this just a reference, The canonical git-send-email(1) args
 alias git-se='git send-email --base=auto --cover-letter'
 # }}}
@@ -145,3 +150,6 @@ alias c='calc' # sudo apt install calc
 # https://discourse.gnome.org/t/gnome-control-center-outside-of-gnome/15771
 alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 
+l() {
+   sudo brightnessctl -q set $1%
+}
