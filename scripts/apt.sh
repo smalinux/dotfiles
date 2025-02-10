@@ -30,6 +30,7 @@ yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
 yes | sudo apt install suckless-tools xss-lock i3lock
 yes | sudo apt install pulseaudio-utils
 yes | sudo apt install pandoc
+yes | sudo apt install libtinfo-dev libncurses5-dev
 
 
 
