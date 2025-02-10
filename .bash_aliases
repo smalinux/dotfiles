@@ -43,6 +43,7 @@ alias record='simplescreenrecorder'
 alias map='xmodmap dotfiles/.Xmodmap'
 alias mapo='xmodmap dotfiles/xmodmap_original'
 alias logout="gnome-session-quit --logout"
+alias ,="pwd"
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
