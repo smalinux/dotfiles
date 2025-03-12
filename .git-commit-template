@@ -1,0 +1,46 @@
+<type>(<scope>): <short summary>
+#   fix(ui): resolve button alignment issue in settings page
+#   feat(auth): add JWT-based authentication
+#   feat(auth): add JWT-based authentication
+#   fix(ui): resolve button alignment issue in settings page
+#
+# ----------------------------------
+# Title: Summary, imperative, start upper case, don't end with a period
+# No more than 50 chars. #### 50 chars is here:  #
+# ----------------------------------
+#
+#    * feat             A new feature - SemVar PATCH
+#    * fix              A bug fix - SemVar MINOR
+#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
+#    * docs             Change to documentation only
+#    * style            Change to style (whitespace, etc.)
+#    * refactor         Change not related to a bug or feat
+#    * perf             Change that affects performance
+#    * test             Change that adds/modifies tests
+#    * build            Change to build system
+#    * ci               Change to CI pipeline/workflow
+#    * chore            General tooling/config/min refactor
+#
+# =============================================================================
+
+# Remember blank line between title and body.
+
+TEST
+----------------------------------
+
+
+Description: What? Why?
+----------------------------------
+#     - Explain what changed and why.
+#     - Provide context if necessary.
+#     - Mention related issues (e.g., Fixes #123).
+
+
+Implementation: How?
+----------------------------------
+#   - Implement JWT authentication for user sessions
+#   - Store tokens securely using HTTPOnly cookies
+#   - Adjusted CSS flex properties to align buttons correctly
+#   - Verified fix on Chrome, Firefox, and Edge
+Fixes #42
+Closes #99
