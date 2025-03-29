@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 pushd ~
-
 
    #cd /home/smalinux/repos/pwn.college/ && make push
    #cd /home/smalinux/repos/problem_solving/ && make push

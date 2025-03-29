@@ -199,11 +199,21 @@ http://localhost:9010/$1
 
 
 === crontab & backup
-update you dotfiles manually!
 
--important- take copy from your yt-local subscription list.
+You have to re-sign with git credential again, to make it work
 
-append to $ crontab -e
+You can configure Git to store your GitHub credentials locally and
+automatically authenticate in your cron job.
+    $ sudo -u smalinux -i
+
+    $ git config --global credential.helper store
+
+✅ Verify Saved Credentials
+    $ cat ~/.git-credentials
+        It should look like this:
+        https://your-username:your-password@github.com
+
+
 ```
 # yt-local
 # --------
