@@ -10,9 +10,9 @@ pushd ~
    #cd /home/smalinux/web_scraping/ && make push
    #cd /home/smalinux/data_science/ && make push
    #cd /home/smalinux/repos/sc-backup/ && make push
-   #cd /home/smalinux/docs/ && make push # Update my docs repos (Obsidian) every 3 hours
+   cd /home/smalinux/docs/ && make push # Update my docs repos (Obsidian) every 3 hours
    #cd /home/smalinux/repos/c_/ && make push #FIXME: Cleanup: Add this repo to Obsidian
-   #cd /home/smalinux/repos/rss_db_backup/ && make push
+   cd /home/smalinux/.config/fluent-reader && make push
    cd /home/smalinux/repos/smalinux.github.io/ && make push
 
 
