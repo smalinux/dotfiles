@@ -231,6 +231,15 @@ sudo systemctl enable cron.service
 sudo systemctl restart cron.service
 ```
 
+=== How to Preview an RST Document in Sublime Text
+
+1. In Sublime Text, click **Preferences->Package Control**.
+2. Type **install** and press **Enter**.
+3. Type https://github.com/timonwong/OmniMarkupPreviewer[OmniMarkupPreviewer] and press **Enter**.
+4. After installing, open a .rst file (it must be a file already [saved](https://raw.githubusercontent.com/lsegal/atom-rst-preview/master/sample.rst) with a `.rst` file extension).
+5. In Sublime Text, use the hot-key `CTRL-ALT-O` or click **Tools->Command Palette** and type **preview**, selecting **Preview Current Markup in Browser**.
+
+Your web browser should launch on localhost and display the formatted rst file.
 
 === obsidian
 
