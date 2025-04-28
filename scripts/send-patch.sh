@@ -6,6 +6,6 @@
 git send-email \
     --cc='sohaib.amhmd@gmail.com' \
     --cc='lorem@google.com' \
-    --cc-cmd='/home/smalinux/repos/acme-perf/scripts/get_maintainer.pl -norolestats' \
+    --cc-cmd='/src/acme-perf/scripts/get_maintainer.pl -norolestats' \
     HEAD~1
 
