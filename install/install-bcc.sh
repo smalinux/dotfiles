@@ -2,8 +2,8 @@
 # Tested on Ubuntu 21.10
 
 
-git clone https://github.com/iovisor/bcc.git ~/repos/
-pushd ~/repos/
+git clone https://github.com/iovisor/bcc.git /src/
+pushd /src/
 	mkdir bcc/build; cd bcc/build
 	cmake ..
 	make
