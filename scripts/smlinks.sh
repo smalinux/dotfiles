@@ -10,6 +10,8 @@ ln -sf ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/scripts/update.sh ~/update.sh
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
+mkdir -p /home/smalinux/.config/makeshift
+ln -sf /home/smalinux/dotfiles/makeshift/* ~/.config/makeshift/
 ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.dwm ~/

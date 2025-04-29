@@ -1,0 +1,34 @@
+[builder kbuild]
+__cmd__ = make -j$(echo $(nproc --all || printf "1\n") | tr -d '\n')
+$KCONFIG_OVERWRITECONFIG = y
+$KBUILD_OUTPUT = ../build/${SOFTWARE}/${PLATFORM}
+__args__ = O=../build/${SOFTWARE}/${PLATFORM}
+$CONFIG = ../${SOFTWARE}-cfg/${PLATFORM}/.config
+__prep__ = <<EOT
+        mkdir -p $(dirname ${CONFIG})
+        touch ${CONFIG}
+        ln -r -f -s $(realpath ${CONFIG}) ${KBUILD_OUTPUT}/.config
+        rm -f build && ln -f -s ${KBUILD_OUTPUT} build
+EOT
+
+[builder kconfig]
+__cmd__ = make
+$KCONFIG_OVERWRITECONFIG = y
+$x = y
+$OUTPUT = ../build/${SOFTWARE}/${PLATFORM}
+__args__ = O=../build/${SOFTWARE}/${PLATFORM}
+$CONFIG = ../${SOFTWARE}-cfg/${PLATFORM}/.config
+__prep__ = <<EOT
+        mkdir -p $(dirname ${CONFIG})
+        touch ${CONFIG}
+        ln -r -f -s $(realpath ${CONFIG}) ${OUTPUT}/.config
+        rm -f build && ln -f -s ${OUTPUT} build
+EOT
+
+[architecture arm]
+$ARCH = arm
+$CROSS_COMPILE = arm-linux-gnueabihf-
+
+[architecture arm64]
+$ARCH = arm64
+$CROSS_COMPILE = aarch64-linux-gnu-

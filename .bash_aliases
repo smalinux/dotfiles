@@ -154,3 +154,6 @@ alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 l() {
    sudo brightnessctl -q set $1%
 }
+
+
+alias m="/home/smalinux/dotfiles/scripts/makeshift.pl"
