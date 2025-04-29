@@ -197,6 +197,15 @@ http://localhost:9010/$1
 
 ```
 
+=== update ubuntu manually
+
+```
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt-get clean && sudo snap refresh
+```
+or/and
+```
+update-manager
+```
 
 === crontab & backup
 
