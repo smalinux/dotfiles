@@ -65,7 +65,7 @@ print "#!/bin/sh\n\n" if $dryrun;
 my %cfgenv;
 
 my %cmds = (
-    __check__ => [], __prep__ => [], __cmd__ => [], __args__ => [],
+    __check__ => [], __prep__ => [], __cmd__ => [], __savedefconfig__ => [], __args__ => [],
     __success__ => [], __failure__ => []
 );
 
@@ -355,7 +355,7 @@ Example configuration for Kbuild-using C<barebox>:
 
     [builder kbuild]
     __cmd__ = make -j$((nproc --all || printf "1\n") | tr -d '\n')
-    
+
     [software barebox]
     \builder = kbuild
     $KCONFIG_OVERWRITECONFIG = y
@@ -369,15 +369,15 @@ Example configuration for Kbuild-using C<barebox>:
             rm -f build && ln -f -s ${KBUILD_OUTPUT} build
     EOT
     __check__ = git cat-file commit a3ffa97f40dc81f2d6b07ee964f2340fe0c1ba97 2>/dev/null 1>/dev/null
-    
+
     [platform mx6]
     $ARCH = arm
     $CROSS_COMPILE = arm-v7a-linux-gnueabihf-
-    
+
     [platform mx6-clang]
     \platform = mx6
     $CONFIG = ../${SOFTWARE}-cfg/mx6/.config
     __args__ = CC=clang
-    
+
 
 =cut

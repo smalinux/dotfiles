@@ -1,5 +1,6 @@
 [builder kbuild]
 __cmd__ = make -j$(echo $(nproc --all || printf "1\n") | tr -d '\n')
+__savedefconfig__ = make -j$(echo $(nproc --all || printf "1\n") | tr -d '\n') savedefconfig
 $KCONFIG_OVERWRITECONFIG = y
 $KBUILD_OUTPUT = ../build/${SOFTWARE}/${PLATFORM}
 __args__ = O=../build/${SOFTWARE}/${PLATFORM}
@@ -13,6 +14,7 @@ EOT
 
 [builder kconfig]
 __cmd__ = make
+__savedefconfig__ = make -j$(echo $(nproc --all || printf "1\n") | tr -d '\n') savedefconfig
 $KCONFIG_OVERWRITECONFIG = y
 $x = y
 $OUTPUT = ../build/${SOFTWARE}/${PLATFORM}
