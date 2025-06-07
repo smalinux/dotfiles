@@ -389,9 +389,36 @@ nnoremap <Leader>tq :tabclose<CR>
 " }}}
 
 " {{{ FZF
-nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :History<CR>
+nnoremap <Leader>f :call <SID>FilesCurrentCommit()<CR>
+
+function! s:FilesCurrentCommit()
+  let commit = ''
+  let bufname = expand('%')
+
+  if bufname =~ '^fugitive:'
+    let commit = matchstr(bufname, 'fugitive://.*//\zs[a-f0-9]\{7,40\}')
+  else
+    silent let result = system('git rev-parse --verify "!" 2>/dev/null')
+    if v:shell_error == 0
+      let commit = trim(system('git rev-parse "!"'))
+    endif
+  endif
+
+  if !empty(commit)
+    call fzf#vim#files('', {
+      \ 'source': 'git ls-tree -r --name-only ' . commit,
+      \ 'sink': function('s:OpenCommitFile', [commit])
+    \ })
+  else
+    call fzf#vim#files('')
+  endif
+endfunction
+
+function! s:OpenCommitFile(commit, filename)
+  execute 'Gedit ' . a:commit . ':' . a:filename
+endfunction
 " }}}
 
 " {{{ Yggdroot/indentLine - for indention
