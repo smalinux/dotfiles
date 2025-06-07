@@ -62,3 +62,5 @@
 	changeHunkIndicators = false
 	stripLeadingSymbols = false
 	useUnicodeRuler = false
+[diff]
+	renameLimit = 10000

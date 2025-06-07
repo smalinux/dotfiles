@@ -389,9 +389,42 @@ nnoremap <Leader>tq :tabclose<CR>
 " }}}
 
 " {{{ FZF
-nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :History<CR>
+" Get current commit SHA and browse its files with fzf
+nnoremap <Leader>f :call <SID>FilesCurrentCommit()<CR>
+
+function! s:FilesCurrentCommit()
+  " Get the current commit SHA from fugitive buffer or ! reference
+  let commit = ''
+  let bufname = expand('%')
+
+  " Check if we're in a fugitive buffer
+  if bufname =~ '^fugitive:'
+    let commit = matchstr(bufname, 'fugitive://.*//\zs[a-f0-9]\{7,40\}')
+  else
+    " Try ! reference
+    silent let result = system('git rev-parse --verify "!" 2>/dev/null')
+    if v:shell_error == 0
+      let commit = trim(system('git rev-parse "!"'))
+    endif
+  endif
+
+  if !empty(commit)
+    " Browse files from that commit with proper sink function
+    call fzf#vim#files('', {
+      \ 'source': 'git ls-tree -r --name-only ' . commit,
+      \ 'sink': function('s:OpenCommitFile', [commit])
+    \ })
+  else
+    " Normal Files
+    call fzf#vim#files('')
+  endif
+endfunction
+
+function! s:OpenCommitFile(commit, filename)
+  execute 'Gedit ' . a:commit . ':' . a:filename
+endfunction
 " }}}
 
 " {{{ Yggdroot/indentLine - for indention
