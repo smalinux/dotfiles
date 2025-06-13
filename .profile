@@ -44,3 +44,7 @@ export MANWIDTH=999
 if [ -f "$HOME/.bashrc" ] ; then
   source "$HOME/.bashrc"
 fi
+
+# I want my HDMI-0 screen to be reversed by default permanently
+xrandr --output HDMI-0 --rotate inverted
+xrandr --output HDMI-0 --auto --primary
