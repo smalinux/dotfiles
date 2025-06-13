@@ -152,7 +152,9 @@ alias c='calc' # sudo apt install calc
 alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 
 l() {
-   sudo brightnessctl -q set $1%
+    sudo brightnessctl -q set $1%
+    BRIGHTNESS=$(awk "BEGIN {printf \"%.2f\", $1 / 100}")
+    xrandr --output HDMI-0 --brightness "$BRIGHTNESS"
 }
 
 
