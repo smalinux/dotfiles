@@ -16,6 +16,8 @@ pushd ~
 
    cd /src/smalinux.github.io/ && make push
    cd /src/md/ && make push
+   cd /home/smalinux/docs/ && make push
+   cd /src/beaglebone-debian-dev && make push
 
    cd /src/barebox-cfg/ && make push
    cd /src/linux-cfg/ && make -f make.sh push
