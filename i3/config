@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
@@ -216,4 +216,4 @@ bindsym $mod+Tab workspace back_and_forth
 # slock bind
 bindsym $mod+l --release exec slock
 
-exec --no-startup-id sh -c 'exec terminator;'
+exec --no-startup-id sh -c 'exec ghostty;'

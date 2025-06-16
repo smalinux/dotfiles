@@ -22,7 +22,7 @@ yes | sudo aptitude install openjdk-11-jre-headless redis-server redis-tools red
 yes | sudo aptitude install libvirt-daemon-system libdevmapper-dev net-tools mariadb-client-core-10.3
 yes | sudo aptitude install docker.io feh most fish ripgrep bear libsecret-1-0 libsecret-1-dev
 yes | sudo aptitude install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
-yes | sudo aptitude install doxygen neovim brightnessctl cmdtest terminator rofi i3-wm i3lock xclip
+yes | sudo aptitude install doxygen neovim brightnessctl cmdtest rofi i3-wm i3lock xclip
 yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bison flex
 yes | sudo aptitude install simplescreenrecorder compton libxft-dev dwarves
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
@@ -95,6 +95,8 @@ yes | sudo snap install ripgrep --classic
 yes | sudo snap install telegram-desktop
 yes | sudo snap install slack --classic
 yes | sudo snap install sublime-text --classic
+yes | sudo snap install ghostty --classic
+
 
 
 # {{{ obs-studio

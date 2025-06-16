@@ -1,0 +1,27 @@
+# Basic Ghostty config for fullscreen headless terminal
+
+# Fullscreen mode
+fullscreen = true
+
+# Remove window decorations (headless feel)
+##############decorations = none
+
+# Optional: hide scrollbars and mouse cursor when idle
+#hide-scrollbar = true
+#hide-cursor-when-typing = true
+
+# Use a readable monospaced font
+#font-family = "JetBrains Mono"
+#font-size = 14
+
+# Optional: dark background
+#background = 1e1e1e
+#foreground = cccccc
+#cursor-color = ffffff
+
+# Increase scrollback history
+scrollback-limit = 100000
+
+# Auto-copy selected text to clipboard
+copy-on-select = clipboard
+

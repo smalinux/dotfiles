@@ -4,7 +4,8 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.emacs ~/.emacs
 ln -sf ~/dotfiles/.strc ~/.strc
 ln -sf ~/dotfiles/i3/ ~/.config/
-ln -sf ~/dotfiles/terminator/ ~/.config/
+rm -rf  ~/dotfiles/ghostty
+ln -sf ~/dotfiles/ghostty/ ~/.config/
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
