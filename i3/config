@@ -216,4 +216,7 @@ bindsym $mod+Tab workspace back_and_forth
 # slock bind
 bindsym $mod+l --release exec slock
 
+# suspend system
+bindsym $mod+Shift+s exec systemctl suspend
+
 exec --no-startup-id sh -c 'exec ghostty;'
