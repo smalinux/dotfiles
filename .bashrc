@@ -188,3 +188,7 @@ fdh() {
 
 bind '"\C-e": "\C-k\C-u fdh\n"'
 # }}}
+
+# Prevent conda from auto-activating the base environment by default
+#$ conda config --set auto_activate false
+
