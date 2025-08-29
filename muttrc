@@ -1,4 +1,11 @@
+#
+#
 # https://myaccount.google.com/apppasswords
+# mkdir ~/.mutt
+# cp ~/dotfiles/muttrc ~/.mutt/
+# change password
+#
+#
 # {{{
 set ssl_force_tls = yes
 set abort_nosubject = no
