@@ -4,7 +4,9 @@
 fullscreen = true
 
 # Remove window decorations (headless feel)
-##############decorations = none
+#decorations = none
+window-decoration = false
+gtk-titlebar = false
 
 # Optional: hide scrollbars and mouse cursor when idle
 #hide-scrollbar = true
