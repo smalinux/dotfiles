@@ -27,10 +27,10 @@ if [ -f /etc/os-release ]; then
     fi
 fi
 
-# $ f
-# $ F
-alias f='sudo find . -name'
-alias F='sudo find / -name'
+# search about files
+function f () {
+	rg --files | rg "$1"
+}
 alias ll='ls -la'
 alias x='~/dotfiles/scripts/extract' # extract any kind of archive
 #alias make='bear -- make' # because of coc.vim
@@ -47,7 +47,7 @@ alias ,="pwd"
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
-#alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
+alias man='bash -c '\''vim +Man\ $0 +wincmd\ o'\'''
 
 
 alias vim="nvim"
@@ -55,9 +55,7 @@ alias vim="nvim"
 # How can I copy the output of a command directly into my clipboard?
 # https://stackoverflow.com/a/5130969/5688267
 # ls | cc
-# vv
 alias "cc=xclip -selection clipboard"
-alias "vv=xclip -o -selection clipboard"
 
 # {{{ copy vimspector.json to current dir
 alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
@@ -66,7 +64,7 @@ alias vimspector="cp ~/dotfiles/vimspector/.vimspector.json ."
 
 # Power aliases
 alias R='yes | rm -r'
-alias cp='cp -r'
+alias cp='cp -r --dereference'
 alias n='ranger'
 alias mutt='neomutt'
 alias strc='xrdb ~/.strc' # Update strc
@@ -159,3 +157,20 @@ l() {
 
 
 alias m="/home/smalinux/dotfiles/scripts/makeshift.pl"
+
+
+xargs-o () { # portable alternative to BSD's xargs -o
+    prog=$1
+    shift
+    xargs sh -c "$prog \"\$@\" < /dev/tty" $prog
+}
+
+rgvim () {
+    rg -l "$@" | xargs-o $EDITOR "+/$1"
+}
+
+# pipe files to nvim
+vv () {
+    xargs-o $EDITOR
+}
+
