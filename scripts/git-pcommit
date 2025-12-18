@@ -1,0 +1,32 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Getopt::Std;
+
+my @staged = qx/git diff --name-only --cached/;
+my $CHECK = 21;
+my @log;
+
+for (@staged) {
+	push @log, qx/git log -n $CHECK --pretty=format:%s $_/;
+}
+
+getopts 'n', \my %opt or die "USAGE: git pcommit [-n] [args]\n";
+
+my %number_of;
+for (@log) {
+	/^((?:[-\w]+(?::| -) )+)/i or next;
+	/^git-svn-id:/ and next;
+	$number_of{$1}++;
+}
+
+my @prefixes = reverse sort { $number_of{$a} <=> $number_of{$b} } keys %number_of;
+
+if ($opt{n}) {
+	foreach my $prefix (@prefixes) {
+	   print "$number_of{$prefix}\t$prefix\n"
+	}
+	exit 0;
+}
+my $prefix = $prefixes[0] // '';
+exec 'git', 'commit', '-s', '-m', $prefix, '--edit', @ARGV;

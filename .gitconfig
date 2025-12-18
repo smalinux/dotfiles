@@ -21,6 +21,7 @@
 	find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 	one = log --pretty=oneline
 	f = log -1 --pretty=fixes
+	pcommit = /usr/bin/git-pcommit
 [patatt]
     signingkey = ed25519:20251127
     selector = 20251127
