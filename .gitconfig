@@ -18,12 +18,14 @@
         fixes = Fixes: %h (\"%s\")
 [alias]
 	g = log --oneline --decorate --graph --all
-	ack = -c color.grep.linenumber=\"bold yellow\"\n \t-c color.grep.filename=\"bold green\"\n\t-c color.grep.match=\"reverse yellow\"\n\tgrep --break --heading --line-number
 	find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 	one = log --pretty=oneline
 	f = log -1 --pretty=fixes
+[patatt]
+    signingkey = ed25519:20251127
+    selector = 20251127
 [pull]
-	rebase = true
+	rebase = merges
 [merge]
 	tool = kdiff3
 	conflictstyle = diff3
