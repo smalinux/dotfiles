@@ -122,8 +122,8 @@ set -o vi
 # powerline for bash
 # Add this to your PATH if it’s not already declared
 export PATH=$PATH:$HOME/.local/bin
-export VISUAL=/usr/bin/vim
-export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export EDITOR=/snap/bin/nvim
 export BROWSER=/usr/bin/brave-browser
 # https://unix.stackexchange.com/a/104101/265591
 # clear screen: Ctrl+l

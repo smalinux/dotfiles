@@ -37,7 +37,7 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {} & wc -
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
-export MANPAGER="nvim +Man!"
+export MANPAGER="vi +Man!"
 export MANWIDTH=999
 
 # source local settings
@@ -48,3 +48,6 @@ fi
 # I want my HDMI-0 screen to be reversed by default permanently
 xrandr --output HDMI-0 --rotate inverted
 xrandr --output HDMI-0 --auto --primary
+
+#xrandr --output HDMI-0 --mode 1920x1080 --pos 1920x0
+#xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0

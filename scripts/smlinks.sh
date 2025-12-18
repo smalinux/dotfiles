@@ -30,5 +30,4 @@ sudo ln -sf ~/dotfiles/scripts/* /usr/bin/
 ln -sf ~/dotfiles/mpv.conf ~/.config/mpv/mpv.conf
 
 # nvim
-mkdir -p /home/smalinux/.config/nvim
-ln -sf /home/smalinux/dotfiles/nvim/* ~/.config/nvim/
+ln -sf /home/smalinux/dotfiles/nvim/ /home/smalinux/.config/

@@ -33,6 +33,11 @@ yes | sudo apt install pandoc
 yes | sudo apt install libtinfo-dev libncurses5-dev
 yes | sudo apt install libperl6-junction-perl
 yes | sudo apt install libconfig-inifiles-perl
+yes | sudo apt install clang-format
+yes | sudo apt install redshift # night light
+yes | sudo apt install genimage genext2fs
+
+
 
 
 
