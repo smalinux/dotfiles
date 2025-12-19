@@ -18,6 +18,10 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# Immediately append each command to history file after execution
+# This is useful with tmux & many panels
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=20000
