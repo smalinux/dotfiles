@@ -1,6 +1,7 @@
 #!/bin/bash
-# (C) 2021 Sohaib Mohamed.
+# (C) 2025 Sohaib Mohamed.
 # sohaib.amhmd@gmail.com
+set -e -x
 
 
 # OS = get distro name
@@ -35,6 +36,10 @@ fi
 
 # {{{ .git config
 sh ~/dotfiles/scripts/git.sh
+# }}}
+
+# {{{ bash history
+sh ~/dotfiles/scripts/restore-bash-history.sh
 # }}}
 
 # {{{ Mute Gnome alerts

@@ -22,6 +22,8 @@ pushd ~
    cd /src/barebox-cfg/ && make push
    cd /src/linux-cfg/ && make -f make.sh push
    cd /src/buildroot-cfg/ && make push
+   # private dotfiles
+   cd /home/smalinux/dotfiles/private/ && make push
 
 
 popd
