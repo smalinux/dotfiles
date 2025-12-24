@@ -44,6 +44,10 @@ alias map='xmodmap dotfiles/.Xmodmap'
 alias mapo='xmodmap dotfiles/xmodmap_original'
 alias logout="gnome-session-quit --logout"
 alias ,="pwd"
+# Extracts unique filenames from colon-separated input (e.g. rg output)
+alias ff='sed "s/:.*//" | sort -u'
+alias v='sed "s/:.*//" | sort -u | xargs-o $EDITOR'
+
 
 # Swap $man <-> $Vim as a PAGER without changing $PAGER var ;)
 # also you could use just q for quit.
