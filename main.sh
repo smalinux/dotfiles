@@ -44,6 +44,16 @@ sh ~/dotfiles/scripts/restore-bash-history.sh
 
 # {{{ Mute Gnome alerts
 gsettings set org.gnome.desktop.sound event-sounds false
+# Gnome dark theme, default is 'default'!
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+# cursor blink
+gsettings set org.gnome.desktop.interface cursor-blink true
+# Hide GNOME Terminal scrollbar for the default profile
+gsettings set \
+org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")/ \
+scrollbar-policy 'never'
+# gnome-terminal theme: https://github.com/catppuccin/gnome-terminal
+curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v1.0.0/install.py | python3 -
 # }}}
 
 # {{{ soft links
