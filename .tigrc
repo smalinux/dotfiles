@@ -8,7 +8,7 @@ bind main R !git rebase -i --autosquash %(commit)
 bind status	C	!git commit -s -v
 
 # For Linux, to speed loading tig, graph disabled
-#set main-view = line-number:no id:no date:default author:abbreviated commit-title:yes,graph=no,refs,overflow=no
+set main-view = line-number:no id:no date:default author:abbreviated commit-title:yes,graph=no,refs,overflow=no
 
 # Colors
 # ------
