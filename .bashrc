@@ -15,12 +15,25 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+# Store timestamp with each command
+HISTTIMEFORMAT='%F %T '
+
+# This runs BEFORE each command
+trap 'history -a' DEBUG
+
+# Save history when shell exits (catches shutdown, logout, kill, etc.)
+trap 'history -a' EXIT
+
+# Sync history after each command
+history_sync() {
+    history -c
+    history -r
+}
+# This runs AFTER each command (for syncing across terminals)
+PROMPT_COMMAND="history_sync${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-# Immediately append each command to history file after execution
-# This is useful with tmux & many panels
-export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
