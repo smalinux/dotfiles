@@ -41,8 +41,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec ghostty
-bindsym $mod+Return exec gnome-terminal
+# Launch GNOME Terminal without the menu bar
+bindsym $mod+Return exec gnome-terminal --hide-menubar
 
 # kill focused window
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
@@ -208,7 +208,6 @@ client.focused    #ff006d #ff006d #ff006d #98e2f5
 focus_follows_mouse no
 
 # wallpaper
-#exec_always --no-startup-id feh --bg-fill --randomize .dotfiles/wms/wallpapers/*.jpg
 exec_always --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1080?random
 
 # mod+tab key
@@ -220,4 +219,5 @@ bindsym $mod+l --release exec slock
 # suspend system
 bindsym $mod+Shift+s exec systemctl suspend
 
-exec --no-startup-id sh -c 'exec gnome-terminal;'
+# Launch GNOME Terminal without the menu bar
+exec --no-startup-id sh -c 'exec gnome-terminal --hide-menubar;'
