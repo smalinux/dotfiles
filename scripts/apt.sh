@@ -37,6 +37,7 @@ yes | sudo apt install clang-format
 yes | sudo apt install redshift # night light
 yes | sudo apt install genimage genext2fs
 
+yes | sudo apt install msmtp  # I use this to send emails to myself!
 
 
 
