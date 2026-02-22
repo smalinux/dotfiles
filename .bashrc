@@ -1,3 +1,12 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+if [ -d "/home/smalinux/.local/share/bash-completion/completions" ]; then
+  for f in "/home/smalinux/.local/share/bash-completion/completions"/*; do
+    [ -f "$f" ] && . "$f"
+  done
+fi
+# OPENSPEC:END
+
 
 
 
@@ -139,7 +148,7 @@ set -o vi
 # powerline for bash
 # Add this to your PATH if it’s not already declared
 export PATH=$PATH:$HOME/.local/bin
-export VISUAL=/usr/bin/nvim
+export VISUAL=/snap/bin/nvim
 export EDITOR=/snap/bin/nvim
 export BROWSER=/usr/bin/brave-browser
 # https://unix.stackexchange.com/a/104101/265591
