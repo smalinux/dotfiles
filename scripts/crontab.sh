@@ -24,5 +24,8 @@ pushd ~
 	cd /src/buildroot-cfg/ && make push
 	# private dotfiles
 	cd /home/smalinux/dotfiles/private/ && make push
+	cd /src/me/ && make push
+	cd /src/openpec/ && make push
+	cd /src/linux_in_arabic/ && make push
 
 popd
