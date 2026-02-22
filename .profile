@@ -46,8 +46,8 @@ if [ -f "$HOME/.bashrc" ] ; then
 fi
 
 # I want my HDMI-0 screen to be reversed by default permanently
-xrandr --output HDMI-0 --rotate inverted
-xrandr --output HDMI-0 --auto --primary
+#xrandr --output HDMI-0 --rotate inverted
+#xrandr --output HDMI-0 --auto --primary
 
 #xrandr --output HDMI-0 --mode 1920x1080 --pos 1920x0
 #xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0
