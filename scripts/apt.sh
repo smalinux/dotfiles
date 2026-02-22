@@ -24,6 +24,12 @@ yes | sudo aptitude install docker.io feh most fish ripgrep bear libsecret-1-0 l
 yes | sudo aptitude install clangd ccls clang ack tig silversearcher-ag bat weechat iwyu astyle cmake
 yes | sudo aptitude install doxygen neovim brightnessctl cmdtest rofi i3-wm i3lock xclip
 yes | sudo aptitude install graphviz git-email kdiff3 neomutt tree asciinema bison flex
+# For sending notifications
+yes | sudo aptitude install dunst
+sudo apt-get install -y jq
+
+#
+yes | sudo asciinema
 yes | sudo aptitude install simplescreenrecorder compton libxft-dev dwarves
 yes | sudo aptitude install apt-file # wow https://askubuntu.com/a/655194
 yes | sudo aptitude install fonts-symbola vim-gtk3 patchutils nnn pip
@@ -38,6 +44,13 @@ yes | sudo apt install redshift # night light
 yes | sudo apt install genimage genext2fs
 
 yes | sudo apt install msmtp  # I use this to send emails to myself!
+#yes | sudo apt install chromium-browser # chrome browser - for some testing
+
+
+
+
+npm install -g @google/gemini-cli
+npm i -g @anthropic-ai/claude-code
 
 
 
