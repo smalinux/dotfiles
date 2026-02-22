@@ -67,3 +67,5 @@
 	useUnicodeRuler = false
 [diff]
 	renameLimit = 10000
+[init]
+	defaultBranch = main
