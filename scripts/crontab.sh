@@ -27,5 +27,12 @@ pushd ~
 	cd /src/me/ && make push
 	cd /src/openpec/ && make push
 	cd /src/linux_in_arabic/ && make push
+	cd /src/scrape-karriere && make run
+	cd /src/main && make push
+	cd /src/dyslexia && make push
+	cd /src/tracking-matt-skills && make push
+	cd /src/dotclaude && make push
+
+	#cd /src/hn_scraper && ./scripts/backup.sh >> ~/data/backup.log 2>&1
 
 popd
