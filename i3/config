@@ -162,6 +162,18 @@ bindsym $mod+n focus output left
 bindsym $mod+Shift+m move workspace to output right
 bindsym $mod+Shift+n move workspace to output left
 
+# Mirror the external monitor onto the laptop panel, auto-detecting the
+# external's native resolution. Runs on startup and via config reload.
+set $mirror sh -c 'REF=HDMI-0; \
+  xrandr | grep -q "^$REF connected" || exit 0; \
+  xrandr --output "$REF" --auto --primary; \
+  RES=$(xrandr | grep -oP "^$REF connected.*? \K[0-9]+x[0-9]+(?=\+)"); \
+  for o in $(xrandr | grep " connected" | cut -d" " -f1); do \
+    [ "$o" = "$REF" ] || \
+    xrandr --output "$o" --auto --same-as "$REF" --scale-from "$RES"; \
+  done'
+exec_always --no-startup-id $mirror
+
 # resize window (you can also use the mouse for that)
 #mode "resize" {
         ## These bindings trigger as soon as you enter the resize mode
