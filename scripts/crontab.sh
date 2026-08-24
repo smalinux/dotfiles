@@ -32,6 +32,12 @@ pushd ~
 	cd /src/dyslexia && make push
 	cd /src/tracking-matt-skills && make push
 	cd /src/dotclaude && make push
+	cd /src/2brain && make push
+	cd /src/notes && make push
+	# headless claude runs /rc in notes vault; flock = never 2 at once
+	cd /src/notes && flock -n /tmp/claude-rc.lock claude -p "/rc" --dangerously-skip-permissions >> /src/notes/.claude-rc-$(date +%F).log 2>&1
+	# delete /rc logs older than 30 days
+	find /src/notes -maxdepth 1 -name '.claude-rc-*.log' -mtime +30 -delete
 
 	#cd /src/hn_scraper && ./scripts/backup.sh >> ~/data/backup.log 2>&1
 
